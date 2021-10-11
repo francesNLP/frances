@@ -90,8 +90,18 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- volume:              Volume (e.g. 1)
 	- letters:             Leters of the volume (e.g. A-B)
 	
-We have a row per article/topic. Note, that a article/topic  can appear several times per edition. That is the case when we have several definitions per term.
+We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
+``` EXAMPLE: ABACUS
+ABACUS - Definition: a table strewed over with dust or sand, upon which the ancient mathematicians drew their figures, It also signified a cupboard, or buffet.
+---
+ABACUS - Definition: in architeflure, signifies the superior part or member of the capital of a column, and serves as a kind of crowning to both. It was originally intended to represent a square tile covering a basket. The form of the abacus is not the same in all orders: in the Tuscan, Doric, and Ionic, it‘is generally square; but in the Corinthian and Compofite, its four sides are arched ir Avards, and embellilhed in the middle withornament, as a rose or other flower, Scammozzi uses abacus for a concave moulding on the capital of the Tuscan pedefial; and Palladio calls the plinth above the echinus, or boultin, in the Tufean and Doric orders, by the same name. See plate I. fig. i. and
+---
+ABACUS - Definition: is also the name of an ancient instrument for facilitating operations in arithmetic. It is vadoully contrived. That chiefly used in Europe is made by drawing any number of parallel lines at the di(lance of two diameters of one of the counters used in the calculation. A counter placed on.the lowed line, signifies r; on the sd, 10; on the 3d, 100; on the 4th, 1000, &c. In the intermediate spaces, the same counters are eflimated at one Jialf of the value of the line immediately superior, viz. between the id and 2d, 5; between the 2d and 3d, 50, &c. See plate I. fig. 2. A B, where the same number, 1768 for example, is represented under both by different dispositions of the counters.
+---
+ABACUS - Definition: logijlicus, a right-angled triangle, whose sides forming the right angle contain the numbers from 1 to 60, and its area the fafta of every two of the numbers perpendicularly opposite. This is also called a canon Jk^&cus Pythagvricus, the multiplication-table, or any table of numbers that facilitates operations in arith-
+---
+```
 **THESE METADATA/COLUMNS/PROPERTIES ARE THE ONES THAT WE ARE GOING TO USE FROM NOW ON**
 
 These dataframes are stored as JSON files in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition<1|2|3|4...>_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe)
