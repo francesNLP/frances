@@ -55,10 +55,13 @@ Important: **Topic** is just the way we named the *long articles* that expands m
 
 ## 3. PostProcessing EB_Articles 
 
-We have realised that those articles need further postprocess, in order to merge articles and topics across pages, and doing futher cleaning. 
-Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  version of them: [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition**_updated**. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated)
+We have realised that those articles need further postprocess, in order to merge articles and topics across pages, and doing futher cleaning steps. 
 
-Furthermore, this notebook re-arrange the information in EB_Articles to create a dataframe per file, with **NEW COLUMNS**:
+Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  "clean" version of them: [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition**_updated**. 
+
+[Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated)
+
+Furthermore, this notebook also re-arranges the updated information to create a dataframe per file/edition, with the following **COLUMNS**:
 
 	- definition:           Definition of the article
 	- edition_num:          1,2,3,4,5,6,7,8
@@ -77,9 +80,11 @@ Furthermore, this notebook re-arrange the information in EB_Articles to create a
 	- volume:              Volume (e.g. 1)
 	- letters:             Leters of the volume (A-B)
 	
-** THESE ARE THE PROPERTIES THAT WE ARE GOING TO WORK WITH FROM NOW ON**
+We have a row per article/topic. Note, that a article can appear several times per edition. That is the case when we have several definitions per term.
 
-The new dataframe per edition are stored as JSON files in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe)
+**THESE PROPERTIES ARE THE ONES THAT WE ARE GOING TO USE FROM NOW ON**
+
+These dataframes are stored as JSON files in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe)
 
 ## 4. Questions
 
