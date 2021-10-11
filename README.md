@@ -3,13 +3,13 @@
 ## 1. Extracting Encyclopaedia Britannica Articles using DEFOE
 
 - Defoe is able to extract articles from the EB volumes.
-- We have stored these data stored in NLS_EB/results_NLS/results_eb_[1|2|3|4 ...]_edition.
+- We have stored these data stored in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition.
 - We have 8 editions 
 
 ## 2. PostProcessing Articles using Notebooks 
 
 - The data extracted from defoe needs further postprocess. We do that using [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb)
-- [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb) cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, creating a new clean version of them: results_NLS/results_eb_[1|2|3|4 ...]_edition**_updated**.
+- [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb) cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, creating a new clean version of them: [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition**_updated**.
 
 - Furthermore, this notebook re-arrange these data to create dataframe, with the following columms:
 
@@ -32,7 +32,7 @@
 	
 ** THESE ARE THE COLUMNS/PROPERTIES THAT WE ARE GOING TO USE **
 
-This dataframe is also stored in NLS_EB/results_NLS/results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. 
+This dataframe is also stored in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. 
 
 ## 3. Questions
 
