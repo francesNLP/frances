@@ -118,6 +118,7 @@ Here a list of questions that we want to ask to these data (using the EB_Article
   -  Work in progress: [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
 - Obtain similar terms
 
+<img width="515" alt="Screen Shot 2021-10-11 at 16 10 47" src="https://user-images.githubusercontent.com/6940078/136814103-346d286d-2b41-4bab-8376-088290420235.png">
 
 
 ## 6. Architecture
