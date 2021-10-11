@@ -2,7 +2,14 @@
 
 ## 1. Extracting automatically articles from the Encyclopaedia Britannica (EB)
 
-Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files. 
+Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
+
+Here we have the command for running this query for extracting the articles of the first, assuming that we are located in the [defoe](https://github.com/francesNLP/defoe) directory. 
+
+```
+spark-submit --py-files defoe.zip defoe/run_query.py [nls_first_edition.txt)](https://github.com/francesNLP/defoe/blob/master/others/nls_first_edition.txt) nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_yaml queries/writehdfs.yml -r [frances/ results_NLS/results_eb_1_edition](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition) -n 34 
+
+```
 
 **Important**: For doing this work, instead of adding this query under the defoe NLS model, we have created a new one, called **nlsArticles** [model]((https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles). This is because, for extracting automatically the articles from the pages, it required to introduce specific modifications at the page and archive level - for capturing headers and text columns. Therefore, this query under **nlsArticles and not under nls**.  
 
@@ -12,9 +19,9 @@ Note that for running this query you need configuration file for specifying the 
 
 We have stored these data stored in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition.
 
-And We have **8 editions**. So, 8 YAML files in total!! 
+And We have **8 editions**. So, we have 8 extracted EB_Articles YAML files in total!! 
 
-## 2. RAW Articles metadata 
+## 2. Extracted EB_Articles metadata 
 
 Each YAML file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
  
@@ -47,13 +54,12 @@ We have detected two types of articles with two different patterns at “page”
 Important: **Topic** is just the way we named the *long articles* that expands more than a page. It does not refer to “NLP topic”.
 
 
-## 3. PostProcessing Articles using Notebooks 
+## 3. PostProcessing EB_Articles 
 
-We have realised that those articles need further postprocess, in order to merging articles and topics across pages, and doing futher cleaning. 
-Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, creating a new clean version of them: [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition**_updated**.
+We have realised that those articles need further postprocess, in order to merge articles and topics across pages, and doing futher cleaning. 
+Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  version of them: [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition**_updated**.
 
-
-Furthermore, this notebook re-arrange the raw metadata to create a dataframe per file, with **NEW COLUMNS**:
+Furthermore, this notebook re-arrange the information in EB_Articles to create a dataframe per file, with **NEW COLUMNS**:
 
 	- definition:           Definition of the article
 	- edition_num:          1,2,3,4,5,6,7,8
@@ -72,13 +78,19 @@ Furthermore, this notebook re-arrange the raw metadata to create a dataframe per
 	- volume:              Volume (e.g. 1)
 	- letters:             Leters of the volume (A-B)
 	
-** THESE ARE THE COLUMNS/PROPERTIES THAT WE ARE GOING TO WORK WITH **
+** THESE ARE THE PROPERTIES THAT WE ARE GOING TO WORK WITH FROM NOW ON**
 
 This dataframe is also stored in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. 
 
 ## 4. Questions
 
-Here a list of questions that we want to ask to these data
+Here a list of questions that we want to ask to these data:
+
+- Search by term
+- Number of terms per edition
+- Compare terms across edition
+- Obtain a graph with the related terms per term
+- Obtain similar terms
 
 
 
