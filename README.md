@@ -57,7 +57,7 @@ Important: **Topic** is just the way we named the *long articles* that expands m
 
 We have realised that those articles need further postprocess, in order to merge articles and topics across pages, and doing futher cleaning steps. 
 
-Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  "clean" version of them: [NLS_EB/results_NLS](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)/results_eb_<1|2|3|4...>edition**_updated**. 
+Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  "clean" version of them: [NLS_EB/results_NLS](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)/results_eb_<1|2|3|4...>edition_updated. 
 
 [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated)
 
@@ -86,7 +86,7 @@ We have a row per article/topic. Note, that a article/topic  can appear several 
 
 **THESE PROPERTIES/COLUMNS/METADATA ARE THE ONES THAT WE ARE GOING TO USE FROM NOW ON**
 
-These dataframes are stored as JSON files in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe)
+These dataframes are stored as JSON files in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition<1|2|3|4...>_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe)
 
 ## 5. Questions
 
