@@ -86,9 +86,11 @@ This dataframe is also stored in [NLS_EB/results_NLS/](https://github.com/france
 Here a list of questions that we want to ask to these data:
 
 - Search by term
+  - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
 - Number of terms per edition
 - Compare terms across edition
-- Obtain a graph with the related terms per term
+- Obtain a graph with the related terms per term:
+  -  Work in progress: [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
 - Obtain similar terms
 
 
