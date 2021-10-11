@@ -121,9 +121,11 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 - Compare terms across edition
 - Obtain a graph with the related terms per term:
   -  Work in progress: [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
+  -  ![Architecture_KG](https://user-images.githubusercontent.com/6940078/136817688-a62c9117-0579-4faa-b4f8-2598a1fb8a43.png)
 - Obtain similar terms
 
-<img width="515" alt="Screen Shot 2021-10-11 at 16 10 47" src="https://user-images.githubusercontent.com/6940078/136814103-346d286d-2b41-4bab-8376-088290420235.png">
+
+
 
 
 ## 6. Architecture
