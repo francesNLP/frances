@@ -7,8 +7,7 @@ Finally, we have created a [new defoe query for extracting automatically article
 Here we have the command for running this query for extracting the articles of the first, assuming that we are located in the [defoe](https://github.com/francesNLP/defoe) directory. 
 
 ```
-spark-submit --py-files defoe.zip defoe/run_query.py [nls_first_edition.txt)](https://github.com/francesNLP/defoe/blob/master/others/nls_first_edition.txt) nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_yaml queries/writehdfs.yml -r [frances/ results_NLS/results_eb_1_edition](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition) -n 34 
-
+spark-submit --py-files defoe.zip defoe/run_query.py nls_first_edition.txt nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_yaml queries/writehdfs.yml -r frances/ results_NLS/results_eb_1_edition] -n 34 
 ```
 
 **Important**: For doing this work, instead of adding this query under the defoe NLS model, we have created a new one, called **nlsArticles** [model]((https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles). This is because, for extracting automatically the articles from the pages, it required to introduce specific modifications at the page and archive level - for capturing headers and text columns. Therefore, this query under **nlsArticles and not under nls**.  
