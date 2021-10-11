@@ -131,8 +131,8 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 - Search definitions for a given term and edition. 
 
 - Given a term and edition, tell me which terms (based on "related_terms") are related with it. 
--  Work in progress: [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
-  -  ![Architecture_KG](https://user-images.githubusercontent.com/6940078/136817688-a62c9117-0579-4faa-b4f8-2598a1fb8a43.png)
+-  Work in progress (using dataframes): [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
+  -  <img width="435" alt="Screen Shot 2021-10-11 at 17 28 59" src="https://user-images.githubusercontent.com/6940078/136824522-a90476f7-05d8-4e31-bbac-733d2fe89efd.png">
 
 - Given a term, see how the definition(s) have changed across editions. 
 
