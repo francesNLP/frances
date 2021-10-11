@@ -104,7 +104,12 @@ ABACUS - Definition: logijlicus, a right-angled triangle, whose sides forming th
 ```
 **THESE METADATA/COLUMNS/PROPERTIES ARE THE ONES THAT WE ARE GOING TO USE FROM NOW ON**
 
-These dataframes are stored as JSON files in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition<1|2|3|4...>_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe)
+**VERY IMPORTANT**
+These dataframes are stored as JSON files (using orient="index") in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]edition<1|2|3|4...>_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe). See bellow the comand that we used for storing the dataframe corresponding to the 1st Edition. 
+
+```
+df.to_json(r'./results_NLS/results_eb_1_edition_postprocess_dataframe', orient="index") 
+```
 
 ## 5. Questions
 
