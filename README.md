@@ -115,20 +115,36 @@ df.to_json(r'./results_NLS/results_eb_1_edition_postprocess_dataframe', orient="
 
 Here a list of questions that we want to ask to these data (using the EB_Articles Clean Metadata):
 
-- Search by term
-  - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
-- Number of terms per edition
-- Compare terms across edition
-- Obtain a graph with the related terms per term:
-  -  Work in progress: [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
+(Remember, a term can have more than one definition per edition)
+
+- Give me all the volumes that we have per edition
+- Given an edition, give me the years that each volume has been published.
+- Given an edition and a volume, give me all the terms
+- Given an edition, give me all the terms
+
+- Given a term, give me all editions and volumes that it appears. 
+- Given a term, give me all the definitions that we have per edition. 
+- Give the terms that only appear in one edition.
+- Give the terms that appears in all editions. 
+- Given an edition, tell me the terms for which we have more definitions
+
+- Search definitions for a given term and edition. 
+
+- Given a term and edition, tell me which terms (based on "related_terms") are related with it. 
+-  Work in progress: [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
   -  ![Architecture_KG](https://user-images.githubusercontent.com/6940078/136817688-a62c9117-0579-4faa-b4f8-2598a1fb8a43.png)
-- Obtain similar terms
+
+- Given a term, see how the definition(s) have changed across editions. 
+
+(Additionally)
+
+- Generic data explorations with dataframes
+  - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
 
 
 
 
-
-## 6. Architecture
+## 6. Architecture Proposed
 
 
 <img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
