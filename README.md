@@ -2,7 +2,7 @@
 
 ## 1. Extracting automatically EB_Articles with defoe
 
-Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
+We have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
 
 Here we have the command for running this query for extracting the articles of the first, assuming that we are located in the [defoe](https://github.com/francesNLP/defoe) directory. 
 
