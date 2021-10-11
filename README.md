@@ -35,19 +35,19 @@
 
 This dataframe is also stored in NLS_EB/results_NLS/results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. 
 
-## QUESTIONS
+## 3. Questions
 
 Here a list of questions that we want to ask to these data
 
 
 
-## Architecture
+## 4. Architecture
 
 
 <img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
 
 
-## ElasticSearch
+## 5. ElasticSearch
 
 Terminal 1:
 
