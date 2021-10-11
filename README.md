@@ -16,7 +16,7 @@ Note that for running this query you need configuration file for specifying the 
 - [configuration_file](https://github.com/francesNLP/defoe/blob/master/queries/write_to_yml.yml)
 
 
-We have stored these data stored in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition.
+We have stored these data stored in [NLS_EB/results_NLS](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)/results_eb_<1|2|3|4>_edition.
 
 And We have **8 editions**. So, we have 8 extracted EB_Articles YAML files in total!! 
 
@@ -57,7 +57,7 @@ Important: **Topic** is just the way we named the *long articles* that expands m
 
 We have realised that those articles need further postprocess, in order to merge articles and topics across pages, and doing futher cleaning steps. 
 
-Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  "clean" version of them: [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition**_updated**. 
+Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  "clean" version of them: [NLS_EB/results_NLS](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)/results_eb_<1|2|3|4...>edition**_updated**. 
 
 [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated)
 
