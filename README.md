@@ -132,7 +132,8 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 
 - Given a term and edition, tell me which terms (based on "related_terms") are related with it. 
 -  Work in progress (using dataframes): [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
-  -  <img width="435" alt="Screen Shot 2021-10-11 at 17 28 59" src="https://user-images.githubusercontent.com/6940078/136824522-a90476f7-05d8-4e31-bbac-733d2fe89efd.png">
+  -  <img width="436" alt="Screen Shot 2021-10-11 at 17 32 23" src="https://user-images.githubusercontent.com/6940078/136824814-ad81c392-a429-405f-8be0-dc1bbabd68cf.png">
+
 
 - Given a term, see how the definition(s) have changed across editions. 
 
