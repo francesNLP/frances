@@ -49,7 +49,7 @@ We have detected two types of articles with two different patterns at “page”
 - **Long articles** (named as **topics**): In this is the case, the Encyclopaedia introduces a TERM in the header of a page (which is not the case for the short articles), and then it normally uses several pages to describe that topic (and very often it uses a combination of text, pictures, tables, etc.). For example, the “topic” AMERICA goes from page 677 to 724 (47 pages!)
 
 
-We have also detected that some pages (e.g. Preface, FrontPage, List of Authors) do not contain articles nor topics. We classify those pages as "FullPages". And we also have noticed that there are some pages that have a "Mix" of articles and topics - we classify those pages as "Mix".
+We have also detected that some pages (e.g. Preface, FrontPage, List of Authors) do not contain articles nor topics. We classify those pages as "Full_Page". And we also have noticed that there are some pages that have a "Mix" of articles and topics - we classify those pages as "Mix".
 
 Therefore a page can be classified (this information is stored in **type_page**) as:
  - Article: If it has several short articles
