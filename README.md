@@ -9,7 +9,6 @@
 ## 2. PostProcessing Articles using Notebooks 
 
 - The data extracted from defoe needs further postprocess. We do that using [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb)
-- 
 - [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb) cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, creating a new clean version of them: results_NLS/results_eb_[1|2|3|4 ...]_edition**_updated**.
 
 - Furthermore, this notebook re-arrange these data to create dataframe, with the following columms:
