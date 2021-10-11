@@ -1,6 +1,6 @@
 # frances
 
-## 1. Extracting automatically articles from the Encyclopaedia Britannica (EB)
+## 1. Extracting automatically EB_Articles with defoe
 
 Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
 
@@ -20,7 +20,7 @@ We have stored these data stored in [NLS_EB/results_NLS/](https://github.com/fra
 
 And We have **8 editions**. So, we have 8 extracted EB_Articles YAML files in total!! 
 
-## 2. Extracted EB_Articles metadata 
+## 2. EB_Articles metadata 
 
 Each YAML file has a row per article found within a page ([Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition)), with the following columns (being the most important **term** and **definition**):
  
@@ -61,7 +61,9 @@ Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNL
 
 [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated)
 
-Furthermore, this notebook also re-arranges the updated information to create a dataframe per file/edition, with the following **COLUMNS**:
+## 4. NEW EB_Articles Clean Metadata
+
+Furthermore, this notebook also re-arranges the updated information to create a dataframe per file/edition, with the following **NEW METADATA/COLUMNS**:
 
 	- definition:           Definition of the article
 	- edition_num:          1,2,3,4,5,6,7,8
@@ -80,15 +82,15 @@ Furthermore, this notebook also re-arranges the updated information to create a 
 	- volume:              Volume (e.g. 1)
 	- letters:             Leters of the volume (A-B)
 	
-We have a row per article/topic. Note, that a article can appear several times per edition. That is the case when we have several definitions per term.
+We have a row per article/topic. Note, that a article/topic  can appear several times per edition. That is the case when we have several definitions per term.
 
-**THESE PROPERTIES ARE THE ONES THAT WE ARE GOING TO USE FROM NOW ON**
+**THESE PROPERTIES/COLUMNS/METADATA ARE THE ONES THAT WE ARE GOING TO USE FROM NOW ON**
 
 These dataframes are stored as JSON files in [NLS_EB/results_NLS/](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)results_eb_[1|2|3|4 ...]_edition_postprocess_dataframe. [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_postprocess_dataframe)
 
-## 4. Questions
+## 5. Questions
 
-Here a list of questions that we want to ask to these data:
+Here a list of questions that we want to ask to these data (using the EB_Articles Clean Metadata):
 
 - Search by term
   - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
@@ -100,13 +102,13 @@ Here a list of questions that we want to ask to these data:
 
 
 
-## 5. Architecture
+## 6. Architecture
 
 
 <img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
 
 
-## 6. ElasticSearch
+## 7. ElasticSearch
 
 Terminal 1:
 
