@@ -4,21 +4,18 @@
 
 We have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
 
-Here we have the command for running this query for extracting the articles of the first, assuming that we are located in the [defoe](https://github.com/francesNLP/defoe) directory. 
+Here we have the command for running this query for extracting the articles of the first edition, assuming that we are located in the [defoe](https://github.com/francesNLP/defoe) directory. 
 
 ```
-spark-submit --py-files defoe.zip defoe/run_query.py nls_first_edition.txt nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_yaml queries/writehdfs.yml -r frances/ results_NLS/results_eb_1_edition] -n 34 
+spark-submit --py-files defoe.zip defoe/run_query.py nls_first_edition.txt nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_yaml queries/write_to_yml.yml -r frances/ results_NLS/results_eb_1_edition] -n 34 
 ```
-
-**Important**: For doing this work, instead of adding this query under the defoe NLS model, we have created a new one, called **nlsArticles** [model]((https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles). This is because, for extracting automatically the articles from the pages, it required to introduce specific modifications at the page and archive level - for capturing headers and text columns. Therefore, this query under **nlsArticles and not under nls**.  
 
 Note that for running this query you need configuration file for specifying the operating system and the defoe path for the *long_s fix*:
 - [configuration_file](https://github.com/francesNLP/defoe/blob/master/queries/write_to_yml.yml)
 
-
 We have stored these data stored in [NLS_EB/results_NLS](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)/results_eb_<1|2|3|4>_edition.
 
-And We have **8 editions**. So, we have 8 extracted EB_Articles YAML files in total!! 
+We have **8 EB editions**, meaning that we have 8 extracted YAML files in total!! 
 
 ## 2. EB_Articles metadata 
 
@@ -55,15 +52,15 @@ Important: **Topic** is just the way we named the *long articles* that expands m
 
 ## 3. PostProcessing EB_Articles 
 
-We have realised that those articles need further postprocess, in order to merge articles and topics across pages, and doing futher cleaning steps. 
+We have realised that those articles/topics need further postprocess before peforming futher analyses with them. For example, we need to merge articles and topics that are splitted across pages. We have also noticed that some pages have wrongly been clasified as topics, since they should be clasified as articles. 
 
-Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_[1|2|3|4 ...]_edition files, and creates a new  "clean" version of them: [NLS_EB/results_NLS](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)/results_eb_<1|2|3|4...>edition_updated. 
+Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNLP/frances/blob/main/NLS_EB/Merging_EB_Terms.ipynb), a notebook that cleans each of the results_NLS/results_eb_<1|2|3|4 ...>_edition files (applying different cleaning treatments), and it creates a new  "clean" version of each them: [NLS_EB/results_NLS](https://github.com/francesNLP/frances/tree/main/NLS_EB/results_NLS)/results_eb_<1|2|3|4...>edition_updated. 
 
 [Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated)
 
 ## 4. NEW EB_Articles Clean Metadata
 
-Furthermore, this notebook also re-arranges the updated information to create a dataframe per file/edition, with the following **NEW METADATA/COLUMNS**:
+Furthermore, this notebook also re-arranges the updated information to create a dataframe per file/edition, with the following **NEW METADATA/COLUMNS/PROPERTIES**:
 
 	- definition:           Definition of the article
 	- edition_num:          1,2,3,4,5,6,7,8
