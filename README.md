@@ -73,22 +73,22 @@ Here we have an [example](https://github.com/francesNLP/frances/blob/main/NLS_EB
 
 Furthermore, this notebook also re-arranges the updated information (and drops some metada) to create a **NEW dataframe per file/edition**, with the following **METADATA/COLUMNS/PROPERTIES**:
 
-	- term:                 Article name 
-	- definition:           Definition of the article
+	- term:                 Article/Topic name 
+	- definition:           Definition of the article/topic
 	- edition_num:          1,2,3,4,5,6,7,8
-	- header:               Header of the page's article                                  
-	- num_article_words:    Number of words per article
+	- header:               Header of the page's article/topic                                  
+	- num_article_words:    Number of words per article/topic
 	- place:                Place where the volume was edited (e.g. Edinburgh)                                    
-	- related_terms:        Related articles (see X article)  
-	- source_text_file:     File Path of the XML file from which the article belongs                             
-	- term_id_in_page:      Number of article in the page     
-	- start_page:           Number page in which the article starts 
-	- end_page:             Number page in which the article ends 
-	- title:               Title of the Volume
-	- type_article:        Type of Page [Full Page| Topic| Mix | Article]                                       
-	- year:                Year of the Volume
-	- volume:              Volume (e.g. 1)
-	- letters:             Leters of the volume (e.g. A-B)
+	- related_terms:        Related articles/topics (e.g. see X article)  
+	- source_text_file:     File Path of the XML file from which the article/topic belongs                             
+	- term_id_in_page:      Number of article/topic in the page     
+	- start_page:           Number page in which the article/topic starts 
+	- end_page:             Number page in which the article/topic ends 
+	- title:                Title of the Volume
+	- type_article:         Type of Page [Full Page| Topic| Mix | Article]                                       
+	- year:                 Year of the Volume
+	- volume:               Volume (e.g. 1)
+	- letters:              Leters of the volume (e.g. A-B)
 	
 We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
