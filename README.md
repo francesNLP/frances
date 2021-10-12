@@ -85,7 +85,7 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- start_page:           Number page in which the article/topic starts 
 	- end_page:             Number page in which the article/topic ends 
 	- title:                Title of the Volume
-	- type_term:            Type of Article/Topic [ Article | Topic| Mix ]                                       
+	- type_definition:            Type of Article/Topic [ Article | Topic| Mix ]                                       
 	- year:                 Year of the Volume
 	- volume:               Volume (e.g. 1)
 	- letters:              Leters of the volume (e.g. A-B)
@@ -146,7 +146,8 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 
 ## 6. Data Model proposed
 
-<img width="779" alt="Screen Shot 2021-10-12 at 10 40 17" src="https://user-images.githubusercontent.com/6940078/136932484-c8b3f5e3-1853-41e2-a597-0202b8b61668.png">
+<img width="797" alt="Screen Shot 2021-10-12 at 11 03 20" src="https://user-images.githubusercontent.com/6940078/136935900-239a5421-06da-4766-9c07-dcb3d0ed9ad7.png">
+
 
 
 ## 7. Architecture Proposed
