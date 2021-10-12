@@ -85,7 +85,7 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- start_page:           Number page in which the article/topic starts 
 	- end_page:             Number page in which the article/topic ends 
 	- title:                Title of the Volume
-	- type_definition:            Type of Article/Topic [ Article | Topic| Mix ]                                       
+	- type_definition:      [ Article | Topic| Mix ]                                       
 	- year:                 Year of the Volume
 	- volume:               Volume (e.g. 1)
 	- letters:              Leters of the volume (e.g. A-B)
