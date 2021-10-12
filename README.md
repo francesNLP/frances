@@ -81,7 +81,7 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- place:                Place where the volume was edited (e.g. Edinburgh)                                    
 	- related_terms:        Related articles/topics (e.g. see X article)  
 	- source_text_file:     File Path of the XML file from which the article/topic belongs                             
-	- term_id_in_page:      Number of article/topic in the page     
+	- term_number_in_page:      Number of article/topic in the page     
 	- start_page:           Number page in which the article/topic starts 
 	- end_page:             Number page in which the article/topic ends 
 	- title:                Title of the Volume
@@ -95,6 +95,11 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- author
 	- publisher
 	- editor
+	- source_ALTO_XML
+	- source_METS_XML
+	- language
+	- library
+	- tittle_encyclop.
 	
 We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
@@ -152,7 +157,8 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 ## 6. Data Model proposed
 
 
-<img width="810" alt="Screen Shot 2021-10-12 at 11 29 47" src="https://user-images.githubusercontent.com/6940078/136939698-fab981a8-175b-44f7-a75f-d1fa7d56c553.png">
+<img width="836" alt="Screen Shot 2021-10-12 at 11 46 33" src="https://user-images.githubusercontent.com/6940078/136941881-f632faf8-06e9-4116-a8e7-aa7eb52534de.png">
+
 
 
 
