@@ -89,7 +89,12 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- year:                 Year of the Volume
 	- volume:               Volume (e.g. 1)
 	- letters:              Leters of the volume (e.g. A-B)
+	
+	TODO
 	- [similar_terms]:      TODO- Doc2Vec similar terms
+	- author
+	- publisher
+	- editor
 	
 We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
@@ -146,7 +151,8 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 
 ## 6. Data Model proposed
 
-<img width="797" alt="Screen Shot 2021-10-12 at 11 03 20" src="https://user-images.githubusercontent.com/6940078/136935900-239a5421-06da-4766-9c07-dcb3d0ed9ad7.png">
+
+<img width="798" alt="Screen Shot 2021-10-12 at 11 27 18" src="https://user-images.githubusercontent.com/6940078/136939446-85ac5134-f64f-47b0-8fd0-609e125afc13.png">
 
 
 
