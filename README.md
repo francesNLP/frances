@@ -154,13 +154,13 @@ Here a list of questions that we want to ask to these data (using the EB_Article
   - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
 
 
-## 6. Data Model proposed
+## 6. Data Model Proposed
 
 
-<img width="824" alt="Screen Shot 2021-10-12 at 13 17 17" src="https://user-images.githubusercontent.com/6940078/136954535-1a272c7c-6e79-4296-8e37-5a2f131d2682.png">
+<img width="844" alt="Screen Shot 2021-10-12 at 13 30 08" src="https://user-images.githubusercontent.com/6940078/136956325-91ec2e62-2b58-4770-b7dc-4f2721bedff4.png">
 
 
-## 7. Architecture Proposed
+## 7. Architecture Proposed 
 
 
 <img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
