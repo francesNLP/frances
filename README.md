@@ -77,7 +77,7 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- definition:           Definition of the article/topic
 	- edition_num:          1,2,3,4,5,6,7,8
 	- header:               Header of the page's article/topic                                  
-	- num_article_words:    Number of words per article/topic
+	- num_words:            Number of words per article/topic
 	- place:                Place where the volume was edited (e.g. Edinburgh)                                    
 	- related_terms:        Related articles/topics (e.g. see X article)  
 	- source_text_file:     File Path of the XML file from which the article/topic belongs                             
@@ -85,10 +85,11 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- start_page:           Number page in which the article/topic starts 
 	- end_page:             Number page in which the article/topic ends 
 	- title:                Title of the Volume
-	- type_article:         Type of Page [Full Page| Topic| Mix | Article]                                       
+	- type_term:            Type of Article/Topic [Full Page| Topic| Mix | Article]                                       
 	- year:                 Year of the Volume
 	- volume:               Volume (e.g. 1)
 	- letters:              Leters of the volume (e.g. A-B)
+	- [similar_terms]:      TODO- Doc2Vec similar terms
 	
 We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
@@ -143,15 +144,18 @@ Here a list of questions that we want to ask to these data (using the EB_Article
   - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
 
 
+## 6. Data Model proposed
+
+<img width="779" alt="Screen Shot 2021-10-12 at 10 40 17" src="https://user-images.githubusercontent.com/6940078/136932484-c8b3f5e3-1853-41e2-a597-0202b8b61668.png">
 
 
-## 6. Architecture Proposed
+## 7. Architecture Proposed
 
 
 <img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
 
 
-## 7. ElasticSearch
+## 8. ElasticSearch
 
 Terminal 1:
 
