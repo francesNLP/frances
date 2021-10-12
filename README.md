@@ -152,7 +152,8 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 ## 6. Data Model proposed
 
 
-<img width="798" alt="Screen Shot 2021-10-12 at 11 27 18" src="https://user-images.githubusercontent.com/6940078/136939446-85ac5134-f64f-47b0-8fd0-609e125afc13.png">
+<img width="810" alt="Screen Shot 2021-10-12 at 11 29 47" src="https://user-images.githubusercontent.com/6940078/136939698-fab981a8-175b-44f7-a75f-d1fa7d56c553.png">
+
 
 
 
