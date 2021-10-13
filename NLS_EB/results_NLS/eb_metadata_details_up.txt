@@ -1,0 +1,3092 @@
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144133901:
+  city: null
+  country: null
+  date: '1771'
+  edition: First edition, 1771, Volume 1, A-B
+  genre: null
+  geographic: null
+  name: Smellie, William
+  name_date: 1740-1795
+  name_termsOfAddress: null
+  num_pages: 832
+  place: Edinburgh
+  publisher: Printed for A. Bell and C. Macfarquhar; and sold by Colin Macfarquhar
+    ...
+  subtitle: Illustrated with one hundred and sixty copperplates
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts and sciences, compiled
+    upon a new plan
+  topic: null
+  year: 1771
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144133902:
+  city: null
+  country: null
+  date: '1771'
+  edition: First edition, 1771, Volume 2, C-L
+  genre: null
+  geographic: null
+  name: Smellie, William
+  name_date: 1740-1795
+  name_termsOfAddress: null
+  num_pages: 1018
+  place: Edinburgh
+  publisher: Printed for A. Bell and C. Macfarquhar; and sold by Colin Macfarquhar
+    ...
+  subtitle: Illustrated with one hundred and sixty copperplates
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts and sciences, compiled
+    upon a new plan
+  topic: null
+  year: 1771
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144133903:
+  city: null
+  country: null
+  date: '1771'
+  edition: First edition, 1771, Volume 3, M-Z
+  genre: null
+  geographic: null
+  name: Smellie, William
+  name_date: 1740-1795
+  name_termsOfAddress: null
+  num_pages: 872
+  place: Edinburgh
+  publisher: Printed for A. Bell and C. Macfarquhar; and sold by Colin Macfarquhar
+    ...
+  subtitle: Illustrated with one hundred and sixty copperplates
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts and sciences, compiled
+    upon a new plan
+  topic: null
+  year: 1771
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850366:
+  city: null
+  country: null
+  date: '1773'
+  edition: First edition, 1773, Volume 1, A-B
+  genre: encyclopedia
+  geographic: null
+  name: Smellie, William
+  name_date: 1740-1795
+  name_termsOfAddress: null
+  num_pages: 844
+  place: London
+  publisher: Printed for John Donaldson, corner of Arundel Street in the Strand.
+  subtitle: compiled upon a new plan. In which the different sciences and arts are
+    digested into distinct treatises or systems; and the various technical terms,
+    &c. are explained as they occur in the order of the alphabet. Illustrated with
+    one hundred and sixty copperplates
+  temporal: null
+  title: 'Encyclopaedia Britannica: or, A dictionary of arts and sciences'
+  topic: null
+  year: 1773
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850367:
+  city: null
+  country: null
+  date: '1773'
+  edition: First edition, 1773, Volume 2, C-L
+  genre: encyclopedia
+  geographic: null
+  name: Smellie, William
+  name_date: 1740-1795
+  name_termsOfAddress: null
+  num_pages: 1032
+  place: London
+  publisher: Printed for John Donaldson, corner of Arundel Street in the Strand.
+  subtitle: compiled upon a new plan. In which the different sciences and arts are
+    digested into distinct treatises or systems; and the various technical terms,
+    &c. are explained as they occur in the order of the alphabet. Illustrated with
+    one hundred and sixty copperplates
+  temporal: null
+  title: 'Encyclopaedia Britannica: or, A dictionary of arts and sciences'
+  topic: null
+  year: 1773
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850368:
+  city: null
+  country: null
+  date: '1773'
+  edition: First edition, 1773, Volume 3, M-Z
+  genre: encyclopedia
+  geographic: null
+  name: Smellie, William
+  name_date: 1740-1795
+  name_termsOfAddress: null
+  num_pages: 864
+  place: London
+  publisher: Printed for John Donaldson, corner of Arundel Street in the Strand.
+  subtitle: compiled upon a new plan. In which the different sciences and arts are
+    digested into distinct treatises or systems; and the various technical terms,
+    &c. are explained as they occur in the order of the alphabet. Illustrated with
+    one hundred and sixty copperplates
+  temporal: null
+  title: 'Encyclopaedia Britannica: or, A dictionary of arts and sciences'
+  topic: null
+  year: 1773
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850370:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 1, A-AST
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 872
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850373:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 2, Astronomy-BZO
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 882
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850374:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 3, C
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 872
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850375:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 4, D-F
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 868
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850376:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 5, G-J
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 980
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850377:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 6, K-Medicine
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 1062
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850378:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 7, Medicines-Optics
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 886
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/144850379:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 8, Optics-Poetry
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 872
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/190273289:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 9, POI-SCU
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 874
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/190273290:
+  city: null
+  country: null
+  date: 1778-83
+  edition: Second edition, Volume 10, SCU-Appendix
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 1280
+  place: Edinburgh
+  publisher: printed for J. Balfour and Co. W. Gordon, J. Bell, J. Dickson, C. Elliot
+    [and 5 others]
+  subtitle: 'or, a dictionary of arts, sciences, &c. On a plan entirely new: ... The
+    second edition; greatly improved and enlarged. Illustrated with above two hundred
+    copperplates'
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1778
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/190273291:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 1, A-ANG
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 894
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/190273372:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 12, MIE-NEG
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 870
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253798:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 13, NEH-PAS
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 874
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253799:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 15, PLA-RAM
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 894
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253800:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 17, SCO-STR
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 918
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253801:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 1, A-ANG
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 892
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253802:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 3, BAR-BZO
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 864
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253803:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 6, DIA-ETH
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 858
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253804:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 10, LES-MEC
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 844
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253805:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 11, Medals-Midwifery
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 868
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253806:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 14, PAS-PLA
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 846
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253807:
+  city: null
+  country: null
+  date: '1801'
+  edition: Volume 1, ABE-IMP
+  genre: null
+  geographic: null
+  name: Gleig, George
+  name_date: 1753-1840
+  name_termsOfAddress: null
+  num_pages: 884
+  place: Edinburgh
+  publisher: For T. Bonar by J. Brown
+  subtitle: null
+  temporal: null
+  title: Supplement to the third edition of the Encyclopaedia Britannica ... Illustrated
+    with ... copperplates
+  topic: null
+  year: 1801
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253808:
+  city: null
+  country: null
+  date: '1801'
+  edition: Volume 2, IND-ZEM
+  genre: null
+  geographic: null
+  name: Gleig, George
+  name_date: 1753-1840
+  name_termsOfAddress: null
+  num_pages: 856
+  place: Edinburgh
+  publisher: For T. Bonar by J. Brown
+  subtitle: null
+  temporal: null
+  title: Supplement to the third edition of the Encyclopaedia Britannica ... Illustrated
+    with ... copperplates
+  topic: null
+  year: 1801
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253809:
+  city: null
+  country: null
+  date: '1803'
+  edition: Volume 1, ABE-IMP
+  genre: null
+  geographic: null
+  name: Gleig, George
+  name_date: 1753-1840
+  name_termsOfAddress: null
+  num_pages: 888
+  place: Edinburgh
+  publisher: For T. Bonar by J. Brown
+  subtitle: null
+  temporal: null
+  title: Supplement to the third edition of the Encyclopaedia Britannica ... Illustrated
+    with ... copperplates
+  topic: null
+  year: 1803
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253810:
+  city: null
+  country: null
+  date: '1803'
+  edition: Volume 2, IND-ZEM
+  genre: null
+  geographic: null
+  name: Gleig, George
+  name_date: 1753-1840
+  name_termsOfAddress: null
+  num_pages: 872
+  place: Edinburgh
+  publisher: For T. Bonar by J. Brown
+  subtitle: null
+  temporal: null
+  title: Supplement to the third edition of the Encyclopaedia Britannica ... Illustrated
+    with ... copperplates
+  topic: null
+  year: 1803
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253814:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 16, RAN-SCO
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 844
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253817:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 18, STR-ZYM
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 1076
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253819:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 1 Part 2, Agriculture-AME
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 424
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253822:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 5, CIC-DIA
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 870
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253823:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 12, MIE-NEG
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 854
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253824:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 15, PLA-RAN
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 890
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253825:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 4 Part 1, Book-keeping-BRE
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 478
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253826:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 4 Part 2, BRE-BUR
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 412
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253835:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 13, NEH-PAS
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 860
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253836:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 15 Part 1, NIC-ORB
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 450
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253837:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 15 Part 2, ORC-PAR
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 438
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253838:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 14 Part 1, MIC-Moral philosophy
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 436
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191253839:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 14 Part 2, Moral philosophy-NIC
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 446
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191319917:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 16, RAN-SCO
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 834
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191320009:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 9, Hydrostatics-LES
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 866
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191320556:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 5 Part 1, BUR-CHA
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 430
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191320557:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 5 Part 2, CHA-CHI
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 414
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191320558:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 17 Part 2, Projectiles-RHI
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 456
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191320559:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 17 Part 1, Poetry-Projectiles
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 422
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191320560:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 8 Part 1, ELE-FAI
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 430
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191320561:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 8 Part 2, FAI-FOR
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 432
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191678897:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 7, CTE-Electricity
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 886
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191678898:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 8, ELE-FOR
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 856
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191678899:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 20, SUI-ZYM
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 956
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191678900:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 20 Part 1, SUI-THE
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 452
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191678901:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 20 Part 2, THE-ZYM
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 614
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191678902:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 13 Part 1, Mathematics-Medicine
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 428
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191678903:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 13 Part 2, Medicine-MIC
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 438
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191679019:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 11 Part 1, HYD-JUN
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 432
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191679020:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 11 Part 2, JUP-LIE
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 424
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191679033:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 4, Book-keeping-BUR
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 888
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191689060:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 16 Part 1, PAR-PHL
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 432
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191689061:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 16 Part 2, PHO-Poetry
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 448
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191689062:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 17, Poetry-RHI
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 870
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191689063:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 2, AME-ASS
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 894
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191809865:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 3 Part 1, ASS-BAR
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 458
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/191809866:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 3 Part 2, BAR-BOO
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 418
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192016229:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 1, A-AME
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 848
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192016360:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 3
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 876
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192146221:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 4
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 848
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192200061:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 14, PAS-PLA
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 840
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192200897:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 15, NIC-PAR
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 884
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192200898:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 13, MAT-MIC
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 864
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192200899:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 19, Scripture-SUG
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 890
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192200900:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 14, MIC-NIC
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 880
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192200901:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 12, LIE-Materia medica
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 856
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192545783:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 2 Part 1, AME-ANS
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 446
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192545784:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 2 Part 2, ANT-ASS
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 452
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192545785:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 12 Part 1, LIE-MAG
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 420
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192545786:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 12 Part 2, MAH-Materia medica
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 438
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547776:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 6 Part 1, CHI-Conchology
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 428
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547777:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 6 Part 2, Conchology-Crystallization
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 448
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547778:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 7, ETM-GOA
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 894
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547779:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 8, GOB-HYD
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 848
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547785:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 11, HYD-LIE
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 856
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547786:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 5
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 902
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547787:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 6
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 944
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547788:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 5
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 898
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547789:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, General index
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 184
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192547790:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 1
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 902
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192692190:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 7 Part 2, Dyeing-Electricity
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 444
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192692191:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 7 Part 1, CTE-Dyeing
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 440
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192692192:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 10 Part 1, GOT-Heraldry
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 424
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192692193:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 10 Part 2, Heraldry-Hydrodynamics
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 442
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192692194:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 18 Part I, RHI-RUS
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 420
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192692195:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 18 Part 2, RUS-SCR
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 428
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192692638:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 16, PAR-Poetry
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 876
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192693199:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 12, Hydrodynamics-KYR
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 902
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192693395:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 2
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 880
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192693396:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 6
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 942
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192984254:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 5, BUR-CHI
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 836
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192984255:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 6, CHI-Crystallization
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 868
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192984256:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 18, RHI-SCR
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 844
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192984258:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 1, Preliminary dissertations
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 942
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192984259:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 2, A-Anatomy
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 974
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/192984260:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 1, Dissertations
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 1014
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193057498:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 1
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 952
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193057499:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 3
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 880
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193057500:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 3, Anatomy-Astronomy
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 982
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193057501:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 19, RAB-SCU
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 878
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108316:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 19 Part 1, SCR-SLE
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 450
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108317:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 19 Part 2, SLE-SUG
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 450
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108318:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 3, ASS-BOO
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 876
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108319:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 2
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 878
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108320:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 1
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 948
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108321:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 3
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 872
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108322:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 4, Astronomy-BOR
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 930
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108323:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 13, LAB-Magnetism
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 810
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108324:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 5, Bombay-BUR
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 982
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108325:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 8, Diamond-Entail
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 902
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193108326:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 18, PLA-REI
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 876
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109107:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 17, SCO-STR
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 918
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109108:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 9, FOR-GOT
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 872
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109109:
+  city: null
+  country: null
+  date: '1815'
+  edition: Fifth edition, Volume 10, GOT-Hydrodynamics
+  genre: encyclopedia
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 870
+  place: Edinburgh
+  publisher: Printed for A. Constable and Co.
+  subtitle: null
+  temporal: null
+  title: 'Encyclopaedia Britannica, or, a Dictionary of arts, sciences, and miscellaneous
+    literature : enlarged and improved. Illustrated with nearly six hundred engravings'
+  topic: Encyclopedias and dictionaries
+  year: 1815
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109110:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 9 Part 1, FOR-Gardening
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 430
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109111:
+  city: null
+  country: null
+  date: '1810'
+  edition: Fourth edition, Volume 9 Part 2, Gardening-GOT
+  genre: null
+  geographic: null
+  name: Millar, James
+  name_date: 1762-1827
+  name_termsOfAddress: null
+  num_pages: 472
+  place: Edinburgh
+  publisher: null
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica; or, A dictionary of arts, sciences, and miscellaneous
+    literature
+  topic: null
+  year: 1810
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109112:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 2
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 870
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109113:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 6, Burning glasses-Climate
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 848
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109114:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 7, CLI-DIA
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 874
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193109115:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 10, France-GRA
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 854
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322688:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 8, DIA-England
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 974
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322689:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 14, Magnetism-Mexico
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 938
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322690:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 6, CAL-Clock
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 930
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322691:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 4, CAA-CIC
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 862
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322698:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 2, A-Anatomy
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 946
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322699:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 16, Navigation-Ornithology
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 880
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322700:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 9, Entomology-FRA
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 936
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322701:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 19, Reid-Scythia
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 916
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193322702:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Index
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 290
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193469090:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 10, France-GRO
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 888
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193469091:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 17, PAN-Plastic nature
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 856
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193469092:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 18, PLA-QUI
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 842
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193469392:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 11, GRA-HUM
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 828
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193469393:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 20, Seamanship-SZO
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 1046
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193592632:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 15, Milan-NAV
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 868
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193638940:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 11, Grotius-HYD
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 872
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193696082:
+  city: null
+  country: null
+  date: '1824'
+  edition: Volume 4
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: null
+  num_pages: 844
+  place: Edinburgh
+  publisher: For A. Constable & Co.
+  subtitle: null
+  temporal: null
+  title: Supplement to the fourth, fifth and sixth editions of the Encyclopaedia Britannica
+  topic: null
+  year: 1824
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193696083:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 5, BOR-CAL
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 938
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193696084:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 9, England-FRA
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 940
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193696085:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 3, Anatomy-Astronomy
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 1066
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193696086:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 4, Astronomy-BOM
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 1030
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193696087:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 12, Hume-JOM
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 858
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193696088:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 14, Magnetism-MIH
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 874
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193819043:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 7, CLO-Dialling
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 878
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193819044:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 15, MEY-Navigation
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 884
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193819045:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 21, Surveying-ZYM
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 1066
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193819046:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 17, ORO-Plato
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 846
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193819047:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 21, T-ZWO
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 1062
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193913444:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 20, Sculpture-SUR
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 1056
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/193916150:
+  city: null
+  country: null
+  date: 1853-1860
+  edition: Eighth edition, Volume 13, Jonah-MAG
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 832
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1853
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/194167545:
+  city: null
+  country: null
+  date: '1797'
+  edition: Third edition, Volume 2, ANG-BAR
+  genre: null
+  geographic: null
+  name: null
+  name_date: null
+  name_termsOfAddress: null
+  num_pages: 936
+  place: Edinburgh
+  publisher: printed for A. Bell and C. Macfarquhar
+  subtitle: or, a dictionary of arts, sciences, and miscellaneous literature; ...
+    The third edition, in eighteen volumes, greatly improved. Illustrated with five
+    hundred and forty-two copperplates
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1797
+/home/rosa_filgueira_vicente/datasets/nls-data-encyclopaediaBritannica/194474782:
+  city: null
+  country: null
+  date: '1842'
+  edition: Seventh edition, Volume 16, Navigation-PAN
+  genre: null
+  geographic: null
+  name: Stewart, Dugald
+  name_date: 1753-1828
+  name_termsOfAddress: Sir
+  num_pages: 868
+  place: Edinburgh
+  publisher: A. & C. Black
+  subtitle: null
+  temporal: null
+  title: Encyclopaedia Britannica
+  topic: null
+  year: 1842
