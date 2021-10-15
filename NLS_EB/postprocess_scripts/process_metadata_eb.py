@@ -65,6 +65,7 @@ def create_dataframe(query_results):
     for i in metadata_results:
         column_list=list(metadata_results[i].keys())
         break
+    print("column_list is %s" %column_list)
         
     data=[]
     for i in metadata_results:
@@ -104,6 +105,8 @@ def create_dataframe(query_results):
                 df.loc[i ,"volume"] = volume
       
             
+    
+    
     df["edition_num"] = "0"
     list_editions={"1":["first", "First"], "2":["second", "Second"],"3":["third", "Third"],
                    "4":["fourth", "Fourth"], "5":["fifth","Fifth"], "6":["sixth","Sixth"], 
@@ -131,9 +134,10 @@ def create_dataframe(query_results):
                         related_editions.append(ed)
                         
             df.loc[i, "supplement_to_editions"]=','.join(related_editions)
+    
+    df["supplement_to_editions"] = df.supplement_to_editions.str.split(",").tolist()
 
     return df
-
 
 # ### 1. Reading data
 
