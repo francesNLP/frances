@@ -67,13 +67,6 @@ def clean_topics_terms(term):
 
 
 
-def create_dataframe_from_file(filename):
-    with open('../results_NLS/'+filename, 'r') as f:
-        query_results = safe_load(f)
-    
-    df = create_dataframe(query_results)
-    return df
-
 
 
 
