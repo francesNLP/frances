@@ -89,17 +89,8 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 	- year:                 Year of the Volume
 	- volume:               Volume (e.g. 1)
 	- letters:              Leters of the volume (e.g. A-B)
-	
 	TODO
 	- [similar_terms]:      TODO- Doc2Vec similar terms
-	- author
-	- publisher
-	- editor
-	- source_ALTO_XML
-	- source_METS_XML
-	- language
-	- library
-	- tittle_encyclop.
 	
 We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
@@ -122,9 +113,18 @@ These dataframes are stored as JSON files (using orient="index") in [NLS_EB/resu
 df.to_json(r'./results_NLS/results_eb_1_edition_postprocess_dataframe', orient="index") 
 ```
 
-## 6. EB Metadata
+## 6. Extracting all EB Metadata
+
+
+We have also improved our query for extracting all the metadata from the all volumes from EB. 
+
+```
+spark-submit --py-files defoe.zip defoe/run_query.py nls_first_edition.txt nls defoe.nls.queries.metadata_yaml  -r frances/ results_NLS/eb_metadata_details.txt -n 34 
+```
 
 [EB Metadata Jupyter](https://github.com/francesNLP/frances/blob/main/NLS_EB/Metadata_EB.ipynb)
+
+propierties extracted: 
 
 - MMSID
 - city
