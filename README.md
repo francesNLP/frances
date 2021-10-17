@@ -153,7 +153,7 @@ propierties extracted:
 - permanent_URL
 - publisher_persons
 
-Example:
+
 <img width="795" alt="Screen Shot 2021-10-17 at 15 19 35" src="https://user-images.githubusercontent.com/6940078/137631543-7e4e88e8-7911-4cc7-8bb7-6e9d4b380d5f.png">
 
 
