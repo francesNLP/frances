@@ -113,7 +113,7 @@ These dataframes are stored as JSON files (using orient="index") in [NLS_EB/resu
 df.to_json(r'./results_NLS/results_eb_1_edition_postprocess_dataframe', orient="index") 
 ```
 
-## 6. Extracting all EB Metadata
+## 5. Extracting all EB Metadata
 
 
 We have also improved our query for extracting all the metadata from the all volumes from EB. 
@@ -157,7 +157,7 @@ propierties extracted:
 <img width="795" alt="Screen Shot 2021-10-17 at 15 19 35" src="https://user-images.githubusercontent.com/6940078/137631543-7e4e88e8-7911-4cc7-8bb7-6e9d4b380d5f.png">
 
 
-## 7. Questions
+## 6. Questions
 
 Here a list of questions that we want to ask to these data (using the EB_Articles Clean Metadata):
 
@@ -189,19 +189,19 @@ Here a list of questions that we want to ask to these data (using the EB_Article
   - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
 
 
-## 8. Data Model Proposed
+## 7. Data Model Proposed
 
 <img width="846" alt="Screen Shot 2021-10-17 at 15 15 39" src="https://user-images.githubusercontent.com/6940078/137631318-8e2eb87f-3ab5-4fe6-bfbf-78a9688122a9.png">
 
 
 
-## 9. Architecture Proposed 
+## 8. Architecture Proposed 
 
 
 <img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
 
 
-## 10. ElasticSearch
+## 9. ElasticSearch
 
 Terminal 1:
 
