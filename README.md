@@ -122,7 +122,42 @@ These dataframes are stored as JSON files (using orient="index") in [NLS_EB/resu
 df.to_json(r'./results_NLS/results_eb_1_edition_postprocess_dataframe', orient="index") 
 ```
 
-## 5. Questions
+## 6. EB Metadata
+
+[EB Metadata Jupyter](https://github.com/francesNLP/frances/blob/main/NLS_EB/Metadata_EB.ipynb)
+
+- MMSID
+- city
+- country
+- dateIssued
+- edition
+- editor
+- editor_date
+- name_termsOfAddress'
+- genre
+- geographic
+- language
+- num_pages
+- physical_description
+- place
+- publisher
+- referenced_by
+- shelfLocator
+- subtitle
+- temporal
+- title
+- topic
+- year
+- volume_id
+- mets_xml
+- permanent_URL
+- publisher_persons
+
+Example:
+<img width="795" alt="Screen Shot 2021-10-17 at 15 19 35" src="https://user-images.githubusercontent.com/6940078/137631543-7e4e88e8-7911-4cc7-8bb7-6e9d4b380d5f.png">
+
+
+## 7. Questions
 
 Here a list of questions that we want to ask to these data (using the EB_Articles Clean Metadata):
 
@@ -154,19 +189,19 @@ Here a list of questions that we want to ask to these data (using the EB_Article
   - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
 
 
-## 6. Data Model Proposed
+## 8. Data Model Proposed
+
+<img width="846" alt="Screen Shot 2021-10-17 at 15 15 39" src="https://user-images.githubusercontent.com/6940078/137631318-8e2eb87f-3ab5-4fe6-bfbf-78a9688122a9.png">
 
 
-<img width="844" alt="Screen Shot 2021-10-12 at 13 30 08" src="https://user-images.githubusercontent.com/6940078/136956325-91ec2e62-2b58-4770-b7dc-4f2721bedff4.png">
 
-
-## 7. Architecture Proposed 
+## 9. Architecture Proposed 
 
 
 <img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
 
 
-## 8. ElasticSearch
+## 10. ElasticSearch
 
 Terminal 1:
 
