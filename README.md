@@ -1,6 +1,6 @@
 # frances
 
-## 1. Extracting automatically EB_Articles with defoe
+## 1. Extracting automatically Articles of the Encyclopaedia Britanica (EB) with defoe
 
 We have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
 
@@ -17,7 +17,7 @@ We have stored these data stored in [NLS_EB/results_NLS](https://github.com/fran
 
 We have **8 EB editions**, meaning that we have 8 extracted YAML files in total!! 
 
-## 2. EB_Articles metadata 
+## 2. Raw defoe Metadata from the EB Articles 
 
 Each YAML file has a row per article found within a page ([Example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition)), with the following columns (being the most important **term** , **definition** and **type_page**):
  
@@ -61,7 +61,7 @@ Therefore a page can be classified (this information is stored in **type_page**)
 Important: **Topic** is just the way we named the *long articles* that expands more than a page. It does not refer to “NLP topic”.
 
 
-## 3. PostProcessing EB_Articles 
+## 3. Post-Processing the Articles from the EB 
 
 We have realised that those articles/topics need additional postprocess treatments before peforming futher analyses with them. For example, we need to merge articles and topics that are split across pages. We have also noticed that some pages have wrongly been classified as "Topic", since they should be classified as articles. And the first pages very often get confused as topics or articles - they should classified as "Full_Page". 
 
@@ -69,7 +69,7 @@ Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNL
 
 Here we have an [example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated) of the results of the 1st edition cleaned. 
 
-## 4. NEW EB_Articles Clean Metadata
+## 4. Post-Processed EB Articles Metadata 
 
 Furthermore, this notebook also re-arranges the updated information (and drops some metada) to create a **NEW dataframe per file/edition**, with the following **METADATA/COLUMNS/PROPERTIES**:
 
@@ -122,10 +122,11 @@ These dataframes are stored as JSON files (using orient="index") in [NLS_EB/resu
 df.to_json(r'./results_NLS/results_eb_1_edition_postprocess_dataframe', orient="index") 
 ```
 
-## 5. Extracting all EB Metadata
+## 5. Extracting all the information (until volume level) from the EB
 
 
-We have also improved our query for extracting all the metadata from the all volumes from EB. 
+We have also improved our query for extracting all the metadata from the all the editions, supplements and volumes from EB.
+In this case, we do not enter to extract the metadata at article level.
 
 ```
 spark-submit --py-files defoe.zip defoe/run_query.py nls_first_edition.txt nls defoe.nls.queries.metadata_yaml  -r frances/ results_NLS/eb_metadata_details.txt -n 34 
