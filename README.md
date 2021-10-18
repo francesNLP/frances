@@ -73,24 +73,33 @@ Here we have an [example](https://github.com/francesNLP/frances/blob/main/NLS_EB
 
 Furthermore, this notebook also re-arranges the updated information (and drops some metada) to create a **NEW dataframe per file/edition**, with the following **METADATA/COLUMNS/PROPERTIES**:
 
-	- term:                 Article/Topic name 
-	- definition:           Definition of the article/topic
-	- edition_num:          1,2,3,4,5,6,7,8
-	- header:               Header of the page's article/topic                                  
-	- num_words:            Number of words per article/topic
-	- place:                Place where the volume was edited (e.g. Edinburgh)                                    
-	- related_terms:        Related articles/topics (e.g. see X article)  
-	- source_text_file:     File Path of the XML file from which the article/topic belongs                             
-	- term_number_in_page:      Number of article/topic in the page     
-	- start_page:           Number page in which the article/topic starts 
-	- end_page:             Number page in which the article/topic ends 
-	- title:                Title of the Volume
-	- type_definition:      [ Article | Topic| Mix ]                                       
-	- year:                 Year of the Volume
-	- volume:               Volume (e.g. 1)
-	- letters:              Leters of the volume (e.g. A-B)
-	TODO
-	- [similar_terms]:      TODO- Doc2Vec similar terms
+	
+- definition:           Definition of a term
+- editionNum:           1,2,3,4,5,6,7,8
+- editionTitle:         Title of the edition
+- header:               Header of the page's term                                  
+- place:                Place where the volume was edited (e.g. Edinburgh)                                    
+- relatedTerms:         Related terms (see X article)  
+- altoXML:              File Path of the XML file from which the term belongs       
+- term:                 Term name                            
+- positionPage:         Position of ther term in the page     
+- startsAt:             Number page in which the term definition starts 
+- endsAt:               Number page in which the term definition ends 
+- volumeTitle:          Title of the Volume
+- typeTerm:             Type of term [Topic| Articles]                                       
+- year:                 Year of the edition
+- volumeNum:            Volume number (e.g. 1)
+- letters:              leters of the volume (A-B)
+- part:                 Part of the volume (e.g 1)
+- supplementTitle:      Supplement's Title
+- supplementsTo:        It suppelements to editions [1, 2, 3....]
+- numberOfWords:        Number of words per term definition
+- numberOfTerms:        Number of terms per page
+- numberOfPages:        Number of pages per volume
+- numberOfVolumes:      Number of volumes per edition or supplement
+
+TODO
+- [similar_terms]:      TODO- Doc2Vec similar terms
 	
 We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
@@ -126,35 +135,36 @@ spark-submit --py-files defoe.zip defoe/run_query.py nls_first_edition.txt nls d
 
 propierties extracted: 
 
-- MMSID
-- city
-- country
-- dateIssued
-- edition
-- editor
-- editor_date
-- name_termsOfAddress'
-- genre
-- geographic
-- language
-- num_pages
-- physical_description
-- place
-- publisher
-- referenced_by
-- shelfLocator
-- subtitle
-- temporal
-- title
-- topic
-- year
-- volume_id
-- mets_xml
-- permanent_URL
-- publisher_persons
+- MMSID: Metadata Management System ID
+- editionTitle:        Title of the edition
+- editionSubTilte:     Subtitle of the edition
+- editor:              Editor (person) of an edition or a supplement
+- termsOfAddress:      Terms of Address of the editor (e.g. Sir)
+- editor_date: Year of Birth - Year of Death
+- genre:        genre of the editions
+- language:     language used to write the volumes
+- numberOfPages: number of pages of a volume
+- physicalDescription: physical description of a edition
+- place: place printed of a edition or a supplement
+- publisher: publisher (organization or person) of an edition
+- referencedBy: books which reference an edition
+- shelfLocator: shelf locator of an edition
+- subTitle: subtitle of an edition
+- volumeTitle: title of a volume
+- year: year of print
+- volumeId: volume identifier
+- metsXML: XML mets file
+- permanentURL: URL of a volume
+- publisherPersons: list of publishers which are persons
+- volumeNum: Number of a volume
+- letters: Letters of a volume
+- part: Part of a volume
+- editionNum: Number of an editior
+- supplementTitle: Supplement subTitle
+- supplementsTo: List of editions which a supplement supplements to
+- numberOfVolumes: Number of volumes per edition or supplement
 
-
-<img width="795" alt="Screen Shot 2021-10-17 at 15 19 35" src="https://user-images.githubusercontent.com/6940078/137631543-7e4e88e8-7911-4cc7-8bb7-6e9d4b380d5f.png">
+<img width="634" alt="Screen Shot 2021-10-18 at 18 47 16" src="https://user-images.githubusercontent.com/6940078/137781600-f81433d7-d60e-425c-a40f-b8c9a4261b0c.png">
 
 
 ## 6. Questions
@@ -191,8 +201,7 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 
 ## 7. Data Model Proposed
 
-<img width="526" alt="Screen Shot 2021-10-18 at 12 11 24" src="https://user-images.githubusercontent.com/6940078/137720106-5fd83f0d-ad6d-4265-a818-f14b378d2fdb.png">
-
+<img width="608" alt="Screen Shot 2021-10-18 at 18 47 40" src="https://user-images.githubusercontent.com/6940078/137781740-f1a63929-3e5c-42b5-a422-37c31c669f76.png">
 
 ## 8. Architecture Proposed 
 
