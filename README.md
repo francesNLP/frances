@@ -191,7 +191,7 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 
 ## 7. Data Model Proposed
 
-<img width="826" alt="Screen Shot 2021-10-17 at 15 29 20" src="https://user-images.githubusercontent.com/6940078/137631904-e6fcebd5-e929-49d8-8609-2c3d71d00542.png">
+<img width="526" alt="Screen Shot 2021-10-18 at 12 11 24" src="https://user-images.githubusercontent.com/6940078/137720106-5fd83f0d-ad6d-4265-a818-f14b378d2fdb.png">
 
 
 ## 8. Architecture Proposed 
