@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-en:Volume a owl:Class ;
+eb:Volume a owl:Class ;
     rdfs:label "Volume" ;
     rdfs:comment "a book from an edition or a supplement" .
 
