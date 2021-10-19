@@ -46,43 +46,49 @@ def find_persons(text):
 
 
 def adding_metadata(query_results):
-    for i in query_results:
+     for i in query_results:
         volume_id=i.split("/")[-1]
         mets_xml = volume_id+ "-mets.xml"
-        query_results[i]["volume_id"] = volume_id
-        query_results[i]["mets_xml"] = mets_xml
-        query_results[i]["permanent_URL"] = "https://digital.nls.uk/"+volume_id
+        query_results[i]["volumeId"] = volume_id
+        query_results[i]["metsXML"] = mets_xml
+        query_results[i]["permanentURL"] = "https://digital.nls.uk/"+volume_id
         if query_results[i]["referenced_by"]:
             query_results[i]["referenced_by"]=query_results[i]["referenced_by"].split("----")
         if query_results[i]["publisher"]:
             persons=find_persons(query_results[i]["publisher"])
-            query_results[i]["publisher_persons"]=persons
+            query_results[i]["publisherPersons"]=persons
         else:
-            query_results[i]["publisher_persons"]=None
-    
+            query_results[i]["publisherPersons"]=None
+
 def create_dataframe(query_results):
   
     for i in metadata_results:
         column_list=list(metadata_results[i].keys())
         break
-    print("column_list is %s" %column_list)
         
     data=[]
     for i in metadata_results:
         data.append(metadata_results[i])
     df = pd.DataFrame(data, columns = column_list)
+    
+    df= df.rename(columns={"edition":"editionTitle", "subtitle":"editionSubTitle",
+                           "title":"volumeTitle", "referenced_by":"referencedBy",\
+                           "num_pages":"numberOfPages", "name_termsOfAddress":"termsOfAddress", 
+                           "physical_description": "physicalDescription"})
+    
    
-    df= df.drop(['geographic', 'country', 'topic', 'city'], axis=1)
+    df= df.drop(['geographic', 'country', 'topic', 'city', 'temporal', 'dateIssued'], axis=1)
     df["genre"] = "encyclopedia"
-    df["volume"] = 0
+    df["volumeNum"] = 0
     df["letters"] = ""
     df["part"] = 0
     
     
-    mask = df["edition"].str.contains('Volume')
+    mask = df["editionTitle"].str.contains('Volume')
     for i in range(0, len (mask)):
+     
         if mask[i]:
-            tmp=df.loc[i,'edition'].split("Volume ")[1].split(",")
+            tmp=df.loc[i,'editionTitle'].split("Volume ")[1].split(",")
             if len(tmp)>=1:
                 volume= tmp[0]
                 letters = tmp[-1].replace(" ","")
@@ -90,7 +96,7 @@ def create_dataframe(query_results):
                 if len(part_tmp)>1:
                     volume=part_tmp[0]
                     part = part_tmp[1]
-            
+    
                     try:
                         part = int(part)
                     except:
@@ -102,40 +108,55 @@ def create_dataframe(query_results):
                 volume = int(volume)
                 df.loc[i, "letters"] = letters
                 df.loc[i,"part"] = part
-                df.loc[i ,"volume"] = volume
+                df.loc[i ,"volumeNum"] = volume
       
             
-    
-    
-    df["edition_num"] = "0"
+    df["editionNum"] = "0"
     list_editions={"1":["first", "First"], "2":["second", "Second"],"3":["third", "Third"],
                    "4":["fourth", "Fourth"], "5":["fifth","Fifth"], "6":["sixth","Sixth"], 
                    "7":["seventh", "Seventh"], "8":["eighth", "Eighth"]}
     
     for ed in list_editions:
         for ed_versions in list_editions[ed]:
-            mask = df["edition"].str.contains(ed_versions)
-            df.loc[mask, 'edition_num'] = ed
+            mask = df["editionTitle"].str.contains(ed_versions)
+            df.loc[mask, 'editionNum'] = ed
             
             
-    df['edition_num']=df["edition_num"].astype(int)    
-    df["supplement"]=""
-    df["supplement_to_editions"]=""
+    df['editionNum']=df["editionNum"].astype(int)    
+    df["supplementTitle"]=""
+    df["supplementSubTitle"]=""
+    df["supplementsTo"]=""
     
-    mask= df["title"].str.contains("Supplement")
+    mask= df["volumeTitle"].str.contains("Supplement")
     for i in range(0, len (mask)):
         if mask[i]:
-            df.loc[i, 'supplement'] = df.loc[i, 'title'] + ","+df.loc[i, 'edition']
-            title= df.loc[i, 'title']
+            df.loc[i, 'supplementTitle'] = df.loc[i, 'volumeTitle']
+            df.loc[i, 'supplementSubTitle'] = df.loc[i, 'editionSubTitle']
+            df.loc[i, 'editionSubTitle'] = ""
+            df.loc[i, 'volumeTitle'] = df.loc[i, 'volumeTitle'] + ","+df.loc[i, 'editionTitle']
+            title= df.loc[i, 'supplementTitle']
             related_editions=[]
             for ed in list_editions:
                 for ed_versions in list_editions[ed]:
                     if ed_versions in title:
                         related_editions.append(ed)
                         
-            df.loc[i, "supplement_to_editions"]=','.join(related_editions)
+            df.loc[i, "supplementsTo"]=','.join(related_editions)
     
-    df["supplement_to_editions"] = df.supplement_to_editions.str.split(",").tolist()
+    df["supplementsTo"] = df.supplementsTo.str.split(",").tolist()
+    df["numberOfVolumes"]=0
+    
+    numberOfVolumes=df.groupby(df["editionNum"])["MMSID"].count().to_dict()
+    for i in range(1, len(numberOfVolumes)):
+        
+        df.loc[(df['editionNum']==i),"numberOfVolumes"]=numberOfVolumes[i]
+            
+    df_sup=df[df["supplementTitle"]!=""]
+    numberOfVolumesSup=df_sup.groupby(df_sup["supplementTitle"]).count()["MMSID"].to_dict()
+    
+    for i in numberOfVolumesSup:
+        df.loc[(df['supplementTitle']==i),"numberOfVolumes"]=numberOfVolumesSup[i]
+        
 
     return df
 
