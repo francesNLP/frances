@@ -1,0 +1,211 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix eb: <https://w3id.org/eb/> .
+@prefix en: <http://www.owl-ontologies.com/en#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+en:Volume a owl:Class ;
+    rdfs:label "Volume" .
+
+eb: a owl:Ontology ;
+    dc:creator "Rosa Filgueira" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "EB Ontology" ;
+    owl:versionInfo "0.0.1" .
+
+eb:Article a owl:Class ;
+    rdfs:label "Article" ;
+    rdfs:subClassOf eb:Term .
+
+eb:Number a owl:DatatypeProperty ;
+    rdfs:label "number" ;
+    rdfs:range xsd:string .
+
+eb:Topic a owl:Class ;
+    rdfs:label "Topic" ;
+    rdfs:subClassOf eb:Term .
+
+eb:altoXML a owl:DatatypeProperty ;
+    rdfs:label "alto x m l" ;
+    rdfs:range xsd:string .
+
+eb:dates a owl:DatatypeProperty ;
+    rdfs:label "dates" ;
+    rdfs:range xsd:string .
+
+eb:definition a owl:DatatypeProperty ;
+    rdfs:label "definition" ;
+    rdfs:range xsd:string .
+
+eb:editor a owl:ObjectProperty ;
+    rdfs:label "editor" ;
+    rdfs:domain eb:Edition,
+        eb:Supplement ;
+    rdfs:range eb:Person .
+
+eb:endsAt a owl:ObjectProperty ;
+    rdfs:label "ends at" ;
+    rdfs:domain eb:Term ;
+    rdfs:range eb:Page .
+
+eb:genre a owl:DatatypeProperty ;
+    rdfs:label "genre" ;
+    rdfs:range xsd:string .
+
+eb:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part" .
+
+eb:hasRevision a owl:ObjectProperty ;
+    rdfs:label "has revision" ;
+    rdfs:domain eb:Edition ;
+    rdfs:range eb:Edition .
+
+eb:header a owl:DatatypeProperty ;
+    rdfs:label "header" ;
+    rdfs:range xsd:string .
+
+eb:language a owl:DatatypeProperty ;
+    rdfs:label "language" ;
+    rdfs:range xsd:string .
+
+eb:letters a owl:DatatypeProperty ;
+    rdfs:label "letters" ;
+    rdfs:range xsd:string .
+
+eb:metsXML a owl:DatatypeProperty ;
+    rdfs:label "mets x m l" ;
+    rdfs:range xsd:string .
+
+eb:mmsid a owl:DatatypeProperty ;
+    rdfs:label "mmsid" ;
+    rdfs:range xsd:string .
+
+eb:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:range xsd:string .
+
+eb:nameTerm a owl:DatatypeProperty ;
+    rdfs:label "name term" ;
+    rdfs:range xsd:string .
+
+eb:numberOfPages a owl:DatatypeProperty ;
+    rdfs:label "number of pages" ;
+    rdfs:range xsd:string .
+
+eb:numberOfTerms a owl:DatatypeProperty ;
+    rdfs:label "number of terms" ;
+    rdfs:range xsd:int .
+
+eb:numberOfVolumes a owl:DatatypeProperty ;
+    rdfs:label "number of volumes" ;
+    rdfs:range xsd:int .
+
+eb:numberOfWords a owl:DatatypeProperty ;
+    rdfs:label "number of words" ;
+    rdfs:range xsd:int .
+
+eb:part a owl:DatatypeProperty ;
+    rdfs:label "part" ;
+    rdfs:range xsd:int .
+
+eb:permanentURL a owl:DatatypeProperty ;
+    rdfs:label "permanent u r l" ;
+    rdfs:range xsd:string .
+
+eb:physicalDescription a owl:DatatypeProperty ;
+    rdfs:label "physical description" ;
+    rdfs:range xsd:string .
+
+eb:place a owl:DatatypeProperty ;
+    rdfs:label "place" ;
+    rdfs:range xsd:string .
+
+eb:positionPage a owl:DatatypeProperty ;
+    rdfs:label "position page" ;
+    rdfs:range xsd:int .
+
+eb:publisher a owl:ObjectProperty ;
+    rdfs:label "publisher" ;
+    rdfs:domain eb:Edition,
+        eb:Supplement ;
+    rdfs:range eb:Organization,
+        eb:Person .
+
+eb:referencedBy a owl:ObjectProperty ;
+    rdfs:label "referenced by" ;
+    rdfs:domain eb:Edition ;
+    rdfs:range eb:Book .
+
+eb:relatedTerms a owl:ObjectProperty ;
+    rdfs:label "related terms" ;
+    rdfs:domain eb:Term .
+
+eb:shelfLocator a owl:DatatypeProperty ;
+    rdfs:label "shelf locator" ;
+    rdfs:range xsd:string .
+
+eb:similarTerms a owl:ObjectProperty ;
+    rdfs:label "similar terms" ;
+    rdfs:domain eb:Term ;
+    rdfs:range eb:Term .
+
+eb:startsAt a owl:ObjectProperty ;
+    rdfs:label "starts at" ;
+    rdfs:domain eb:Term ;
+    rdfs:range eb:Page .
+
+eb:subTitle a owl:DatatypeProperty ;
+    rdfs:label "sub title" ;
+    rdfs:range xsd:string .
+
+eb:supplementsTo a owl:ObjectProperty ;
+    rdfs:label "supplements to" ;
+    rdfs:domain eb:Supplement ;
+    rdfs:range eb:Edition .
+
+eb:termsOfAddress a owl:DatatypeProperty ;
+    rdfs:label "terms of address" ;
+    rdfs:range xsd:string .
+
+eb:titile a owl:DatatypeProperty ;
+    rdfs:label "titile" ;
+    rdfs:range xsd:string .
+
+eb:title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:range xsd:string .
+
+eb:tittle a owl:DatatypeProperty ;
+    rdfs:label "tittle" ;
+    rdfs:range xsd:string .
+
+eb:volumeId a owl:DatatypeProperty ;
+    rdfs:label "volume id" ;
+    rdfs:range xsd:string .
+
+eb:year a owl:DatatypeProperty ;
+    rdfs:label "year" ;
+    rdfs:range xsd:date .
+
+eb:Book a owl:Class ;
+    rdfs:label "Book" .
+
+eb:Organization a owl:Class ;
+    rdfs:label "Organization" .
+
+eb:Page a owl:Class ;
+    rdfs:label "Page" .
+
+eb:Person a owl:Class ;
+    rdfs:label "Person" .
+
+eb:Supplement a owl:Class ;
+    rdfs:label "Supplement" .
+
+eb:Edition a owl:Class ;
+    rdfs:label "Edition" .
+
+eb:Term a owl:Class ;
+    rdfs:label "Term" .
+
