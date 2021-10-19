@@ -1,13 +1,8 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix eb: <https://w3id.org/eb/> .
-@prefix en: <http://www.owl-ontologies.com/en#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-eb:Volume a owl:Class ;
-    rdfs:label "Volume" ;
-    rdfs:comment "a book from an edition or a supplement" .
 
 eb: a owl:Ontology ;
     dc:creator "Rosa Filgueira" ;
@@ -30,14 +25,18 @@ eb:Topic a owl:Class ;
     rdfs:comment "is the entry in the encyclopaedia describing a term in one or several pages."@en ; 
     rdfs:subClassOf eb:Term .
 
+eb:Volume a owl:Class ;
+    rdfs:label "Volume" ;
+    rdfs:comment "a book from an edition or a supplement" .
+
 eb:altoXML a owl:DatatypeProperty ;
     rdfs:label "alto x m l" ;
-    rdfs:comment "is the name of the ALTO XML file representing a page from a particular volume."; 
+    rdfs:comment "is the name of the ALTO XML file representing a page from a particular volume." ; 
     rdfs:range xsd:string .
 
 eb:dates a owl:DatatypeProperty ;
     rdfs:label "dates" ;
-    rdfs:comment "is the year of Birth - year of Death";
+    rdfs:comment "is the year of Birth - year of Death" ;
     rdfs:range xsd:string .
 
 eb:definition a owl:DatatypeProperty ;
@@ -47,20 +46,20 @@ eb:definition a owl:DatatypeProperty ;
 
 eb:editor a owl:ObjectProperty ;
     rdfs:label "editor" ;
-    rdfs:comment "is the editor of an edition or supplement";
+    rdfs:comment "is the editor of an edition or supplement" ;
     rdfs:domain eb:Edition,
         eb:Supplement ;
     rdfs:range eb:Person .
 
 eb:endsAt a owl:ObjectProperty ;
     rdfs:label "ends at" ;
-    rdfs:comment "is the page in which the description of a term finishes.";
+    rdfs:comment "is the page in which the description of a term finishes." ;
     rdfs:domain eb:Term ;
     rdfs:range eb:Page .
 
 eb:genre a owl:DatatypeProperty ;
     rdfs:label "genre" ;
-    rdfs:comment "is the genre of an edition or a supplement.";
+    rdfs:comment "is the genre of an edition or a supplement." ;
     rdfs:range xsd:string .
 
 eb:hasPart a owl:ObjectProperty ;
@@ -80,82 +79,82 @@ eb:header a owl:DatatypeProperty ;
 
 eb:language a owl:DatatypeProperty ;
     rdfs:label "language" ;
-    rdfs:comment "is the language used to write the encyclopaedia"; 
+    rdfs:comment "is the language used to write the encyclopaedia" ; 
     rdfs:range xsd:string .
 
 eb:letters a owl:DatatypeProperty ;
     rdfs:label "letters" ;
-    rdfs:comment "is the range from which the terms of an edition or supplement are splitted across volumes."; 
+    rdfs:comment "is the range from which the terms of an edition or supplement are splitted across volumes." ; 
     rdfs:range xsd:string .
 
 eb:metsXML a owl:DatatypeProperty ;
     rdfs:label "mets x m l" ;
-    rdfs:comment "is the name of the METS XML file representing a volume from a particular edition or supplement."; 
+    rdfs:comment "is the name of the METS XML file representing a volume from a particular edition or supplement." ; 
     rdfs:range xsd:string .
 
 eb:mmsid a owl:DatatypeProperty ;
     rdfs:label "mmsid" ;
-    rdfs:comment "is the Metadata Management System identifier of an edition or supplement"; 
+    rdfs:comment "is the Metadata Management System identifier of an edition or supplement" ; 
     rdfs:range xsd:string .
 
 eb:name a owl:DatatypeProperty ;
     rdfs:label "name" ;
-    rdfs:comment "is the name of an item"; 
+    rdfs:comment "is the name of an item" ; 
     rdfs:range xsd:string .
 
 eb:nameTerm a owl:DatatypeProperty ;
     rdfs:label "name term" ;
-    rdfs:comment "is the name of a term. "; 
+    rdfs:comment "is the name of a term. " ; 
     rdfs:range xsd:string .
 
 eb:numberOfPages a owl:DatatypeProperty ;
     rdfs:label "number of pages" ;
-    rdfs:comment "is the number of pages of a volume. "; 
+    rdfs:comment "is the number of pages of a volume. " ; 
     rdfs:range xsd:string .
 
 eb:numberOfTerms a owl:DatatypeProperty ;
     rdfs:label "number of terms" ;
-    rdfs:comment "is the number of terms of a page. "; 
+    rdfs:comment "is the number of terms of a page. " ; 
     rdfs:range xsd:int .
 
 eb:numberOfVolumes a owl:DatatypeProperty ;
     rdfs:label "number of volumes" ;
-    rdfs:comment "is the number of volumes of an edition or supplement. "; 
+    rdfs:comment "is the number of volumes of an edition or supplement. " ; 
     rdfs:range xsd:int .
 
 eb:numberOfWords a owl:DatatypeProperty ;
     rdfs:label "number of words" ;
-    rdfs:comment "is the number of words of an entry in the encyclopaedia. "; 
+    rdfs:comment "is the number of words of an entry in the encyclopaedia. " ; 
     rdfs:range xsd:int .
 
 eb:part a owl:DatatypeProperty ;
     rdfs:label "part" ;
-    rdfs:comment "is the number representing the part of a volume. "; 
+    rdfs:comment "is the number representing the part of a volume. " ; 
     rdfs:range xsd:int .
 
 eb:permanentURL a owl:DatatypeProperty ;
     rdfs:label "permanent u r l" ;
-    rdfs:comment "is the permanent URL of a volume. "; 
+    rdfs:comment "is the permanent URL of a volume. " ; 
     rdfs:range xsd:string .
 
 eb:physicalDescription a owl:DatatypeProperty ;
     rdfs:label "physical description" ;
-    rdfs:comment "is the physical description of an edition or supplement."; 
+    rdfs:comment "is the physical description of an edition or supplement." ; 
     rdfs:range xsd:string .
 
 eb:place a owl:DatatypeProperty ;
     rdfs:label "place" ;
-    rdfs:comment "is the place in which an edition or supplement was printed."; 
+    rdfs:comment "is the place in which an edition or supplement was printed." ; 
     rdfs:range xsd:string .
 
 eb:positionPage a owl:DatatypeProperty ;
     rdfs:label "position page" ;
-    rdfs:comment "is a number representing in which position appears a term in a page."; 
+    rdfs:comment "is a number representing in which position appears a term in a page." ; 
     rdfs:range xsd:int .
 
 eb:publisher a owl:ObjectProperty ;
     rdfs:label "publisher" ;
-    rdfs:comment "is the publisher of an edition or supplement. The publisher can be one or several persons, and/or an organization"; 
+    rdfs:comment "is the publisher of an edition or supplement. The publisher can be one or several persons, and/or an organization" ; 
     rdfs:domain eb:Edition,
         eb:Supplement ;
     rdfs:range eb:Organization,
@@ -163,40 +162,41 @@ eb:publisher a owl:ObjectProperty ;
 
 eb:referencedBy a owl:ObjectProperty ;
     rdfs:label "referenced by" ;
-    rdfs:comment "is a book which references an edition"; 
+    rdfs:comment "is a book which references an edition" ; 
     rdfs:domain eb:Edition ;
     rdfs:range eb:Book .
 
 eb:relatedTerms a owl:ObjectProperty ;
     rdfs:label "related terms" ;
-    rdfs:comment "is a property describing that a term is related with other terms."; 
-    rdfs:domain eb:Term .
+    rdfs:comment "is a property describing that a term is related with other terms." ; 
+    rdfs:domain eb:Term ;
+    rdfs:range eb:Term .
 
 eb:shelfLocator a owl:DatatypeProperty ;
     rdfs:label "shelf locator" ;
-    rdfs:comment "is the shelf locator in which an edition or supplement is stored in the library."; 
+    rdfs:comment "is the shelf locator in which an edition or supplement is stored in the library." ; 
     rdfs:range xsd:string .
 
 eb:similarTerms a owl:ObjectProperty ;
     rdfs:label "similar terms" ;
-    rdfs:comment "is a property describing that a term is similar to other terms."; 
+    rdfs:comment "is a property describing that a term is similar to other terms." ; 
     rdfs:domain eb:Term ;
     rdfs:range eb:Term .
 
 eb:startsAt a owl:ObjectProperty ;
     rdfs:label "starts at" ;
-    rdfs:comment "is the page in which the description of a term starts.";
+    rdfs:comment "is the page in which the description of a term starts." ;
     rdfs:domain eb:Term ;
     rdfs:range eb:Page .
 
 eb:subTitle a owl:DatatypeProperty ;
     rdfs:label "sub title" ;
-    rdfs:comment "is the subtitle of an item.";
+    rdfs:comment "is the subtitle of an item." ;
     rdfs:range xsd:string .
 
 eb:supplementsTo a owl:ObjectProperty ;
     rdfs:label "supplements to" ;
-    rdfs:comment "is the edition(s) that a supplement supplements.";
+    rdfs:comment "is the edition(s) that a supplement supplements." ;
     rdfs:domain eb:Supplement ;
     rdfs:range eb:Edition .
 
@@ -207,22 +207,22 @@ eb:termsOfAddress a owl:DatatypeProperty ;
 
 eb:title a owl:DatatypeProperty ;
     rdfs:label "title" ;
-    rdfs:comment "is the title of an item.";
+    rdfs:comment "is the title of an item." ;
     rdfs:range xsd:string .
 
 eb:volumeId a owl:DatatypeProperty ;
     rdfs:label "volume id" ;
-    rdfs:comment "is the identifier of a volume.";
+    rdfs:comment "is the identifier of a volume." ;
     rdfs:range xsd:string .
 
 eb:year a owl:DatatypeProperty ;
     rdfs:label "year" ;
-    rdfs:comment "is the year that an edition or supplement was published.";
+    rdfs:comment "is the year that an edition or supplement was published." ;
     rdfs:range xsd:date .
 
 eb:Book a owl:Class ;
     rdfs:label "Book" ;
-    rdfs:comment "is a book that is not part of the encyclopaedia.";
+    rdfs:comment "is a book that is not part of the encyclopaedia." .
 
 eb:Organization a owl:Class ;
     rdfs:label "Organization" ;
