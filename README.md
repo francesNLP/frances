@@ -1,6 +1,6 @@
 # frances
 
-## 1. Extracting automatically Articles of the Encyclopaedia Britanica (EB) with defoe
+## 1. Extracting automatically Articles of the Encyclopaedia Britannica (EB) with defoe
 
 We have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
 
