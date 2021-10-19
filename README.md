@@ -202,7 +202,7 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 
 ## 7. Data Model Proposed
 
-<img width="505" alt="dataModel" src="https://user-images.githubusercontent.com/6940078/137887893-d3175c3c-3be7-4967-af65-11d8eae56fe5.png">
+<img width="634" alt="dataModel" src="https://user-images.githubusercontent.com/6940078/137888772-85aecfac-372a-46a5-bf6a-ce2c54695d16.png">
 
 
 ## 8. Architecture Proposed 
