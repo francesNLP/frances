@@ -355,7 +355,7 @@ def fixing_articles(query_results):
 
 
 def fixing_topics(query_results):
-     for edition in query_results:
+    for edition in query_results:
         for page_idx in range(0, len(query_results[edition])):
             element = query_results[edition][page_idx][1]
             if (element["num_articles"] == 1) and ((element["type_page"]=="Article") or element["type_page"]=="Mix"):
@@ -365,7 +365,7 @@ def fixing_topics(query_results):
                     element["type_page"]=="Topic"
                     element["term"]=prev_element["term"]
     
-
+    return query_results
 
 
 def merge_articles(query_results):
@@ -660,6 +660,6 @@ def main():
 
     df.to_json(r'../results_NLS/'+filename+'_dataframe', orient="index")
 
-
+    print("FINISH!")
 if __name__ == "__main__":
     main()
