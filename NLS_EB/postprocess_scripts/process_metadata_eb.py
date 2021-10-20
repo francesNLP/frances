@@ -31,7 +31,7 @@ def read_query_results(filename):
 
 
 def write_query_results(filename, results):
-    with open('./results_NLS/'+filename, 'w') as f:
+    with open('../results_NLS/'+filename, 'w') as f:
         documents = yaml.dump(results, f)
 
 
