@@ -60,7 +60,7 @@ def adding_metadata(query_results):
         else:
             query_results[i]["publisherPersons"]=None
 
-def create_dataframe(query_results):
+def create_dataframe(metadata_results):
   
     for i in metadata_results:
         column_list=list(metadata_results[i].keys())
