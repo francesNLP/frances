@@ -134,15 +134,13 @@ def create_dataframe(query_results):
     df['altoXML']= a+ "/" + df["altoXML"]   
     df= df.drop(['archive_filename'], axis=1)
     
-   
-    df = df[df['term'] != '']
-    mask=df["term"].str.isalpha()
-    df=df.loc[mask] 
-    
     
     df = df[["term", "definition", "relatedTerms", "header", "startsAt", "endsAt", "numberOfTerms","numberOfWords", "numberOfPages",              "positionPage", "typeTerm", "editionTitle", "editionNum", "supplementTitle", "supplementsTo",              "year", "place", "volumeTitle", "volumeNum", "letters", "part", "altoXML"]]
     
    
+    df = df[df['term'] != '']
+    mask=df["term"].str.isalpha()
+    df=df.loc[mask] 
     
     return df
 
@@ -646,7 +644,7 @@ def main():
 
     articles_refined=fixing_articles(query_results_articles)
 
-    fixing_topics(articles_refined)
+    articles_refined = fixing_topics(articles_refined)
 
     topics_refined, merged_topics, freq_topics_terms =merge_topics(articles_refined)
 
@@ -658,7 +656,7 @@ def main():
 
     includeKeywords=["Article", "Topic", "Mix"]
 
-    df=df[df["typeTerm"].str.contains('|'.join(includeKeywords))]
+    df=df[df["typeTerm"].str.contains('|'.join(includeKeywords))].reset_index(drop=True)
 
     df.to_json(r'../results_NLS/'+filename+'_dataframe', orient="index")
 
