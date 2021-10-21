@@ -1,0 +1,1482 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/eb" ],
+    "title" : {
+      "undefined" : "EB Ontology"
+    },
+    "iri" : "https://w3id.org/eb#",
+    "version" : "0.0.1",
+    "author" : [ "Rosa Filgueira" ],
+    "description" : {
+      "en" : "An ontology designed to represent volumes, terms and editions of the Encyclopaedia Britannica. The ontology extends Schema.org."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://opensource.org/licenses/MIT",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rosa Filgueira",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "eb",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eb",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "EB Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "10",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "1",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "100",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "95",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/eb#Term",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Term",
+      "en" : "Term"
+    },
+    "subClasses" : [ "14", "15" ],
+    "comment" : {
+      "en" : "is an entry of a volume of the encyclopaedia"
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "31" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/eb#Person",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "comment" : {
+      "en" : "is a person"
+    },
+    "id" : "5",
+    "superClasses" : [ "41" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "43", "13", "5" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/eb#Supplement",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Supplement",
+      "en" : "Supplement"
+    },
+    "comment" : {
+      "en" : "is a supplement of an edition or edditions."
+    },
+    "id" : "12",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "31", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://schema.org/PublicationVolume",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PublicationVolume"
+    },
+    "subClasses" : [ "31" ],
+    "attributes" : [ "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/eb#Page",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Page",
+      "en" : "Page"
+    },
+    "comment" : {
+      "en" : "is an page that inside a volume."
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "8",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/eb#Topic",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Topic",
+      "en" : "Topic"
+    },
+    "comment" : {
+      "en" : "is the entry in the encyclopaedia describing a term in one or several pages."
+    },
+    "id" : "14",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "82",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "31", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "77"
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/eb#Book",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Book",
+      "en" : "Book"
+    },
+    "comment" : {
+      "en" : "is a book that is not part of the encyclopaedia."
+    },
+    "id" : "58",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://schema.org/Person",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "subClasses" : [ "5" ],
+    "attributes" : [ "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/eb#Edition",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Edition",
+      "en" : "Edition"
+    },
+    "comment" : {
+      "en" : "is an edition of the encyclopaedia"
+    },
+    "id" : "11",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://schema.org/Organization",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "subClasses" : [ "43" ],
+    "attributes" : [ "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://schema.org/Book",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Book"
+    },
+    "subClasses" : [ "11", "58", "12" ],
+    "attributes" : [ "external" ],
+    "id" : "50"
+  }, {
+    "instances" : 0,
+    "union" : [ "43", "5" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/eb#Volume",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Volume",
+      "en" : "Volume"
+    },
+    "comment" : {
+      "en" : "a book from an edition or a supplement"
+    },
+    "id" : "31",
+    "superClasses" : [ "59" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "4"
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/eb#Organization",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization"
+    },
+    "comment" : {
+      "en" : "is an organization"
+    },
+    "id" : "43",
+    "superClasses" : [ "71" ]
+  }, {
+    "iri" : "https://w3id.org/eb#Article",
+    "baseIri" : "https://w3id.org/eb",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Article",
+      "en" : "Article"
+    },
+    "comment" : {
+      "en" : "is the entry in the encyclopaedia describing a term in one or two paragraphs. Similar to an entry in a dictionary."
+    },
+    "id" : "15",
+    "superClasses" : [ "13" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/eb#shelfLocator",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "shelfLocator",
+      "en" : "shelf locator"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "is the shelf locator in which an edition or supplement is stored in the library."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/eb#editor",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "editor",
+      "en" : "editor"
+    },
+    "superproperty" : [ "6" ],
+    "domain" : "4",
+    "comment" : {
+      "en" : "is the editor of an edition or supplement"
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://schema.org/deathDate",
+    "baseIri" : "http://schema.org",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "deathDate"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/eb#supplementsTo",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "supplementsTo",
+      "en" : "supplements to"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "is the edition(s) that a supplement supplements."
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/eb#header",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "header",
+      "en" : "header"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "is the header of a page"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/eb#printedAt",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "printedAt",
+      "en" : "printed at"
+    },
+    "domain" : "21",
+    "comment" : {
+      "undefined" : "is the place in which an edition or supplement was printed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/eb#numberOfVolumes",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "numberOfVolumes",
+      "en" : "number of volumes"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the number of volumes of an edition or supplement."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "wasRevisionOf"
+    },
+    "domain" : "8",
+    "subproperty" : [ "34" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/eb#endsAtPage",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "endsAtPage",
+      "en" : "ends at page"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "is the page in which the description of a term finishes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/eb#relatedTerms",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "relatedTerms",
+      "en" : "related terms"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "is a property describing that a term is related with other terms."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/eb#language",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "language",
+      "en" : "language"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "is the language used to write the encyclopaedia"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/eb#name",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "domain" : "42",
+    "comment" : {
+      "en" : "is the name of an item"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://schema.org/publisher",
+    "baseIri" : "http://schema.org",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "publisher"
+    },
+    "domain" : "8",
+    "subproperty" : [ "46" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/eb#position",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "position",
+      "en" : "position"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Number representing the position in which a term appears  in a page."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/eb#hasPart",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasPart",
+      "en" : "has part"
+    },
+    "superproperty" : [ "55" ],
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the parthood property relating a Whole to a Part."
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/eb#startsAtPage",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "startsAtPage",
+      "en" : "starts at page"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "is the page in which the description of a term starts."
+    },
+    "attributes" : [ "object" ],
+    "id" : "56"
+  }, {
+    "range" : "50",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/eb#referencedBy",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "referencedBy",
+      "en" : "referenced by"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "is a book which references an edition"
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "range" : "50",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://schema.org/editor",
+    "baseIri" : "http://schema.org",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "editor"
+    },
+    "domain" : "8",
+    "subproperty" : [ "3" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/eb#Number",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "Number",
+      "en" : "number"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the number of the item (e.g., volume 2, page 100, etc.)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/eb#numberOfWords",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "numberOfWords",
+      "en" : "number of words"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the number of words of an entry in the encyclopaedia."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "range" : "41",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "59",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/eb#deathDate",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "deathDate",
+      "en" : "death date"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Date of death of a person"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "67"
+  }, {
+    "range" : "50",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "71",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "70"
+  }, {
+    "range" : "13",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "13",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/eb#title",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "title"
+    },
+    "domain" : "77",
+    "comment" : {
+      "en" : "is the title of an item."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/eb#birthDate",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "birthDate",
+      "en" : "Birth date"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Date of birth of a person"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://schema.org/hasPart",
+    "baseIri" : "http://schema.org",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasPart"
+    },
+    "domain" : "8",
+    "subproperty" : [ "54" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/eb#subtitle",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "subtitle",
+      "en" : "subtitle"
+    },
+    "domain" : "85",
+    "comment" : {
+      "en" : "is the subtitle of an item."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/eb#similarTerms",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "similarTerms",
+      "en" : "similar terms"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "is a property describing that a term is similar to other terms."
+    },
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://schema.org/identifier",
+    "baseIri" : "http://schema.org",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://w3id.org/eb#definition",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "definition",
+      "en" : "definition"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "is the definition of a term in the encyclopaedia."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://schema.org/birthDate",
+    "baseIri" : "http://schema.org",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "birthDate"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://w3id.org/eb#letters",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "letters",
+      "en" : "letters"
+    },
+    "domain" : "49",
+    "comment" : {
+      "en" : "is the range from which the terms of an edition or supplement are splitted across volumes."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/eb#termsOfAddress",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "termsOfAddress",
+      "en" : "terms of address"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "is the terms of address of a person."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://w3id.org/eb#part",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "part",
+      "undefined" : "part"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "is the number representing the part of a volume. E.g., part 1 of 2"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/eb#publisher",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "publisher",
+      "en" : "publisher"
+    },
+    "superproperty" : [ "45" ],
+    "domain" : "95",
+    "comment" : {
+      "en" : "is the publisher of an edition or supplement. The publisher can be one or several persons, and/or an organization"
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/eb#physicalDescription",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "physicalDescription",
+      "en" : "physical description"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the physical description of an edition or supplement."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://w3id.org/eb#publicationYear",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "publicationYear",
+      "en" : "publication year"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "is the year that an edition or supplement was published."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/eb#revisionOf",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "revisionOf",
+      "en" : "revision of"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "is the property indicating the creatin of a new revision of an item"
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/eb#numberOfPages",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "numberOfPages",
+      "en" : "number of pages"
+    },
+    "domain" : "31",
+    "comment" : {
+      "en" : "is the number of pages of a volume."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/eb#genre",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "genre",
+      "en" : "genre"
+    },
+    "domain" : "100",
+    "comment" : {
+      "en" : "is the genre of an edition or a supplement."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/eb#numberOfTerms",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "numberOfTerms",
+      "en" : "number of terms"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "is the number of terms of a page."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/eb#permanentURL",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "permanentURL",
+      "en" : "permanent URL"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the permanent URL of a volume in the NLS."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/eb#mmsid",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "mmsid",
+      "en" : "mmsid"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the Metadata Management System identifier of an edition or supplement"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/eb#volumeId",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "volumeId",
+      "en" : "volume id"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the identifier of a volume."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/eb#altoXML",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "altoXML",
+      "en" : "alto XML"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the name of the ALTO XML file representing a page from a particular volume."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/eb#metsXML",
+    "baseIri" : "https://w3id.org/eb",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "metsXML",
+      "en" : "mets XML"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "is the name of the METS XML file representing a volume from a particular edition or supplement."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "109"
+  } ]
+}
