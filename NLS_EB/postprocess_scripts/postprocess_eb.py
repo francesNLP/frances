@@ -398,6 +398,7 @@ def fixing_articles(query_results):
     return new_results 
 
 
+def fixing_topics(query_results):
     eliminate_pages={}
     for edition in query_results:
         eliminate_pages[edition]=[]
