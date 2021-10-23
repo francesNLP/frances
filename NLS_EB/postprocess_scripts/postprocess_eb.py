@@ -425,6 +425,11 @@ def fixing_topics(query_results):
                         element["num_articles"] = 1
                     if page_idx == len(query_results[edition]):
                         break
+                       
+        
+    new_results= delete_entries(query_results, eliminate_pages)              
+    return new_results
+
 
 def merge_articles(query_results):
     eliminate_pages={}
