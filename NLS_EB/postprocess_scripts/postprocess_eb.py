@@ -424,7 +424,7 @@ def fixing_topics(query_results):
                                 element["related_terms"]+= n_element["related_terms"]
                                 eliminate_pages[edition].append(page_idx)
                             else:
-                                print("Dont entering here - element %s - term %s, page %s,  page_idx %s, len %s" %(edition, element["term"], query_results[edition][page_idx], page_idx, len(query_results[edition])))
+                                print("Dont entering here - element %s - term %s -  page %s - page_idx %s - len %s" %(edition, element["term"], query_results[edition][page_idx][0], page_idx, len(query_results[edition])))
                             
                         element["num_articles"] = 1    
             page_idx +=1   
