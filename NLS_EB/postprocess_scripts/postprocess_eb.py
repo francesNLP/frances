@@ -426,7 +426,7 @@ def fixing_topics(query_results):
                             else:
                                 print("Dont entering here - element %s - term %s -  page %s - page_idx %s - len %s" %(edition, element["term"], query_results[edition][page_idx][0], page_idx, len(query_results[edition])))
                             
-                        element["num_articles"] = 1    
+                    element["num_articles"] = 1    
             page_idx +=1   
         
     new_results= delete_entries(query_results, eliminate_pages)              
