@@ -406,9 +406,7 @@ def fixing_topics(query_results):
           
             element = query_results[edition][page_idx][1]
             if (element["num_articles"] < 3) and ((element["type_page"]=="Article") or element["type_page"]=="Mix"):
-                
                 prev_element = query_results[edition][page_idx-1][1]
-                element_term = element["term"].strip()
                 
                 if prev_element["type_page"]=="Topic":
                     element["type_page"] = "Topic"
@@ -416,21 +414,17 @@ def fixing_topics(query_results):
                     element["term"] = element["header"].strip()
                     
                     if element["num_articles"] > 1:
-                        p_dx = page_idx
                         for i in range(1, element["num_articles"]):
-                            page_idx += i
+                            page_idx += 1
                             n_element = query_results[edition][page_idx][1]
                             element["definition"]+=n_element["definition"]
                             element["num_article_words"]+=n_element["num_article_words"]
                             element["related_terms"]+= n_element["related_terms"]
-                            eliminate_pages[edition].append(p_dx)
+                            eliminate_pages[edition].append(page_idx)
                             
                         element["num_articles"] = 1
-                       
-        
-    new_results= delete_entries(query_results, eliminate_pages)              
-    return new_results
-
+                    if page_idx == len(query_results[edition]):
+                        break
 
 def merge_articles(query_results):
     eliminate_pages={}
