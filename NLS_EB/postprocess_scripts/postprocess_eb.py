@@ -402,8 +402,9 @@ def fixing_topics(query_results):
     eliminate_pages={}
     for edition in query_results:
         eliminate_pages[edition]=[]
-        for page_idx in range(0, len(query_results[edition])):
-          
+        page_idx = 0
+        
+        while page_idx < len(query_results[edition]):
             element = query_results[edition][page_idx][1]
             if (element["num_articles"] < 3) and ((element["type_page"]=="Article") or element["type_page"]=="Mix"):
                 prev_element = query_results[edition][page_idx-1][1]
@@ -423,16 +424,13 @@ def fixing_topics(query_results):
                                 element["related_terms"]+= n_element["related_terms"]
                                 eliminate_pages[edition].append(page_idx)
                             else:
-                                print("Dont entering here - element %s - ed %s, page_idx %s, len %s" %(edition, element["term"], page_idx, len(query_results[edition])))
+                                print("Dont entering here - element %s - term %s, page %s,  page_idx %s, len %s" %(edition, element["term"], query_results[edition][page_idx], page_idx, len(query_results[edition])))
                             
-                        element["num_articles"] = 1
-                    if page_idx == len(query_results[edition]):
-                        break
-                       
+                        element["num_articles"] = 1    
+            page_idx +=1   
         
     new_results= delete_entries(query_results, eliminate_pages)              
     return new_results
-
 
 def merge_articles(query_results):
     eliminate_pages={}
