@@ -661,7 +661,7 @@ def merge_topics_refine(query_results):
                 first_element["num_article_words"]+=element["num_article_words"]
                 first_element["num_page_words"]+=element["num_page_words"]                  
                 first_element["related_terms"]+= element["related_terms"]
-                first_element["end_page"] = int(element['text_unit_id'].split("Page")[1])
+                first_element["end_page"] = element['end_page']
                 provenance_removal[edition].append(first_element["end_page"])
                 merged_topics_refine[edition].append(term)
                 eliminate_pages[edition].append(p_id)
