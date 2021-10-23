@@ -482,11 +482,16 @@ def merge_articles(query_results):
                     else:
                         print("Edition %s -ERROR page %s -" % (edition,current_page))
                   
-                    for update_element_idx in range(page_number_dict[current_page], page_idx+1):
-                        if query_results[edition][update_element_idx][0] == current_page:
-                            query_results[edition][update_element_idx][1]["num_page_words"]-=num_article_words
-                            query_results[edition][update_element_idx][1]["num_articles"]-=1
-                    
+                    pd_i = page_idx 
+                    for i in range(1, element["num_articles"]):
+                        if pd_i + 1 < len(query_results[edition]):
+                            pd_i += 1
+                            if query_results[edition][pd_i][1][0] == current_page:
+                                n_element = query_results[edition][pd_i][1]
+                                n_element["num_page_words"]-=num_article_words
+                                n_element["num_articles"]-=1
+                 
+    
                 
                 eliminate_pages[edition].append(page_idx)
             else:
@@ -495,7 +500,6 @@ def merge_articles(query_results):
     new_results= delete_entries(query_results, eliminate_pages)
     
     return new_results
-
 
 def merge_topics(query_results):
     eliminate_pages={}
