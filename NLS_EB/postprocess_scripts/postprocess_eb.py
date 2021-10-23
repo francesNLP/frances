@@ -486,7 +486,7 @@ def merge_articles(query_results):
                     for i in range(1, element["num_articles"]):
                         if pd_i + 1 < len(query_results[edition]):
                             pd_i += 1
-                            if query_results[edition][pd_i][1][0] == current_page:
+                            if query_results[edition][pd_i][0] == current_page:
                                 n_element = query_results[edition][pd_i][1]
                                 n_element["num_page_words"]-=num_article_words
                                 n_element["num_articles"]-=1
