@@ -28,6 +28,42 @@ def write_query_results(filename, results):
     with open('../results_NLS/'+filename, 'w') as f:
         documents = yaml.dump(results, f)
 
+def sort_query_results(query_results):
+    new_results={}
+    for edition in query_results:
+        new_results[edition]=[]
+        page_list=[]
+        for page_idx in range(0, len(query_results[edition])):
+            page_num = query_results[edition][page_idx][0]
+            if not page_list:
+                page_list.append(page_num)
+                new_results[edition].append(query_results[edition][page_idx])
+            
+            else:
+                last_element=page_list[-1]
+                if page_num >= last_element:
+                    page_list.append(page_num)
+                    new_results[edition].append(query_results[edition][page_idx])
+                else:
+                    ## insert the new page in page_list
+                    i_dx=0
+                    while page_list[i_dx] < page_num:
+                        i_dx+=1
+                    page_list.insert(i_dx, page_num)
+                    new_results[edition].insert(i_dx,query_results[edition][page_idx])
+    return new_results
+
+def consistency_query_results(query_results):
+      for i in query_results:
+        for j in range(0, len(query_results[i])):
+            page_num = query_results[i][j][0]
+            if j < (len(query_results[i])-1):
+                next_page_num = query_results[i][j+1][0]
+                if page_num > next_page_num:
+                    print("INCONSISTENCY for %s: %s and %s"% (i, page_num, next_page_num))
+
+
+
 
 def create_dataframe(query_results):
 
@@ -140,7 +176,12 @@ def create_dataframe(query_results):
    
     df = df[df['term'] != '']
     mask=df["term"].str.isalpha()
-    df=df.loc[mask] 
+    df=df.loc[mask]
+ 
+    ### NEW DECISION: Move Mix Articles as Article
+    mask = df["typeTerm"].str.contains("Mix")
+    df.loc[mask, 'typeTerm'] = "Article"
+    ###########
     
     return df
 
@@ -154,8 +195,14 @@ def similar(a, b):
 
 
 def most_frequent(List):
-    return max(set(List), key = List.count)
-
+    ### removed '' and ' ' keys
+    if '' in List: 
+        List.remove('')
+    if len(List) > 1:
+        a= max(set(List), key = List.count)
+        return a
+    else:
+        return ''
 
 
 def check_string(term, List):
@@ -248,7 +295,6 @@ def related_terms_info(related_terms):
                 if m is None:
                     term_up = term.upper()
                     if term_up !="FIG" and term_up !="NUMBER" and term_up!="EXAMPLE" and term_up!="PLATE" and term_up!="FIGURE":
-                        related_data.append(term_up) and term_up!="EXAMPLE" and term_up!="PLATE" and term_up!="FIGURE"
                         related_data.append(term_up)
     return related_data
 
@@ -272,7 +318,7 @@ def fixing_articles(query_results):
                 new_entries=[]
                 definition=element["definition"]
                 definition_list= definition.split(" ")
-                term = element["term"]
+                term = element["term"].strip()
                 flag = 0
                 sub_elements=[]
                 for word_idx in range(0, len(definition_list)):
@@ -288,7 +334,7 @@ def fixing_articles(query_results):
                        
                         new_element={}
                         elem=sub_elements[elem_idx]
-                        new_element["term"]=elem[0]
+                        new_element["term"]=elem[0].strip()
      
                         if elem_idx+1 < len(sub_elements):
                             sentence=definition_list[elem[1]+1: sub_elements[elem_idx+1][1]]
@@ -336,7 +382,7 @@ def fixing_articles(query_results):
                             new_element["edition"] = element["edition"]
                             
                             new_entries.append(new_element)
-                            list_terms.append(new_element["term"])
+                            list_terms.append(new_element["term"].strip())
                             term_id += 1
                         
                 if len(list_terms) > 12:
@@ -349,23 +395,41 @@ def fixing_articles(query_results):
                              
    
     new_results = deleting_adding_entries(query_results, eliminate_pages, create_entries)
-    return new_results
- 
-
+    return new_results 
 
 
 def fixing_topics(query_results):
+    eliminate_pages={}
     for edition in query_results:
+        eliminate_pages[edition]=[]
         for page_idx in range(0, len(query_results[edition])):
+          
             element = query_results[edition][page_idx][1]
-            if (element["num_articles"] == 1) and ((element["type_page"]=="Article") or element["type_page"]=="Mix"):
+            if (element["num_articles"] < 3) and ((element["type_page"]=="Article") or element["type_page"]=="Mix"):
+                
                 prev_element = query_results[edition][page_idx-1][1]
-                element_term = element["term"]
+                element_term = element["term"].strip()
+                
                 if prev_element["type_page"]=="Topic":
-                    element["type_page"]=="Topic"
-                    element["term"]=prev_element["term"]
-    
-    return query_results
+                    element["type_page"] = "Topic"
+                    #element["term"] = prev_element["term"]
+                    element["term"] = element["header"].strip()
+                    
+                    if element["num_articles"] > 1:
+                        p_dx = page_idx
+                        for i in range(1, element["num_articles"]):
+                            page_idx += i
+                            n_element = query_results[edition][page_idx][1]
+                            element["definition"]+=n_element["definition"]
+                            element["num_article_words"]+=n_element["num_article_words"]
+                            element["related_terms"]+= n_element["related_terms"]
+                            eliminate_pages[edition].append(p_dx)
+                            
+                        element["num_articles"] = 1
+                       
+        
+    new_results= delete_entries(query_results, eliminate_pages)              
+    return new_results
 
 
 def merge_articles(query_results):
@@ -400,7 +464,6 @@ def merge_articles(query_results):
                 num_article_words=element["num_article_words"]
                 related_terms=element["related_terms"]
             
-                
                 prev_elements = query_results[edition][previous_page_idx][1]
                 if prev_elements["last_term_in_page"]:
                    
@@ -409,13 +472,16 @@ def merge_articles(query_results):
                     prev_elements["related_terms"]+= related_terms
                     prev_number = int(prev_elements['text_unit_id'].split("Page")[1])
                     prev_elements["end_page"] = current_page
-                   
-                    if prev_number in page_number_dict: 
+                    
+                    if prev_number in page_number_dict:
                         for prev_articles_idx in range(page_number_dict[prev_number], page_idx):
                        
                             if query_results[edition][prev_articles_idx][0] == prev_number:
                            
-                                query_results[edition][prev_articles_idx][1]["num_page_words"]+=num_article_words
+                                 query_results[edition][prev_articles_idx][1]["num_page_words"]+=num_article_words
+                    else:
+                        print("Edition %s -ERROR page %s -" % (edition,current_page))
+                  
                     for update_element_idx in range(page_number_dict[current_page], page_idx+1):
                         if query_results[edition][update_element_idx][0] == current_page:
                             query_results[edition][update_element_idx][1]["num_page_words"]-=num_article_words
@@ -449,20 +515,23 @@ def merge_topics(query_results):
             element = query_results[edition][page_idx][1]
 
             if "Topic" in element['type_page'] and element["term"]!="" and element["term"]!=" ":
+        
                 
-                if check_string(element["term"], parts_string):
+                #if check_string(element["term"], parts_string):
                    
-                    ### It means that the previous page was a topic
-                    ### And we have one before and correct the error
-                    page_idx = page_idx -1 
-                    element = query_results[edition][page_idx][1]
-                    element['type_page']="Topic"
+                #   ### It means that the previous page was a topic
+                #   ### And we have one before and correct the error
+                #    page_idx = page_idx -1 
+                #    element = query_results[edition][page_idx][1]
+                #    element['type_page']="Topic"
                     
             
-                term=element["term"]
+                term=element["term"].strip()
                 clean_term=clean_topics_terms(term)
                 
                 next_page_idx= page_idx + 1
+                
+                #print("EXPLORING current page %s, term %s PID %s " %(current_page, term, page_idx ))
                       
                 if next_page_idx < len(query_results[edition]):
                     flag=0
@@ -471,17 +540,30 @@ def merge_topics(query_results):
                         next_element = query_results[edition][p_id][1]
    
                         if not check_string(next_element["term"], parts_string):
-                            next_term=clean_topics_terms(next_element["term"])
+                            next_term=clean_topics_terms(next_element["term"].strip())
                         else:
-                            next_term=next_element["term"]
-                    
-                        if similar(clean_term, next_term) > 0.72 or check_string(next_term, parts_string) or next_term in clean_term: 
-
-                            if term not in merged_topics[edition]:
-                                merged_topics[edition][clean_term]=[]
+                            next_term=next_element["term"].strip()
                         
-                            if not check_string(next_term, parts_string) :
-                                 merged_topics[edition][clean_term].append(next_term)
+                        if p_id < len(query_results[edition])-1:             
+                            two_next_element = query_results[edition][p_id+1][1]
+                            if not check_string(two_next_element["term"], parts_string):
+                                two_next_term=clean_topics_terms(two_next_element["term"])
+                            else:
+                                two_next_term=two_next_element["term"].strip()
+                        
+                        definition= next_element["definition"]
+                        #print("PAGE %s, len def %s" %(query_results[edition][p_id][0], len(definition)))
+                    
+                        if (similar(clean_term, next_term) > 0.72) or (len(definition)<=30) or check_string(next_term, parts_string) or next_term in clean_term or similar(clean_term, two_next_term) > 0.72: 
+                           
+                            if clean_term!="" or clean_term!=" ":
+                                if clean_term not in merged_topics[edition]:
+                                    merged_topics[edition][clean_term]=[]
+                                    merged_topics[edition][clean_term].append(clean_term)
+                        
+                                if not check_string(next_term, parts_string) :
+                                     merged_topics[edition][clean_term].append(next_term)
+                            
                          
                             element["definition"]+=next_element["definition"]
                             element["num_article_words"]+=next_element["num_article_words"]
@@ -489,31 +571,33 @@ def merge_topics(query_results):
                             element["related_terms"]+= next_element["related_terms"]
                             element["end_page"] = int(next_element['text_unit_id'].split("Page")[1])
                             provenance_removal[edition].append(element["end_page"])
+                            
 
                             eliminate_pages[edition].append(p_id)
                             tmp_idx= p_id + 1
+                            
                         else:
-                            flag = 1
+                            #flag = 1
                             break
                   
         
-                    if flag:
-                         page_idx= p_id
+                    #if flag:
+                    #     page_idx= p_id
                     
-                    else:
-                        page_idx = tmp_idx
+                    #else:
+                    page_idx = p_id
                         
                  
                     if clean_term in merged_topics[edition]:
                        
                         if merged_topics[edition][clean_term]:
                             freq_term=most_frequent(merged_topics[edition][clean_term])
-                            freq_topics_terms[edition][term]=freq_term
-                            element["term"]=freq_term
+                            freq_topics_terms[edition][clean_term]=freq_term
+                            element["term"]=freq_term.strip()
                         else:
-                            element["term"]=clean_term
+                            element["term"]=clean_term.strip()
                     else:
-                        element["term"]=clean_term
+                        element["term"]=clean_term.strip()
                     
                 else:
                     page_idx = next_page_idx
@@ -528,8 +612,6 @@ def merge_topics(query_results):
     new_results= delete_entries(query_results, eliminate_pages)
     
     return new_results, merged_topics, freq_topics_terms
-
-
 
 def merge_topics_refine(query_results):
     
@@ -547,38 +629,46 @@ def merge_topics_refine(query_results):
         while page_idx < len(query_results[edition]):
             
             element = query_results[edition][page_idx][1]
-            term = element["term"]
-           
-            
-            if "Topic" in element['type_page'] and term!="" and term!=" " and term[0] >= character:
+            term = element["term"].strip()
+
+            if "Topic" in element['type_page'] and term!="" :
+            #and term[0] >= character:
                 character=term[0]
                 if term not in topics_editions[edition]:
-                    topics_editions[edition][term]=page_idx
-                    #print("NEW: Topic --%s-- - Page: %s "%(term, topics_editions[edition][term]))
+                    topics_editions[edition][term]={}
+                    topics_editions[edition][term]["start"]=page_idx
+                    topics_editions[edition][term]["end"]= page_idx
+                    #print("NEW: Topic --%s-- - Start Page: %s, EN Page:%s "%(term, topics_editions[edition][term]["start"], topics_editions[edition][term]["end"]))
                 else:
-                    start_page_idx=topics_editions[edition][term]
-                    first_element = query_results[edition][start_page_idx][1]
-                    
-                    first_element["definition"]+=element["definition"]
-                    first_element["num_article_words"]+=element["num_article_words"]
-                    first_element["num_page_words"]+=element["num_page_words"]                  
-                    first_element["related_terms"]+= element["related_terms"]
-                    first_element["end_page"] = int(element['text_unit_id'].split("Page")[1])
-                    provenance_removal[edition].append(first_element["end_page"])
-                    merged_topics_refine[edition].append(term)
-                    eliminate_pages[edition].append(page_idx)
-                    
-                
+                    topics_editions[edition][term]["end"]=page_idx
+                    #print("UPDATE: Topic --%s-- - Start Page: %s, EN Page:%s "%(term, topics_editions[edition][term]["start"], topics_editions[edition][term]["end"]))        
             
             page_idx += 1
-            if term:
-                character=term[0]
+            #if term:
+            #    character=term[0]
+        
+        
+        for term in topics_editions[edition]:
+            
+            p_start= topics_editions[edition][term]["start"]
+            p_end =  topics_editions[edition][term]["end"]
+            first_element= query_results[edition][p_start][1]
+            #print("NEW: Topic --%s-- - Start Page: %s, EN Page:%s "%(term, topics_editions[edition][term]["start"], topics_editions[edition][term]["end"]))
+            
+            for p_id in range (p_start + 1, p_end+1):
+                element = query_results[edition][p_id][1]
+                first_element["definition"]+=element["definition"]
+                first_element["num_article_words"]+=element["num_article_words"]
+                first_element["num_page_words"]+=element["num_page_words"]                  
+                first_element["related_terms"]+= element["related_terms"]
+                first_element["end_page"] = int(element['text_unit_id'].split("Page")[1])
+                provenance_removal[edition].append(first_element["end_page"])
+                merged_topics_refine[edition].append(term)
+                eliminate_pages[edition].append(p_id)
         
     new_results= delete_entries(query_results, eliminate_pages)
     
     return new_results, provenance_removal, merged_topics_refine
-
-
 
 def page2full_pages(element):
     
@@ -639,8 +729,10 @@ def main():
     query_results=read_query_results(filename)
 
     dc_results = copy.deepcopy(query_results)
+    sorted_results= sort_query_results(dc_results)
+    consistency_query_results(sorted_results)
 
-    query_results_articles = merge_articles(dc_results)
+    query_results_articles = merge_articles(sorted_results)
 
     articles_refined=fixing_articles(query_results_articles)
 
@@ -654,7 +746,7 @@ def main():
 
     df=create_dataframe(final_refine)
 
-    includeKeywords=["Article", "Topic", "Mix"]
+    includeKeywords=["Article", "Topic"]
 
     df=df[df["typeTerm"].str.contains('|'.join(includeKeywords))].reset_index(drop=True)
 
