@@ -205,7 +205,6 @@ def most_frequent_simple(List):
     else:
         return ''
 
-def most_frequent(words_list, prev_car=None):
     
     result=''
     if '' in words_list: 
@@ -219,11 +218,14 @@ def most_frequent(words_list, prev_car=None):
         c = [item for item in Counter(words_list).most_common(2)]
         
         if len(c) > 1:
-            if len(c[0][0]) < 1 and len(c[1][0])>1:
+            if len(c[0][0]) < 1 and len(c[1][0])>=1:
                 result= c[1][0]
         
-            elif len(c[0][0]) > 1 and len(c[1][0])<1:
+            elif len(c[0][0]) >= 1 and len(c[1][0])<1:
                 result= c[0][0]
+
+            elif len(c[0][0]) < 1 and len(c[1][0])<1:
+                result=''
             
             elif c[0][1] == c[1][1]:
         
@@ -250,7 +252,6 @@ def most_frequent(words_list, prev_car=None):
             
             
                 if prev_car:
-                
                     if c[0][0][0] == prev_car:
                     
                         result= c[0][0]
@@ -272,9 +273,7 @@ def most_frequent(words_list, prev_car=None):
                  result= c[0][0]
         else:
             result= c[0][0]
-
     return result
-
 
 
 def check_string(term, List):
