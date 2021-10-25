@@ -90,13 +90,13 @@ def create_dataframe(query_results):
     df= df.rename(columns={"text_unit_id": "startsAt", "end_page":"endsAt", "type_page": "typeTerm", "edition":"editionTitle", "title":"volumeTitle", "related_terms":"relatedTerms", "source_text_file": "altoXML", "num_articles": "numberOfTerms", "num_text_unit": "numberOfPages", "num_article_words":"numberOfWords", "term_id_in_page":"positionPage"})
      
     #removing 'Page' from the string
-    df["startsAt"] = df["startsAt"].str.replace("Page", "")
+    df["startsAt"] = df["startsAt"].str.replace("Page", "", regex=True)
     df["startsAt"] = df["startsAt"].astype(int)
     df["endsAt"] = df["endsAt"].astype(int)
    
     
-    df['term'] = df["term"].str.replace("_def", "")
-    df['term']= df["term"].str.replace('[^a-zA-Z0-9]', '')
+    df['term'] = df["term"].str.replace("_def", "",  regex=True)
+    df['term']= df["term"].str.replace('[^a-zA-Z0-9]', '', regex=True)
     
     #mask=df["term"].str.isalpha()
     #df_new=df.loc[mask]
