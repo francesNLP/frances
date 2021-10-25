@@ -511,16 +511,17 @@ def fixing_topics(query_results):
 
 def merge_articles(query_results):
     eliminate_pages={}
+    page_number_dict={}
     for edition in query_results:
         eliminate_pages[edition]=[]
-        page_number_dict={}
+        page_number_dict[edition]={}
 
         for page_idx in range(0, len(query_results[edition])):
             prev_number = -1
             current_page=query_results[edition][page_idx][0]
             
-            if current_page not in page_number_dict:
-                page_number_dict[current_page]=page_idx
+            if current_page not in page_number_dict[edition]:
+                page_number_dict[edition][current_page]=page_idx
             
             element = query_results[edition][page_idx][1]
             
@@ -538,21 +539,19 @@ def merge_articles(query_results):
             if "previous_page" in element['term']:
                 current_definition= element["definition"]
                 previous_page_idx= page_idx -1
-                previous_page_number = current_page -1
                 num_article_words=element["num_article_words"]
                 related_terms=element["related_terms"]
             
                 prev_elements = query_results[edition][previous_page_idx][1]
-                if prev_elements["last_term_in_page"]:
-                   
+                prev_number = query_results[edition][previous_page_idx][0]
+                if prev_elements["last_term_in_page"] and current_page > prev_number:
                     prev_elements["definition"]+=current_definition
                     prev_elements["num_article_words"]+=num_article_words
                     prev_elements["related_terms"]+= related_terms
-                    prev_number = int(prev_elements['text_unit_id'].split("Page")[1])
                     prev_elements["end_page"] = current_page
                     
-                    if prev_number in page_number_dict and prev_number != -1:
-                        for prev_articles_idx in range(page_number_dict[prev_number], page_idx):
+                    if prev_number in page_number_dict[edition] and prev_number != -1:
+                        for prev_articles_idx in range(page_number_dict[edition][prev_number], page_idx):
                        
                             if query_results[edition][prev_articles_idx][0] == prev_number:
                            
@@ -577,9 +576,7 @@ def merge_articles(query_results):
    
     new_results= delete_entries(query_results, eliminate_pages)
     
-    return new_results
-
-
+    return new_results 
 
 def merge_topics(query_results):
     eliminate_pages={}
