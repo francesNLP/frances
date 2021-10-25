@@ -16,6 +16,7 @@ import pandas as pd
 from yaml import safe_load
 from pandas.io.json import json_normalize
 from difflib import SequenceMatcher
+from collections import Counter
 
 # ### Functions
 
@@ -194,7 +195,7 @@ def similar(a, b):
 
 
 
-def most_frequent(List):
+def most_frequent_simple(List):
     ### removed '' and ' ' keys
     if '' in List: 
         List.remove('')
@@ -203,6 +204,65 @@ def most_frequent(List):
         return a
     else:
         return ''
+
+def most_frequent(words_list, prev_car=None):
+    
+    result=''
+    if '' in words_list: 
+        words_list.remove('')
+        
+    if len(words_list) > 1:
+        
+        c = [item for item in Counter(words_list).most_common(2)]
+    
+        if len(c)> 1: 
+            if c[0][1] == c[1][1]:
+        
+                similar_count={}
+                similar_count[c[0][0]]=0
+                similar_count[c[1][0]]=0
+        
+                for i in words_list:
+                    if i != c[0][0] and i!=c[1][0]:
+                        
+                
+                        if similar(i, c[0][0]) > similar(i, c[1][0]):
+                            similar_count[c[0][0]]+=1
+                    
+                        elif similar(i, c[0][0]) < similar(i, c[1][0]):
+                            similar_count[c[1][0]]+=1
+                
+                if  similar_count[c[0][0]] > similar_count[c[1][0]]:
+                    result= c[0][0]
+                
+                elif similar_count[c[0][0]] < similar_count[c[1][0]]:
+        
+                    result= c[1][0]
+        
+                elif prev_car:
+                
+                    if c[0][0][0] == prev_car:
+                    
+                        result= c[0][0]
+                    elif c[1][0][0] == prev_car:
+                     
+                        result= c[1][0]
+                    
+                    elif c[0][0][0]> prev_car:
+                        result= c[0][0]
+                    
+                    else:
+                        result= c[1][0]
+                     
+                
+                else:
+                    result= c[0][0]
+            else:
+                 result= c[0][0]
+        else:
+            result= c[0][0]
+
+    return result
 
 
 def check_string(term, List):
@@ -506,6 +566,7 @@ def merge_topics(query_results):
     provenance_removal={}
     freq_topics_terms={}
     merged_topics={}
+    character_terms=[]
     parts_string=["Part", "Fart", "Parc", "CPart", "PI"]
     for edition in query_results:
         eliminate_pages[edition]=[]
@@ -533,10 +594,11 @@ def merge_topics(query_results):
                 term=element["term"].strip()
                 clean_term=clean_topics_terms(term)
                 
+                
                 next_page_idx= page_idx + 1
                 
                 #print("EXPLORING current page %s, term %s PID %s " %(current_page, term, page_idx ))
-                      
+                flag_force = 0  
                 if next_page_idx < len(query_results[edition]):
                     flag=0
                     tmp_idx = 0
@@ -558,7 +620,7 @@ def merge_topics(query_results):
                         definition= next_element["definition"]
                         #print("PAGE %s, len def %s" %(query_results[edition][p_id][0], len(definition)))
                     
-                        if (similar(clean_term, next_term) > 0.72) or (len(definition)<=30) or check_string(next_term, parts_string) or next_term in clean_term or similar(clean_term, two_next_term) > 0.72: 
+                        if (similar(clean_term, next_term) > 0.70) or (len(definition)<=30) or check_string(next_term, parts_string) or next_term in clean_term or similar(clean_term, two_next_term) > 0.70: 
                            
                             if clean_term!="" or clean_term!=" ":
                                 if clean_term not in merged_topics[edition]:
@@ -567,6 +629,8 @@ def merge_topics(query_results):
                         
                                 if not check_string(next_term, parts_string) :
                                      merged_topics[edition][clean_term].append(next_term)
+                                    
+                                
                             
                          
                             element["definition"]+=next_element["definition"]
@@ -575,11 +639,27 @@ def merge_topics(query_results):
                             element["related_terms"]+= next_element["related_terms"]
                             element["end_page"] = int(next_element['text_unit_id'].split("Page")[1])
                             provenance_removal[edition].append(element["end_page"])
-                            
-
                             eliminate_pages[edition].append(p_id)
                             tmp_idx= p_id + 1
                             
+                            if similar(clean_term, two_next_term) > 0.70:
+                                
+                                ## adding the two nexts ones. 
+                                
+                                element["definition"]+=two_next_element["definition"]
+                                element["num_article_words"]+=two_next_element["num_article_words"]
+                                element["num_page_words"]+=two_next_element["num_page_words"]                  
+                                element["related_terms"]+= two_next_element["related_terms"]
+                                element["end_page"] = int(two_next_element['text_unit_id'].split("Page")[1])
+                                provenance_removal[edition].append(two_next_element["end_page"])
+                                
+                                if not check_string(two_next_term, parts_string) :
+                                     merged_topics[edition][clean_term].append(two_next_term)
+                                        
+                                eliminate_pages[edition].append(p_id)
+                                tmp_idx= p_id + 1
+                                
+                        
                         else:
                             #flag = 1
                             break
@@ -595,7 +675,10 @@ def merge_topics(query_results):
                     if clean_term in merged_topics[edition]:
                        
                         if merged_topics[edition][clean_term]:
-                            freq_term=most_frequent(merged_topics[edition][clean_term])
+                            if character_terms:
+                                freq_term=most_frequent(merged_topics[edition][clean_term], character_terms[-1])
+                            else:
+                                freq_term=most_frequent(merged_topics[edition][clean_term])
                             freq_topics_terms[edition][clean_term]=freq_term
                             element["term"]=freq_term.strip()
                         else:
@@ -603,19 +686,24 @@ def merge_topics(query_results):
                     else:
                         element["term"]=clean_term.strip()
                     
+                    if len(clean_term)>1:
+                        character_terms.append(clean_term[0])  
                 else:
                     page_idx = next_page_idx
-                    
+                
+                
                 
                
             else:
                 page_idx += 1
+            
            
     #for ed in provenance_removal:
     #    print("ED:%s -- removing the following pages %s" %(ed, provenance_removal[ed]))
     new_results= delete_entries(query_results, eliminate_pages)
     
-    return new_results, merged_topics, freq_topics_terms
+    return new_results, merged_topics, freq_topics_terms, provenance_removal
+
 
 def merge_topics_refine(query_results):
     
