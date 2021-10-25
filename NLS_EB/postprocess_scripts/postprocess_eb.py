@@ -514,8 +514,9 @@ def merge_articles(query_results):
     for edition in query_results:
         eliminate_pages[edition]=[]
         page_number_dict={}
+
         for page_idx in range(0, len(query_results[edition])):
-            
+            prev_number = -1
             current_page=query_results[edition][page_idx][0]
             
             if current_page not in page_number_dict:
@@ -550,7 +551,7 @@ def merge_articles(query_results):
                     prev_number = int(prev_elements['text_unit_id'].split("Page")[1])
                     prev_elements["end_page"] = current_page
                     
-                    if prev_number in page_number_dict:
+                    if prev_number in page_number_dict and prev_number != -1:
                         for prev_articles_idx in range(page_number_dict[prev_number], page_idx):
                        
                             if query_results[edition][prev_articles_idx][0] == prev_number:
