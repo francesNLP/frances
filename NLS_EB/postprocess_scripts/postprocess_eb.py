@@ -820,7 +820,7 @@ def main():
 
     articles_refined = fixing_topics(articles_refined)
 
-    topics_refined, merged_topics, freq_topics_terms =merge_topics(articles_refined)
+    topics_refined, merged_topics, freq_topics_terms, provenance_removal =merge_topics(articles_refined)
 
     final_refine, provenance_removal,merged_topics_refine =merge_topics_refine(topics_refined)
 
