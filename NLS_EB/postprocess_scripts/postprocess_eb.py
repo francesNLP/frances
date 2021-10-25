@@ -205,7 +205,7 @@ def most_frequent_simple(List):
     else:
         return ''
 
-def most_frequent(words_list):
+def most_frequent(words_list, prev_car=None):
     
     result=''
     if '' in words_list: 
