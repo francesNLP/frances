@@ -205,6 +205,7 @@ def most_frequent_simple(List):
     else:
         return ''
 
+def most_frequent(words_list):
     
     result=''
     if '' in words_list: 
