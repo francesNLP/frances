@@ -1,0 +1,1491 @@
+<h2 id="crossreference" class="list">Cross reference for EB Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by EB Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Article" title="https://w3id.org/eb#Article">Article</a>
+      </li>
+      <li>
+         <a href="#Book" title="https://w3id.org/eb#Book">Book</a>
+      </li>
+      <li>
+         <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+      </li>
+      <li>
+         <a href="#Organization" title="https://w3id.org/eb#Organization">Organization</a>
+      </li>
+      <li>
+         <a href="#Page" title="https://w3id.org/eb#Page">Page</a>
+      </li>
+      <li>
+         <a href="#Person" title="https://w3id.org/eb#Person">Person</a>
+      </li>
+      <li>
+         <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+      </li>
+      <li>
+         <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+      </li>
+      <li>
+         <a href="#Topic" title="https://w3id.org/eb#Topic">Topic</a>
+      </li>
+      <li>
+         <a href="#Volume" title="https://w3id.org/eb#Volume">Volume</a>
+      </li>
+   </ul>
+   <div class="entity" id="Article">
+      <h3>Article<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Article</p>
+      <div class="comment">
+         <span class="markdown">is the entry in the encyclopaedia describing a term in one or two paragraphs. Similar to an entry in a dictionary.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Book">
+      <h3>Book<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Book</p>
+      <div class="comment">
+         <span class="markdown">is a book that is not part of the encyclopaedia.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Book"
+               target="_blank"
+               title="http://schema.org/Book">book</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#referencedBy" title="https://w3id.org/eb#referencedBy">referenced by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Edition">
+      <h3>Edition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Edition</p>
+      <div class="comment">
+         <span class="markdown">is an edition of the encyclopaedia</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Book"
+               target="_blank"
+               title="http://schema.org/Book">book</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#referencedBy" title="https://w3id.org/eb#referencedBy">referenced by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#revisionOf" title="https://w3id.org/eb#revisionOf">revision of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#revisionOf" title="https://w3id.org/eb#revisionOf">revision of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#supplementsTo" title="https://w3id.org/eb#supplementsTo">supplements to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Organization">
+      <h3>Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Organization</p>
+      <div class="comment">
+         <span class="markdown">is an organization</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Organization"
+               target="_blank"
+               title="http://schema.org/Organization">organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Page">
+      <h3>Page<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Page</p>
+      <div class="comment">
+         <span class="markdown">is an page that inside a volume.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#header" title="https://w3id.org/eb#header">header</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#numberOfTerms" title="https://w3id.org/eb#numberOfTerms">number of terms</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#endsAtPage" title="https://w3id.org/eb#endsAtPage">ends at page</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#startsAtPage" title="https://w3id.org/eb#startsAtPage">starts at page</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Person">
+      <h3>Person<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Person</p>
+      <div class="comment">
+         <span class="markdown">is a person</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Person"
+               target="_blank"
+               title="http://schema.org/Person">person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#birthDate" title="https://w3id.org/eb#birthDate">Birth date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#deathDate" title="https://w3id.org/eb#deathDate">death date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#termsOfAddress" title="https://w3id.org/eb#termsOfAddress">terms of address</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#editor" title="https://w3id.org/eb#editor">editor</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Supplement">
+      <h3>Supplement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Supplement</p>
+      <div class="comment">
+         <span class="markdown">is a supplement of an edition or edditions.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://schema.org/Book"
+               target="_blank"
+               title="http://schema.org/Book">book</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#supplementsTo" title="https://w3id.org/eb#supplementsTo">supplements to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Term">
+      <h3>Term<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Term</p>
+      <div class="comment">
+         <span class="markdown">is an entry of a volume of the encyclopaedia</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Article" title="https://w3id.org/eb#Article">Article</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Topic" title="https://w3id.org/eb#Topic">Topic</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#ldaTopic" title="https://w3id.org/eb#ldaTopic">LDA topic</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#definition" title="https://w3id.org/eb#definition">definition</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#endsAtPage" title="https://w3id.org/eb#endsAtPage">ends at page</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#position" title="https://w3id.org/eb#position">position</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#relatedTerms" title="https://w3id.org/eb#relatedTerms">related terms</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#similarTerms" title="https://w3id.org/eb#similarTerms">similar terms</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#startsAtPage" title="https://w3id.org/eb#startsAtPage">starts at page</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedTerms" title="https://w3id.org/eb#relatedTerms">related terms</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#similarTerms" title="https://w3id.org/eb#similarTerms">similar terms</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Topic">
+      <h3>Topic<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Topic</p>
+      <div class="comment">
+         <span class="markdown">is the entry in the encyclopaedia describing a term in one or several pages.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#summarizedTopic" title="https://w3id.org/eb#summarizedTopic">LDA topic</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Volume">
+      <h3>Volume<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#Volume</p>
+      <div class="comment">
+         <span class="markdown">a book from an edition or a supplement</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://schema.org/PublicationVolume"
+               target="_blank"
+               title="http://schema.org/PublicationVolume">publication volume</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#numberOfPages" title="https://w3id.org/eb#numberOfPages">number of pages</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#editor" title="https://w3id.org/eb#editor">editor</a>
+      </li>
+      <li>
+         <a href="#endsAtPage" title="https://w3id.org/eb#endsAtPage">ends at page</a>
+      </li>
+      <li>
+         <a href="#hasPart" title="https://w3id.org/eb#hasPart">has part</a>
+      </li>
+      <li>
+         <a href="#publisher" title="https://w3id.org/eb#publisher">publisher</a>
+      </li>
+      <li>
+         <a href="#referencedBy" title="https://w3id.org/eb#referencedBy">referenced by</a>
+      </li>
+      <li>
+         <a href="#relatedTerms" title="https://w3id.org/eb#relatedTerms">related terms</a>
+      </li>
+      <li>
+         <a href="#revisionOf" title="https://w3id.org/eb#revisionOf">revision of</a>
+      </li>
+      <li>
+         <a href="#similarTerms" title="https://w3id.org/eb#similarTerms">similar terms</a>
+      </li>
+      <li>
+         <a href="#startsAtPage" title="https://w3id.org/eb#startsAtPage">starts at page</a>
+      </li>
+      <li>
+         <a href="#supplementsTo" title="https://w3id.org/eb#supplementsTo">supplements to</a>
+      </li>
+   </ul>
+   <div class="entity" id="editor">
+      <h3>editor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#editor</p>
+      <div class="comment">
+         <span class="markdown">is the editor of an edition or supplement</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/editor"
+                  target="_blank"
+                  title="http://schema.org/editor">editor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Person" title="https://w3id.org/eb#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="endsAtPage">
+      <h3>ends at page<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#endsAtPage</p>
+      <div class="comment">
+         <span class="markdown">is the page in which the description of a term finishes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Page" title="https://w3id.org/eb#Page">Page</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPart">
+      <h3>has part<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#hasPart</p>
+      <div class="comment">
+         <span class="markdown">is the parthood property relating a Whole to a Part.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/hasPart"
+                  target="_blank"
+                  title="http://schema.org/hasPart">has part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="publisher">
+      <h3>publisher<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#publisher</p>
+      <div class="comment">
+         <span class="markdown">is the publisher of an edition or supplement. The publisher can be one or several persons, and/or an organization</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/publisher"
+                  target="_blank"
+                  title="http://schema.org/publisher">publisher</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="https://w3id.org/eb#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Person" title="https://w3id.org/eb#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="referencedBy">
+      <h3>referenced by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#referencedBy</p>
+      <div class="comment">
+         <span class="markdown">is a book which references an edition</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Book" title="https://w3id.org/eb#Book">Book</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="relatedTerms">
+      <h3>related terms<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#relatedTerms</p>
+      <div class="comment">
+         <span class="markdown">is a property describing that a term is related with other terms.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="revisionOf">
+      <h3>revision of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#revisionOf</p>
+      <div class="comment">
+         <span class="markdown">is the property indicating the creatin of a new revision of an item</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/prov#wasRevisionOf"
+                  target="_blank"
+                  title="http://www.w3.org/ns/prov#wasRevisionOf">was revision of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="similarTerms">
+      <h3>similar terms<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#similarTerms</p>
+      <div class="comment">
+         <span class="markdown">is a property describing that a term is similar to other terms.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="startsAtPage">
+      <h3>starts at page<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#startsAtPage</p>
+      <div class="comment">
+         <span class="markdown">is the page in which the description of a term starts.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Page" title="https://w3id.org/eb#Page">Page</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="supplementsTo">
+      <h3>supplements to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#supplementsTo</p>
+      <div class="comment">
+         <span class="markdown">is the edition(s) that a supplement supplements.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#altoXML" title="https://w3id.org/eb#altoXML">alto XML</a>
+      </li>
+      <li>
+         <a href="#birthDate" title="https://w3id.org/eb#birthDate">Birth date</a>
+      </li>
+      <li>
+         <a href="#deathDate" title="https://w3id.org/eb#deathDate">death date</a>
+      </li>
+      <li>
+         <a href="#definition" title="https://w3id.org/eb#definition">definition</a>
+      </li>
+      <li>
+         <a href="#genre" title="https://w3id.org/eb#genre">genre</a>
+      </li>
+      <li>
+         <a href="#header" title="https://w3id.org/eb#header">header</a>
+      </li>
+      <li>
+         <a href="#language" title="https://w3id.org/eb#language">language</a>
+      </li>
+      <li>
+         <a href="#ldaTopic" title="https://w3id.org/eb#ldaTopic">LDA topic</a>
+      </li>
+      <li>
+         <a href="#summarizedTopic" title="https://w3id.org/eb#summarizedTopic">LDA topic</a>
+      </li>
+      <li>
+         <a href="#letters" title="https://w3id.org/eb#letters">letters</a>
+      </li>
+      <li>
+         <a href="#metsXML" title="https://w3id.org/eb#metsXML">mets XML</a>
+      </li>
+      <li>
+         <a href="#mmsid" title="https://w3id.org/eb#mmsid">mmsid</a>
+      </li>
+      <li>
+         <a href="#name" title="https://w3id.org/eb#name">name</a>
+      </li>
+      <li>
+         <a href="#number" title="https://w3id.org/eb#number">number</a>
+      </li>
+      <li>
+         <a href="#numberOfPages" title="https://w3id.org/eb#numberOfPages">number of pages</a>
+      </li>
+      <li>
+         <a href="#numberOfTerms" title="https://w3id.org/eb#numberOfTerms">number of terms</a>
+      </li>
+      <li>
+         <a href="#numberOfVolumes" title="https://w3id.org/eb#numberOfVolumes">number of volumes</a>
+      </li>
+      <li>
+         <a href="#numberOfWords" title="https://w3id.org/eb#numberOfWords">number of words</a>
+      </li>
+      <li>
+         <a href="#part" title="https://w3id.org/eb#part">part</a>
+      </li>
+      <li>
+         <a href="#permanentURL" title="https://w3id.org/eb#permanentURL">permanent URL</a>
+      </li>
+      <li>
+         <a href="#physicalDescription" title="https://w3id.org/eb#physicalDescription">physical description</a>
+      </li>
+      <li>
+         <a href="#position" title="https://w3id.org/eb#position">position</a>
+      </li>
+      <li>
+         <a href="#printedAt" title="https://w3id.org/eb#printedAt">printed at</a>
+      </li>
+      <li>
+         <a href="#publicationYear" title="https://w3id.org/eb#publicationYear">publication year</a>
+      </li>
+      <li>
+         <a href="#shelfLocator" title="https://w3id.org/eb#shelfLocator">shelf locator</a>
+      </li>
+      <li>
+         <a href="#subtitle" title="https://w3id.org/eb#subtitle">subtitle</a>
+      </li>
+      <li>
+         <a href="#termsOfAddress" title="https://w3id.org/eb#termsOfAddress">terms of address</a>
+      </li>
+      <li>
+         <a href="#title" title="https://w3id.org/eb#title">title</a>
+      </li>
+      <li>
+         <a href="#volumeId" title="https://w3id.org/eb#volumeId">volume id</a>
+      </li>
+   </ul>
+   <div class="entity" id="altoXML">
+      <h3>alto XML<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#altoXML</p>
+      <div class="comment">
+         <span class="markdown">is the name of the ALTO XML file representing a page from a particular volume.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="birthDate">
+      <h3>Birth date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#birthDate</p>
+      <div class="comment">
+         <span class="markdown">Date of birth of a person</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/birthDate"
+                  target="_blank"
+                  title="http://schema.org/birthDate">birth date</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Person" title="https://w3id.org/eb#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="deathDate">
+      <h3>death date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#deathDate</p>
+      <div class="comment">
+         <span class="markdown">Date of death of a person</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/deathDate"
+                  target="_blank"
+                  title="http://schema.org/deathDate">death date</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Person" title="https://w3id.org/eb#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="definition">
+      <h3>definition<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#definition</p>
+      <div class="comment">
+         <span class="markdown">is the definition of a term in the encyclopaedia.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="genre">
+      <h3>genre<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#genre</p>
+      <div class="comment">
+         <span class="markdown">is the genre of an edition or a supplement.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="header">
+      <h3>header<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#header</p>
+      <div class="comment">
+         <span class="markdown">is the header of a page</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Page" title="https://w3id.org/eb#Page">Page</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="language">
+      <h3>language<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#language</p>
+      <div class="comment">
+         <span class="markdown">is the language used to write the encyclopaedia</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Volume" title="https://w3id.org/eb#Volume">Volume</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ldaTopic">
+      <h3>LDA topic<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#ldaTopic</p>
+      <div class="comment">
+         <span class="markdown">is the classification of a term into an NLP topic model.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="summarizedTopic">
+      <h3>LDA topic<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#summarizedTopic</p>
+      <div class="comment">
+         <span class="markdown">is the text summarization of a topic definition.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Topic" title="https://w3id.org/eb#Topic">Topic</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="letters">
+      <h3>letters<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#letters</p>
+      <div class="comment">
+         <span class="markdown">is the range from which the terms of an edition or supplement are splitted across volumes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="metsXML">
+      <h3>mets XML<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#metsXML</p>
+      <div class="comment">
+         <span class="markdown">is the name of the METS XML file representing a volume from a particular edition or supplement.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="mmsid">
+      <h3>mmsid<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#mmsid</p>
+      <div class="comment">
+         <span class="markdown">is the Metadata Management System identifier of an edition or supplement</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/identifier"
+                  target="_blank"
+                  title="http://schema.org/identifier">identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#name</p>
+      <div class="comment">
+         <span class="markdown">is the name of an item</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="https://w3id.org/eb#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Person" title="https://w3id.org/eb#Person">Person</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="number">
+      <h3>number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#number</p>
+      <div class="comment">
+         <span class="markdown">is the number of the item (e.g., volume 2, page 100, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="numberOfPages">
+      <h3>number of pages<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#numberOfPages</p>
+      <div class="comment">
+         <span class="markdown">is the number of pages of a volume.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Volume" title="https://w3id.org/eb#Volume">Volume</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="numberOfTerms">
+      <h3>number of terms<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#numberOfTerms</p>
+      <div class="comment">
+         <span class="markdown">is the number of terms of a page.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Page" title="https://w3id.org/eb#Page">Page</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="numberOfVolumes">
+      <h3>number of volumes<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#numberOfVolumes</p>
+      <div class="comment">
+         <span class="markdown">is the number of volumes of an edition or supplement.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="numberOfWords">
+      <h3>number of words<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#numberOfWords</p>
+      <div class="comment">
+         <span class="markdown">is the number of words of an entry in the encyclopaedia.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="part">
+      <h3>part<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#part</p>
+      <div class="comment">
+         <span class="markdown">is the number representing the part of a volume. E.g., part 1 of 2</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Volume" title="https://w3id.org/eb#Volume">Volume</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="permanentURL">
+      <h3>permanent URL<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#permanentURL</p>
+      <div class="comment">
+         <span class="markdown">is the permanent URL of a volume in the NLS.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/identifier"
+                  target="_blank"
+                  title="http://schema.org/identifier">identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="physicalDescription">
+      <h3>physical description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#physicalDescription</p>
+      <div class="comment">
+         <span class="markdown">is the physical description of an edition or supplement.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="position">
+      <h3>position<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#position</p>
+      <div class="comment">
+         <span class="markdown">Number representing the position in which a term appears  in a page.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Term" title="https://w3id.org/eb#Term">Term</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="printedAt">
+      <h3>printed at<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#printedAt</p>
+      <div class="comment">
+         <span class="markdown">is the place in which an edition or supplement was printed.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="publicationYear">
+      <h3>publication year<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#publicationYear</p>
+      <div class="comment">
+         <span class="markdown">is the year that an edition or supplement was published.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="shelfLocator">
+      <h3>shelf locator<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#shelfLocator</p>
+      <div class="comment">
+         <span class="markdown">is the shelf locator in which an edition or supplement is stored in the library.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subtitle">
+      <h3>subtitle<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#subtitle</p>
+      <div class="comment">
+         <span class="markdown">is the subtitle of an item.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="termsOfAddress">
+      <h3>terms of address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#termsOfAddress</p>
+      <div class="comment">
+         <span class="markdown">is the terms of address of a person.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Person" title="https://w3id.org/eb#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="title">
+      <h3>title<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#title</p>
+      <div class="comment">
+         <span class="markdown">is the title of an item.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Edition" title="https://w3id.org/eb#Edition">Edition</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Supplement" title="https://w3id.org/eb#Supplement">Supplement</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Volume" title="https://w3id.org/eb#Volume">Volume</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="volumeId">
+      <h3>volume id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/eb#volumeId</p>
+      <div class="comment">
+         <span class="markdown">is the identifier of a volume.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://schema.org/identifier"
+                  target="_blank"
+                  title="http://schema.org/identifier">identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
