@@ -1,5 +1,9 @@
 # frances
 
+## Datasets
+
+The raw and postprocessed datasets can be found [here](https://drive.google.com/file/d/1naT2L5tFTngD7xSo7hhr7gn6yQS6RAVu/view?usp=sharing)
+
 ## 1. Extracting automatically Articles of the Encyclopaedia Britannica (EB) with defoe
 
 We have created a [new defoe query for extracting automatically articles](https://github.com/francesNLP/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_yaml.py) from the EB. The articles are stored per edition in YAML files.  
