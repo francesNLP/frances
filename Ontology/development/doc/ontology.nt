@@ -1,0 +1,555 @@
+<https://w3id.org/eb#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eb#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eb/0.0.1> .
+<https://w3id.org/eb#> <http://purl.org/dc/elements/1.1/contributor> "Daniel Garijo"@en .
+<https://w3id.org/eb#> <http://purl.org/dc/elements/1.1/creator> "Rosa Filgueira" .
+<https://w3id.org/eb#> <http://purl.org/dc/elements/1.1/description> "An ontology designed to represent volumes, terms and editions of the Encyclopaedia Britannica. The ontology extends Schema.org."@en .
+<https://w3id.org/eb#> <http://purl.org/dc/elements/1.1/license> <https://opensource.org/licenses/MIT> .
+<https://w3id.org/eb#> <http://purl.org/dc/elements/1.1/title> "EB Ontology" .
+<https://w3id.org/eb#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "eb"@en .
+<https://w3id.org/eb#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/eb> .
+<https://w3id.org/eb#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/editor
+<http://schema.org/editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://schema.org/hasPart
+<http://schema.org/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://schema.org/publisher
+<http://schema.org/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/ns/prov#wasRevisionOf
+<http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/eb#editor
+<https://w3id.org/eb#editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#editor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/editor> .
+<https://w3id.org/eb#editor> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#editor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Person> .
+<https://w3id.org/eb#editor> <http://www.w3.org/2000/01/rdf-schema#comment> "is the editor of an edition or supplement"@en .
+<https://w3id.org/eb#editor> <http://www.w3.org/2000/01/rdf-schema#label> "editor"@en .
+# 
+# https://w3id.org/eb#endsAtPage
+<https://w3id.org/eb#endsAtPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#endsAtPage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#endsAtPage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Page> .
+<https://w3id.org/eb#endsAtPage> <http://www.w3.org/2000/01/rdf-schema#comment> "is the page in which the description of a term finishes."@en .
+<https://w3id.org/eb#endsAtPage> <http://www.w3.org/2000/01/rdf-schema#label> "ends at page"@en .
+# 
+# https://w3id.org/eb#hasPart
+<https://w3id.org/eb#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#hasPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/hasPart> .
+<https://w3id.org/eb#hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "is the parthood property relating a Whole to a Part."@en .
+<https://w3id.org/eb#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part"@en .
+# 
+# https://w3id.org/eb#publisher
+<https://w3id.org/eb#publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#publisher> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/publisher> .
+<https://w3id.org/eb#publisher> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#publisher> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Organization> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Person> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "is the publisher of an edition or supplement. The publisher can be one or several persons, and/or an organization"@en .
+<https://w3id.org/eb#publisher> <http://www.w3.org/2000/01/rdf-schema#label> "publisher"@en .
+# 
+# https://w3id.org/eb#referencedBy
+<https://w3id.org/eb#referencedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#referencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Edition> .
+<https://w3id.org/eb#referencedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Book> .
+<https://w3id.org/eb#referencedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "is a book which references an edition"@en .
+<https://w3id.org/eb#referencedBy> <http://www.w3.org/2000/01/rdf-schema#label> "referenced by"@en .
+# 
+# https://w3id.org/eb#relatedTerms
+<https://w3id.org/eb#relatedTerms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#relatedTerms> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#relatedTerms> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#relatedTerms> <http://www.w3.org/2000/01/rdf-schema#comment> "is a property describing that a term is related with other terms."@en .
+<https://w3id.org/eb#relatedTerms> <http://www.w3.org/2000/01/rdf-schema#label> "related terms"@en .
+# 
+# https://w3id.org/eb#revisionOf
+<https://w3id.org/eb#revisionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#revisionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasRevisionOf> .
+<https://w3id.org/eb#revisionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Edition> .
+<https://w3id.org/eb#revisionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Edition> .
+<https://w3id.org/eb#revisionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "is the property indicating the creatin of a new revision of an item"@en .
+<https://w3id.org/eb#revisionOf> <http://www.w3.org/2000/01/rdf-schema#label> "revision of"@en .
+# 
+# https://w3id.org/eb#similarTerms
+<https://w3id.org/eb#similarTerms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#similarTerms> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#similarTerms> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#similarTerms> <http://www.w3.org/2000/01/rdf-schema#comment> "is a property describing that a term is similar to other terms."@en .
+<https://w3id.org/eb#similarTerms> <http://www.w3.org/2000/01/rdf-schema#label> "similar terms"@en .
+# 
+# https://w3id.org/eb#startsAtPage
+<https://w3id.org/eb#startsAtPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#startsAtPage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#startsAtPage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Page> .
+<https://w3id.org/eb#startsAtPage> <http://www.w3.org/2000/01/rdf-schema#comment> "is the page in which the description of a term starts."@en .
+<https://w3id.org/eb#startsAtPage> <http://www.w3.org/2000/01/rdf-schema#label> "starts at page"@en .
+# 
+# https://w3id.org/eb#supplementsTo
+<https://w3id.org/eb#supplementsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eb#supplementsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Supplement> .
+<https://w3id.org/eb#supplementsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eb#Edition> .
+<https://w3id.org/eb#supplementsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "is the edition(s) that a supplement supplements."@en .
+<https://w3id.org/eb#supplementsTo> <http://www.w3.org/2000/01/rdf-schema#label> "supplements to"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/birthDate
+<http://schema.org/birthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://schema.org/deathDate
+<http://schema.org/deathDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://schema.org/identifier
+<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/eb#altoXML
+<https://w3id.org/eb#altoXML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#altoXML> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#altoXML> <http://www.w3.org/2000/01/rdf-schema#comment> "is the name of the ALTO XML file representing a page from a particular volume."@en .
+<https://w3id.org/eb#altoXML> <http://www.w3.org/2000/01/rdf-schema#label> "alto XML"@en .
+# 
+# https://w3id.org/eb#birthDate
+<https://w3id.org/eb#birthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#birthDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/birthDate> .
+<https://w3id.org/eb#birthDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Person> .
+<https://w3id.org/eb#birthDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/eb#birthDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of birth of a person"@en .
+<https://w3id.org/eb#birthDate> <http://www.w3.org/2000/01/rdf-schema#label> "Birth date"@en .
+# 
+# https://w3id.org/eb#deathDate
+<https://w3id.org/eb#deathDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#deathDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/deathDate> .
+<https://w3id.org/eb#deathDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Person> .
+<https://w3id.org/eb#deathDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/eb#deathDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of death of a person"@en .
+<https://w3id.org/eb#deathDate> <http://www.w3.org/2000/01/rdf-schema#label> "death date"@en .
+# 
+# https://w3id.org/eb#definition
+<https://w3id.org/eb#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#definition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#definition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#definition> <http://www.w3.org/2000/01/rdf-schema#comment> "is the definition of a term in the encyclopaedia."@en .
+<https://w3id.org/eb#definition> <http://www.w3.org/2000/01/rdf-schema#label> "definition"@en .
+# 
+# https://w3id.org/eb#genre
+<https://w3id.org/eb#genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#genre> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#genre> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#genre> <http://www.w3.org/2000/01/rdf-schema#comment> "is the genre of an edition or a supplement."@en .
+<https://w3id.org/eb#genre> <http://www.w3.org/2000/01/rdf-schema#label> "genre"@en .
+# 
+# https://w3id.org/eb#header
+<https://w3id.org/eb#header> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#header> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Page> .
+<https://w3id.org/eb#header> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#header> <http://www.w3.org/2000/01/rdf-schema#comment> "is the header of a page"@en .
+<https://w3id.org/eb#header> <http://www.w3.org/2000/01/rdf-schema#label> "header"@en .
+# 
+# https://w3id.org/eb#language
+<https://w3id.org/eb#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#language> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Volume> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#language> <http://www.w3.org/2000/01/rdf-schema#comment> "is the language used to write the encyclopaedia"@en .
+<https://w3id.org/eb#language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
+# 
+# https://w3id.org/eb#ldaTopic
+<https://w3id.org/eb#ldaTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#ldaTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#ldaTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#ldaTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "is the classification of a term into an NLP topic model."@en .
+<https://w3id.org/eb#ldaTopic> <http://www.w3.org/2000/01/rdf-schema#label> "LDA topic"@en .
+# 
+# https://w3id.org/eb#letters
+<https://w3id.org/eb#letters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#letters> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#letters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#letters> <http://www.w3.org/2000/01/rdf-schema#comment> "is the range from which the terms of an edition or supplement are splitted across volumes."@en .
+<https://w3id.org/eb#letters> <http://www.w3.org/2000/01/rdf-schema#label> "letters"@en .
+# 
+# https://w3id.org/eb#metsXML
+<https://w3id.org/eb#metsXML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#metsXML> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#metsXML> <http://www.w3.org/2000/01/rdf-schema#comment> "is the name of the METS XML file representing a volume from a particular edition or supplement."@en .
+<https://w3id.org/eb#metsXML> <http://www.w3.org/2000/01/rdf-schema#label> "mets XML"@en .
+# 
+# https://w3id.org/eb#mmsid
+<https://w3id.org/eb#mmsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#mmsid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<https://w3id.org/eb#mmsid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#mmsid> <http://www.w3.org/2000/01/rdf-schema#comment> "is the Metadata Management System identifier of an edition or supplement"@en .
+<https://w3id.org/eb#mmsid> <http://www.w3.org/2000/01/rdf-schema#label> "mmsid"@en .
+# 
+# https://w3id.org/eb#name
+<https://w3id.org/eb#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#name> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Organization> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Person> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Term> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#name> <http://www.w3.org/2000/01/rdf-schema#comment> "is the name of an item"@en .
+<https://w3id.org/eb#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# https://w3id.org/eb#number
+<https://w3id.org/eb#number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#number> <http://www.w3.org/2000/01/rdf-schema#comment> "is the number of the item (e.g., volume 2, page 100, etc.)"@en .
+<https://w3id.org/eb#number> <http://www.w3.org/2000/01/rdf-schema#label> "number"@en .
+# 
+# https://w3id.org/eb#numberOfPages
+<https://w3id.org/eb#numberOfPages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#numberOfPages> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Volume> .
+<https://w3id.org/eb#numberOfPages> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#numberOfPages> <http://www.w3.org/2000/01/rdf-schema#comment> "is the number of pages of a volume."@en .
+<https://w3id.org/eb#numberOfPages> <http://www.w3.org/2000/01/rdf-schema#label> "number of pages"@en .
+# 
+# https://w3id.org/eb#numberOfTerms
+<https://w3id.org/eb#numberOfTerms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#numberOfTerms> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Page> .
+<https://w3id.org/eb#numberOfTerms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#numberOfTerms> <http://www.w3.org/2000/01/rdf-schema#comment> "is the number of terms of a page."@en .
+<https://w3id.org/eb#numberOfTerms> <http://www.w3.org/2000/01/rdf-schema#label> "number of terms"@en .
+# 
+# https://w3id.org/eb#numberOfVolumes
+<https://w3id.org/eb#numberOfVolumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#numberOfVolumes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#numberOfVolumes> <http://www.w3.org/2000/01/rdf-schema#comment> "is the number of volumes of an edition or supplement."@en .
+<https://w3id.org/eb#numberOfVolumes> <http://www.w3.org/2000/01/rdf-schema#label> "number of volumes"@en .
+# 
+# https://w3id.org/eb#numberOfWords
+<https://w3id.org/eb#numberOfWords> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#numberOfWords> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#numberOfWords> <http://www.w3.org/2000/01/rdf-schema#comment> "is the number of words of an entry in the encyclopaedia."@en .
+<https://w3id.org/eb#numberOfWords> <http://www.w3.org/2000/01/rdf-schema#label> "number of words"@en .
+# 
+# https://w3id.org/eb#part
+<https://w3id.org/eb#part> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#part> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid24 <http://www.w3.org/2002/07/owl#unionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Volume> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#part> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#part> <http://www.w3.org/2000/01/rdf-schema#comment> "is the number representing the part of a volume. E.g., part 1 of 2"@en .
+<https://w3id.org/eb#part> <http://www.w3.org/2000/01/rdf-schema#label> "part" .
+# 
+# https://w3id.org/eb#permanentURL
+<https://w3id.org/eb#permanentURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#permanentURL> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<https://w3id.org/eb#permanentURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#permanentURL> <http://www.w3.org/2000/01/rdf-schema#comment> "is the permanent URL of a volume in the NLS."@en .
+<https://w3id.org/eb#permanentURL> <http://www.w3.org/2000/01/rdf-schema#label> "permanent URL"@en .
+# 
+# https://w3id.org/eb#physicalDescription
+<https://w3id.org/eb#physicalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#physicalDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#physicalDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "is the physical description of an edition or supplement."@en .
+<https://w3id.org/eb#physicalDescription> <http://www.w3.org/2000/01/rdf-schema#label> "physical description"@en .
+# 
+# https://w3id.org/eb#position
+<https://w3id.org/eb#position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#position> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#position> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#position> <http://www.w3.org/2000/01/rdf-schema#comment> "Number representing the position in which a term appears  in a page."@en .
+<https://w3id.org/eb#position> <http://www.w3.org/2000/01/rdf-schema#label> "position"@en .
+# 
+# https://w3id.org/eb#printedAt
+<https://w3id.org/eb#printedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#printedAt> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid27 <http://www.w3.org/2002/07/owl#unionOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#printedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#printedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "is the place in which an edition or supplement was printed." .
+<https://w3id.org/eb#printedAt> <http://www.w3.org/2000/01/rdf-schema#label> "printed at"@en .
+# 
+# https://w3id.org/eb#publicationYear
+<https://w3id.org/eb#publicationYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#publicationYear> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid30 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#publicationYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/eb#publicationYear> <http://www.w3.org/2000/01/rdf-schema#comment> "is the year that an edition or supplement was published."@en .
+<https://w3id.org/eb#publicationYear> <http://www.w3.org/2000/01/rdf-schema#label> "publication year"@en .
+# 
+# https://w3id.org/eb#shelfLocator
+<https://w3id.org/eb#shelfLocator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#shelfLocator> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid33 <http://www.w3.org/2002/07/owl#unionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#shelfLocator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#shelfLocator> <http://www.w3.org/2000/01/rdf-schema#comment> "is the shelf locator in which an edition or supplement is stored in the library."@en .
+<https://w3id.org/eb#shelfLocator> <http://www.w3.org/2000/01/rdf-schema#label> "shelf locator"@en .
+# 
+# https://w3id.org/eb#subtitle
+<https://w3id.org/eb#subtitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#subtitle> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/2002/07/owl#unionOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#subtitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#subtitle> <http://www.w3.org/2000/01/rdf-schema#comment> "is the subtitle of an item."@en .
+<https://w3id.org/eb#subtitle> <http://www.w3.org/2000/01/rdf-schema#label> "subtitle"@en .
+# 
+# https://w3id.org/eb#summarizedTopic
+<https://w3id.org/eb#summarizedTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#summarizedTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Topic> .
+<https://w3id.org/eb#summarizedTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#summarizedTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "is the text summarization of a topic definition."@en .
+<https://w3id.org/eb#summarizedTopic> <http://www.w3.org/2000/01/rdf-schema#label> "LDA topic"@en .
+# 
+# https://w3id.org/eb#termsOfAddress
+<https://w3id.org/eb#termsOfAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#termsOfAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eb#Person> .
+<https://w3id.org/eb#termsOfAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#termsOfAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "is the terms of address of a person."@en .
+<https://w3id.org/eb#termsOfAddress> <http://www.w3.org/2000/01/rdf-schema#label> "terms of address"@en .
+# 
+# https://w3id.org/eb#title
+<https://w3id.org/eb#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#title> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid39 <http://www.w3.org/2002/07/owl#unionOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Edition> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Supplement> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eb#Volume> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/eb#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#title> <http://www.w3.org/2000/01/rdf-schema#comment> "is the title of an item."@en .
+<https://w3id.org/eb#title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en .
+# 
+# https://w3id.org/eb#volumeId
+<https://w3id.org/eb#volumeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eb#volumeId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
+<https://w3id.org/eb#volumeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eb#volumeId> <http://www.w3.org/2000/01/rdf-schema#comment> "is the identifier of a volume."@en .
+<https://w3id.org/eb#volumeId> <http://www.w3.org/2000/01/rdf-schema#label> "volume id"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/Book
+<http://schema.org/Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Organization
+<http://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Person
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/PublicationVolume
+<http://schema.org/PublicationVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eb#Article
+<https://w3id.org/eb#Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#Article> <http://www.w3.org/2000/01/rdf-schema#comment> "is the entry in the encyclopaedia describing a term in one or two paragraphs. Similar to an entry in a dictionary."@en .
+<https://w3id.org/eb#Article> <http://www.w3.org/2000/01/rdf-schema#label> "Article"@en .
+# 
+# https://w3id.org/eb#Book
+<https://w3id.org/eb#Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Book> .
+<https://w3id.org/eb#Book> <http://www.w3.org/2000/01/rdf-schema#comment> "is a book that is not part of the encyclopaedia."@en .
+<https://w3id.org/eb#Book> <http://www.w3.org/2000/01/rdf-schema#label> "Book"@en .
+# 
+# https://w3id.org/eb#Edition
+<https://w3id.org/eb#Edition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Edition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Book> .
+<https://w3id.org/eb#Edition> <http://www.w3.org/2000/01/rdf-schema#comment> "is an edition of the encyclopaedia"@en .
+<https://w3id.org/eb#Edition> <http://www.w3.org/2000/01/rdf-schema#label> "Edition"@en .
+# 
+# https://w3id.org/eb#Organization
+<https://w3id.org/eb#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<https://w3id.org/eb#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "is an organization"@en .
+<https://w3id.org/eb#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# https://w3id.org/eb#Page
+<https://w3id.org/eb#Page> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Page> <http://www.w3.org/2000/01/rdf-schema#comment> "is an page that inside a volume."@en .
+<https://w3id.org/eb#Page> <http://www.w3.org/2000/01/rdf-schema#label> "Page"@en .
+# 
+# https://w3id.org/eb#Person
+<https://w3id.org/eb#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Person> .
+<https://w3id.org/eb#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "is a person"@en .
+<https://w3id.org/eb#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# https://w3id.org/eb#Supplement
+<https://w3id.org/eb#Supplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Supplement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Book> .
+<https://w3id.org/eb#Supplement> <http://www.w3.org/2000/01/rdf-schema#comment> "is a supplement of an edition or edditions."@en .
+<https://w3id.org/eb#Supplement> <http://www.w3.org/2000/01/rdf-schema#label> "Supplement"@en .
+# 
+# https://w3id.org/eb#Term
+<https://w3id.org/eb#Term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Term> <http://www.w3.org/2000/01/rdf-schema#comment> "is an entry of a volume of the encyclopaedia"@en .
+<https://w3id.org/eb#Term> <http://www.w3.org/2000/01/rdf-schema#label> "Term"@en .
+# 
+# https://w3id.org/eb#Topic
+<https://w3id.org/eb#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eb#Term> .
+<https://w3id.org/eb#Topic> <http://www.w3.org/2000/01/rdf-schema#comment> "is the entry in the encyclopaedia describing a term in one or several pages."@en .
+<https://w3id.org/eb#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic"@en .
+# 
+# https://w3id.org/eb#Volume
+<https://w3id.org/eb#Volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eb#Volume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/PublicationVolume> .
+<https://w3id.org/eb#Volume> <http://www.w3.org/2000/01/rdf-schema#comment> "a book from an edition or a supplement"@en .
+<https://w3id.org/eb#Volume> <http://www.w3.org/2000/01/rdf-schema#label> "Volume"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
