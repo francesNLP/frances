@@ -538,8 +538,11 @@ def fixing_articles(query_results):
                         
                 if page_idx >=1 and page_idx < len(query_results[edition])-1:
 
-                    if (definition_list[1] == prev_element["definition"].split(" ")[-1]):
-                        flag = 1            
+                    try:
+                        if (definition_list[1] == prev_element["definition"].split(" ")[-1]):
+                            flag = 1 
+                    except:
+                        pass
                 
                 if flag: 
                     for elem_idx in range(0, len(sub_elements)):
