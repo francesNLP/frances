@@ -986,7 +986,8 @@ def main():
     consistency_query_results(sorted_results)
 
     query_results_articles_fp=fixing_fullPages(sorted_results)
-    query_results_articles = merge_articles(query_results_articles)
+    
+    query_results_articles = merge_articles(query_results_articles_fp)
 
     articles_refined=fixing_articles(query_results_articles)
 
