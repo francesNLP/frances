@@ -11,7 +11,7 @@ import collections
 import string
 import copy
 import re
-
+import sys
 import pandas as pd
 from yaml import safe_load
 from pandas.io.json import json_normalize
@@ -21,14 +21,14 @@ from collections import Counter
 
 
 def read_query_results(filename):
-    with open('../../results_NLS/'+filename, 'r') as f:
+    with open('../results_NLS/'+filename, 'r') as f:
         query_results = safe_load(f)
     return query_results
 
 
 
 def write_query_results(filename, results):
-    with open('../../results_NLS/'+filename, 'w') as f:
+    with open('../results_NLS/'+filename, 'w') as f:
         documents = yaml.dump(results, f)
 
 
@@ -307,7 +307,7 @@ def clean_topics_terms(term):
 
 
 def create_dataframe_from_file(filename):
-    with open('../../results_NLS/'+filename, 'r') as f:
+    with open('../results_NLS/'+filename, 'r') as f:
         query_results = safe_load(f)
     
     df = create_dataframe(query_results)
@@ -726,7 +726,6 @@ def merge_articles(query_results):
                             if query_results[edition][prev_articles_idx][0] == prev_number:
                            
                                  query_results[edition][prev_articles_idx][1]["num_page_words"]+=num_article_words
-                    else:
                   
                     pd_i = page_idx 
                     for i in range(1, element["num_articles"]):
