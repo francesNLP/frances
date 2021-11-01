@@ -787,7 +787,7 @@ def merge_topics(query_results):
 
             if "Topic" in element['type_page']:
                 term=element["term"].strip()
-                while check_string(term, parts_string) and page_idx < len(query_results[edition]-1):
+                while check_string(term, parts_string) and page_idx < len(query_results[edition])-1:
     
                     page_idx = page_idx + 1
                     next_element = query_results[edition][page_idx][1]
