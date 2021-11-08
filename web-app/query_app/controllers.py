@@ -20,19 +20,25 @@ def get_editor():
     results = sparqlW.query().convert()
     return results["results"]["bindings"][0]["name"]["value"]
 
-
-def get_year():
-    sparqlW.setQuery("""
-        PREFIX eb: <https://w3id.org/eb#>
-        SELECT ?year WHERE {
-        ?edition a eb:Edition .
-        ?edition eb:publicationYear ?year 
-        }
-
-    """)
+def get_editions():
+    sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
+    query1="""
+    PREFIX eb: <https://w3id.org/eb#>
+    SELECT ?enum ?e ?y WHERE {
+           ?e a eb:Edition ;
+                eb:number ?enum ;
+                eb:publicationYear ?y.
+               
+        }"""
+    query = query1
+    sparqlW.setQuery(query)
     sparqlW.setReturnFormat(JSON)
     results = sparqlW.query().convert()
-    return results["results"]["bindings"][0]["year"]["value"]
+    clean_r={}
+    for r in results["results"]["bindings"]:
+        clean_r[r["e"]["value"]]="Edition " + r["enum"]["value"]+ " Year "+r["y"]["value"]
+    return clean_r
+
 
 def get_definition(term=None):
     term=term.upper()
@@ -84,3 +90,12 @@ def rs():
                                                         headers=headers,
                                                         term=term
                                                         )
+
+@app.route("/eb_details")
+def eb_details():
+    edList=get_editions()
+    return render_template('eb_details.html', edList=edList)
+
+@app.route("/evolution_terms", methods=["GET"])
+def evolution_terms():
+    return render_template('evolution_terms.html')
