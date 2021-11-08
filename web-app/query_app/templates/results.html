@@ -1,0 +1,10 @@
+{% extends "home.html" %}
+
+{% block content %}
+{{ super() }}
+<div class="container">
+
+<p>Returned <strong>{{ results|length }}</strong> results for <strong>{{term}}</strong> </p>
+{% include "includes/results.html" %}
+</div>
+{% endblock %}
