@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from .flask_app import app
 from SPARQLWrapper import SPARQLWrapper, RDF, JSON
 import requests
@@ -19,6 +19,33 @@ def get_editor():
     sparqlW.setReturnFormat(JSON)
     results = sparqlW.query().convert()
     return results["results"]["bindings"][0]["name"]["value"]
+
+
+def get_volumes(uri):
+    sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
+    query="""
+    PREFIX eb: <https://w3id.org/eb#>
+    SELECT ?v ?vnum ?part ?letters WHERE {
+       %s eb:hasPart ?v .
+       ?v eb:number ?vnum ; 
+          eb:letters ?letters .
+          OPTIONAL {?v eb:part ?part; }
+    } 
+    """ % (uri)
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    r=results["results"]["bindings"]
+    clean_r={}
+    for i in r:
+       if "part" in i:
+           clean_r[i["v"]["value"]]= i["vnum"]["value"]+ " "+ i["letters"]["value"]+ "Part "+ i["part"]["value"]
+       else:
+           clean_r[i["v"]["value"]]= i["vnum"]["value"]+ " "+ i["letters"]["value"]
+   
+    return clean_r
+
+
 
 def get_editions():
     sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
@@ -79,23 +106,58 @@ def get_editions_details(uri=None):
     results = sparql.query().convert()
     clean_r={}
     for r in results["results"]["bindings"]:
-        clean_r["publicationYear"]=r["publicationYear"]["value"]
-        clean_r["num"]=r["num"]["value"]
-        clean_r["uri"]=uri
-        clean_r["title"]=r["title"]["value"]
+        clean_r["Year"]=r["publicationYear"]["value"]
+        clean_r["Edition Number"]=r["num"]["value"]
+        clean_r["Edition URI"]=uri
+        clean_r["Edition Title"]=r["title"]["value"]
         if "subtitle" in r:
-            clean_r["subtitle"]=r["subtitle"]["value"]
+            clean_r["Edition Subtitle"]=r["subtitle"]["value"]
         else:
-            clean_r["subtitle"]="No value"
-        clean_r["printedAt"]=r["printedAt"]["value"]
-        clean_r["physicalDescription"]=r["physicalDescription"]["value"]
-        clean_r["mmsid"]=r["mmsid"]["value"]
-        clean_r["shelfLocator"]=r["shelfLocator"]["value"]
-        clean_r["genre"]=r["genre"]["value"]
-        clean_r["language"]="English"
-        clean_r["numberOfVolumes"]=get_numberOfVolumes(uri)
+            clean_r["Edition Subtitle"]="No value"
+        clean_r["Printed at"]=r["printedAt"]["value"]
+        clean_r["Physical Description"]=r["physicalDescription"]["value"]
+        clean_r["MMSID"]=r["mmsid"]["value"]
+        clean_r["Shelf Locator"]=r["shelfLocator"]["value"]
+        clean_r["Genre"]=r["genre"]["value"]
+        clean_r["Language"]="English"
+        clean_r["Number of Volumes"]=get_numberOfVolumes(uri)
 
     return clean_r
+
+def get_volume_details(uri=None):
+    sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
+    query="""
+    PREFIX eb: <https://w3id.org/eb#>
+    SELECT ?num ?title ?part ?metsXML ?volumeId ?permanentURL ?numberOfPages ?letters WHERE {
+       %s eb:number ?num ;
+          eb:title ?title;
+          eb:metsXML ?metsXML;
+          eb:volumeId ?volumeId;
+          eb:permanentURL ?permanentURL;
+          eb:numberOfPages ?numberOfPages;
+          eb:letters ?letters.
+       OPTIONAL {%s eb:part ?part. }
+      
+               
+    }
+    """ % (uri, uri)
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    clean_r={}
+    for r in results["results"]["bindings"]:
+        clean_r["Volume Number"]=r["num"]["value"]
+        clean_r["Volume URI"]=uri
+        clean_r["Volume Title"]=r["title"]["value"]
+        clean_r["Volume Letters"]=r["letters"]["value"]
+        if "part" in r:
+            clean_r["Volume Part"]=r["part"]["value"]
+        else:
+            clean_r["Volume Part"]=""
+        clean_r["Volume Permanent URL"]=r["permanentURL"]["value"]
+        clean_r["Volume Number of Pages"]=r["numberOfPages"]["value"]
+    return clean_r
+
 
 
 def get_definition(term=None):
@@ -148,17 +210,36 @@ def rs():
                                                         headers=headers,
                                                         term=term
                                                         )
-
-@app.route("/eb_details", methods=['GET', 'POST'])
+@app.route("/eb_details",  methods=['GET', 'POST'])
 def eb_details():
     edList=get_editions()
-    if 'edition_selection' in request.form:
+    if 'edition_selection' in request.form and 'volume_selection' in request.form:
+        ed_raw=request.form.get('edition_selection')
+        vol_raw=request.form.get('volume_selection')
+        if vol_raw !="" and ed_raw !="":
+            ed_uri="<"+ed_raw+">"
+            ed_r=get_editions_details(ed_uri)
+            vol_uri="<"+vol_raw+">"
+            ed_v=get_volume_details(vol_uri)
+            return render_template('eb_details.html', edList=edList,  ed_r=ed_r, ed_v=ed_v)
+        else:
+            return render_template('eb_details.html', edList=edList)
+    return render_template('eb_details.html', edList=edList)
+
+    
+@app.route("/vol_details", methods=['GET', 'POST'])
+def vol_details():
+    if request.method == "POST":
         uri_raw=request.form.get('edition_selection')
         uri="<"+uri_raw+">"
-        print("Uri is %s" %uri)
-        ed_r=get_editions_details(uri)
-        return render_template('eb_details.html', edList=edList, ed_r=ed_r)
-    return render_template('eb_details.html', edList=edList)
+        volList=get_volumes(uri)
+        OutputArray = []
+        for key, value in sorted(volList.items(), key=lambda item: item[1]):
+            outputObj = { 'id':key , 'name': value }
+            OutputArray.append(outputObj)
+    return jsonify(OutputArray)
+
+
 
 @app.route("/evolution_terms", methods=["GET"])
 def evolution_terms():
