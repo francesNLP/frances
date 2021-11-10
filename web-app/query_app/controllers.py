@@ -54,12 +54,16 @@ def describe_resource(uri=None):
        data["object"]=obj
        clear_r.append(data)
 
+   startsAtPage="-1"
+   endsAtPage="-2"
+
    for i in range(0, len(clear_r)):
        if "startsAtPage" in clear_r[i]["predicate"]:
            startsAtPage= clear_r[i]["object"]
        if "endsAtPage" in clear_r[i]["predicate"]:
            endsAtPage= clear_r[i]["object"]
            endsAtPageIndex =i
+
  
    if startsAtPage == endsAtPage:
        clear_r.pop(endsAtPageIndex)

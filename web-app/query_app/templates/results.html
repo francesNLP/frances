@@ -2,9 +2,10 @@
 
 {% block content %}
 {{ super() }}
-<div class="container">
+
+<br></br>
+<br></br>
 
 <p>Returned <strong>{{ results|length }}</strong> results for <strong>{{term}}</strong> </p>
 {% include "includes/results.html" %}
-</div>
 {% endblock %}

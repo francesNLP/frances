@@ -15,7 +15,7 @@ form.search_form input[type=text] {
   font-size: 17px;
   border: 1px solid grey;
   float: left;
-  width: 80%;
+  width: 50%;
   background: #f1f1f1;
 }
 
@@ -42,12 +42,12 @@ form.search_form::after {
 }
 </style>
  
-    <p> Enter the term that you would like to search for:</p>
+    <p> Enter the <strong> term </strong> that you would like to search for:</p>
 
      <!-- Load icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- The form -->
-        <form method="POST" action="/" class="search_form" style="margin:auto;max-width:300px">
+        <form method="POST" action="/" class="search_form">
   	<input type="text" placeholder="Search term" name="search">
   	<button type="submit"><i class="fa fa-search"></i></button>
 	</form> 
