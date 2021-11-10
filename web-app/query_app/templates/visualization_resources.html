@@ -1,9 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Visualizing RDF </title>
-	
+{% extends 'base.html' %}
+    {% block head %}
 	<style type="text/css">
 		.node {
 		  stroke: #fff;
@@ -175,9 +171,8 @@
 		
 		
 	</script>
-</head>
-<body style="margin:20px;">
-  <h1>Visualizing RDF using D3</h1>
+   {% endblock %}
+{% block content %}
   <div id="svg-body" class="panel-body"></div>
   <script>
  
@@ -194,5 +189,4 @@
 	update();
 	
   </script>
-  
-</body>
+{% endblock %}

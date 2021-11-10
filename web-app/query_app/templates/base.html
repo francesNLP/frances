@@ -11,6 +11,8 @@
     <link rel="stylesheet "type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
     <title>{% block title %} Encyclopaedia Britannica (1768-1860){% endblock %}</title>
+      {% block head %}
+      {% endblock %}
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -22,7 +24,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand"  href="{{ url_for('evolution_terms')}}">Evolution of Terms</a>
+        <a class="navbar-brand"  href="{{ url_for('visualization_resources')}}">Visualization of Resources</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
