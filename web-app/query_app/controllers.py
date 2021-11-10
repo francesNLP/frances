@@ -23,7 +23,6 @@ def get_editor():
 
 def describe_resource(uri=None):
    sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
-   uri="<https://w3id.org/eb/i/Edition/992277653804341>"
    query="""
    PREFIX eb: <https://w3id.org/eb#>
    DESCRIBE %s 
@@ -33,9 +32,22 @@ def describe_resource(uri=None):
    clear_r=[]
    for s,p,o in results.triples((None, None, None)):
        data={}
-       data["subject"]=str(s)
-       data["predicate"]=str(p)
-       data["object"]=str(o)
+       sub=str(s)
+       if "#" in sub:
+           sub=sub.split("#")[1]
+           sub="eb:"+sub
+       data["subject"]=sub
+       pred=str(p)
+       if "#" in pred:
+           pred=pred.split("#")[1]
+           pred="eb:"+pred
+       data["predicate"]=pred
+       obj=str(o)
+       if "#" in obj:
+           obj=obj.split("#")[1]
+           obj="eb:"+obj
+
+       data["object"]=obj
        clear_r.append(data)
    return clear_r
 
@@ -259,7 +271,12 @@ def vol_details():
 
 
 
-@app.route("/visualization_resources", methods=["GET"])
+@app.route("/visualization_resources", methods=['GET', 'POST'])
 def visualization_resources():
-    g_results=describe_resource()
-    return render_template('visualization_resources.html', g_results=g_results)
+    if 'resource_uri' in request.form:
+        uri_raw=request.form.get('resource_uri').strip().replace("<","").replace(">","")
+        uri="<"+uri_raw+">"
+        print("--%s--" %uri)
+        g_results=describe_resource(uri)
+        return render_template('visualization_resources.html', g_results=g_results)
+    return render_template('visualization_resources.html')

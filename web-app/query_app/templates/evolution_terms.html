@@ -181,9 +181,7 @@
   <div id="svg-body" class="panel-body"></div>
   <script>
  
-        var triples = [{% for item in g_results %} "{{item}}",  {% endfor %}];
         var triples = [{% for item in g_results %} { {%for key, value in item.items() %} "{{key}}":"{{value}}", {%endfor %}}, {% endfor %}];
-        alert(triples)
 	var svg = d3.select("#svg-body").append("svg")
 				.attr("width", 800)
 				.attr("height", 600)

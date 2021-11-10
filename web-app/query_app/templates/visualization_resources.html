@@ -13,18 +13,14 @@
 		  stroke-width: 1px;
 		}
 
-		marker {
-			stroke: #999;
-			fill:rgba(18, 66, 64));
-		}
 
 		.node-text {
-		  font: 11px sans-serif;
+		  font: 12px sans-serif;
 		  fill:black;
 		}
 
 		.link-text {
-		  font: 9px sans-serif;
+		  font: 12px sans-serif;
 		  fill:blue;
 		}
 		
@@ -161,7 +157,7 @@
 		      .nodes(graph.nodes)
 		      .links(graph.links)
 			  .charge(-500)
-			  .linkDistance(100)
+			  .linkDistance(300)
 		      .start()
 			  ;
 		}
@@ -170,20 +166,31 @@
 	</script>
    {% endblock %}
 {% block content %}
+    <p> Enter an URI of a resource that you would like to visualize:</p>
+
+     <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- The form -->
+        <form method="POST" action="/visualization_resources" class="search_form" style="margin:auto;max-width:300px">
+  	<input type="text" placeholder="Place URI" name="resource_uri">
+  	<button type="submit"><i class="fa fa-search"></i></button>
+	</form> 
+
   <div id="svg-body" class="panel-body"></div>
-  <script>
+  {% if g_results %}
+  	<script>
  
         var triples = [{% for item in g_results %} { {%for key, value in item.items() %} "{{key}}":"{{value}}", {%endfor %}}, {% endfor %}];
 	var svg = d3.select("#svg-body").append("svg")
-				.attr("width", 800)
-				.attr("height", 600)
+				.attr("width", 1000)
+				.attr("height", 700)
 				;
 				
-	var force = d3.layout.force().size([800, 600]);
+	var force = d3.layout.force().size([1000, 700]);
 	
 	var graph = triplesToGraph(triples);
 	
 	update();
-	
-  </script>
+  	</script>
+ {% endif %}
 {% endblock %}
