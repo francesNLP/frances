@@ -259,8 +259,7 @@ def vol_details():
 
 
 
-@app.route("/evolution_terms", methods=["GET"])
-def evolution_terms():
+@app.route("/visualization_resources", methods=["GET"])
+def visualization_resources():
     g_results=describe_resource()
-    print(g_results)
-    return render_template('evolution_terms.html', g_results=g_results)
+    return render_template('visualization_resources.html', g_results=g_results)
