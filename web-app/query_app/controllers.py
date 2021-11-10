@@ -21,6 +21,24 @@ def get_editor():
     return results["results"]["bindings"][0]["name"]["value"]
 
 
+def describe_resource(uri=None):
+   sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
+   uri="<https://w3id.org/eb/i/Edition/992277653804341>"
+   query="""
+   PREFIX eb: <https://w3id.org/eb#>
+   DESCRIBE %s 
+   """ % (uri)
+   sparql.setQuery(query)
+   results = sparql.query().convert()
+   clear_r=[]
+   for s,p,o in results.triples((None, None, None)):
+       data={}
+       data["subject"]=str(s)
+       data["predicate"]=str(p)
+       data["object"]=str(o)
+       clear_r.append(data)
+   return clear_r
+
 def get_volumes(uri):
     sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
     query="""
@@ -243,4 +261,6 @@ def vol_details():
 
 @app.route("/evolution_terms", methods=["GET"])
 def evolution_terms():
-    return render_template('evolution_terms.html')
+    g_results=describe_resource()
+    print(g_results)
+    return render_template('evolution_terms.html', g_results=g_results)
