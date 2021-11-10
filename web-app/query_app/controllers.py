@@ -160,8 +160,6 @@ def get_editions_details(uri=None):
         clean_r["Edition Title"]=r["title"]["value"]
         if "subtitle" in r:
             clean_r["Edition Subtitle"]=r["subtitle"]["value"]
-        else:
-            clean_r["Edition Subtitle"]="No value"
         clean_r["Printed at"]=r["printedAt"]["value"]
         clean_r["Physical Description"]=r["physicalDescription"]["value"]
         clean_r["MMSID"]=r["mmsid"]["value"]
@@ -200,8 +198,6 @@ def get_volume_details(uri=None):
         clean_r["Volume Letters"]=r["letters"]["value"]
         if "part" in r:
             clean_r["Volume Part"]=r["part"]["value"]
-        else:
-            clean_r["Volume Part"]=""
         clean_r["Volume Permanent URL"]=r["permanentURL"]["value"]
         clean_r["Volume Number of Pages"]=r["numberOfPages"]["value"]
     return clean_r
@@ -239,6 +235,75 @@ def get_definition(term=None):
 
     return clean_r
 
+def get_vol_statistics(uri):
+    data={}
+    ###### NUM ARTICLES
+    query="""
+          PREFIX eb: <https://w3id.org/eb#>
+          SELECT (COUNT (DISTINCT ?t) as ?count)
+          WHERE {
+          %s eb:hasPart ?t .
+          ?t a eb:Article
+         } 
+         """ % (uri)
+    sparqlW.setQuery(query)
+    sparqlW.setReturnFormat(JSON)
+    results = sparqlW.query().convert()
+    num_articles=results["results"]["bindings"][0]["count"]["value"]
+    data["Number of Articles"]=num_articles
+
+    ###### NUM TOPICS
+    query1="""
+          PREFIX eb: <https://w3id.org/eb#>
+          SELECT (COUNT (DISTINCT ?t) as ?count)
+          WHERE {
+          %s eb:hasPart ?t .
+          ?t a eb:Topic 
+         } 
+         """ % (uri)
+    sparqlW.setQuery(query1)
+    sparqlW.setReturnFormat(JSON)
+    results1 = sparqlW.query().convert()
+    num_topics=results1["results"]["bindings"][0]["count"]["value"]
+    data["Number of Topics"] = num_topics
+
+    ###### NUM DIST ARTICLES
+    query2="""
+         PREFIX eb: <https://w3id.org/eb#>
+         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+         SELECT (count (DISTINCT ?a) as ?count)
+         WHERE {
+            %s eb:hasPart ?b .
+    	    ?b a eb:Article .
+    	    ?b eb:name ?a.
+        }
+        """ % (uri)
+    sparqlW.setQuery(query2)
+    sparqlW.setReturnFormat(JSON)
+    results2 = sparqlW.query().convert()
+    num_dist_articles= results2["results"]["bindings"][0]["count"]["value"]
+    data["Number of Distinct Articles"] = num_dist_articles
+
+
+    ###### NUM DIST TOPICS
+    query3="""
+       PREFIX eb: <https://w3id.org/eb#>
+       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+       SELECT (count (DISTINCT ?a) as ?count)
+       WHERE {
+            %s eb:hasPart ?b .
+    	    ?b a eb:Topic .
+    	    ?b eb:name ?a.
+      }
+      """ % (uri)
+    sparqlW.setQuery(query3)
+    sparqlW.setReturnFormat(JSON)
+    results3 = sparqlW.query().convert()
+    num_dist_topics= results3["results"]["bindings"][0]["count"]["value"]
+    data["Number of Distinct Topics"] = num_dist_topics
+    return data
+            
+
 @app.route("/", methods=["GET"])
 def home_page():
     return render_template('home.html')
@@ -269,7 +334,8 @@ def eb_details():
             ed_r=get_editions_details(ed_uri)
             vol_uri="<"+vol_raw+">"
             ed_v=get_volume_details(vol_uri)
-            return render_template('eb_details.html', edList=edList,  ed_r=ed_r, ed_v=ed_v)
+            ed_st=get_vol_statistics(vol_uri)
+            return render_template('eb_details.html', edList=edList,  ed_r=ed_r, ed_v=ed_v, ed_st=ed_st)
         else:
             return render_template('eb_details.html', edList=edList)
     return render_template('eb_details.html', edList=edList)
