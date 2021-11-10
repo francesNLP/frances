@@ -46,9 +46,23 @@ def describe_resource(uri=None):
        if "#" in obj:
            obj=obj.split("#")[1]
            obj="eb:"+obj
+       
+       if len(obj)>80:
+          obj=obj[0:80]
+          obj=obj+"... CONTINUE"
 
        data["object"]=obj
        clear_r.append(data)
+
+   for i in range(0, len(clear_r)):
+       if "startsAtPage" in clear_r[i]["predicate"]:
+           startsAtPage= clear_r[i]["object"]
+       if "endsAtPage" in clear_r[i]["predicate"]:
+           endsAtPage= clear_r[i]["object"]
+           endsAtPageIndex =i
+ 
+   if startsAtPage == endsAtPage:
+       clear_r.pop(endsAtPageIndex)
    return clear_r
 
 def get_volumes(uri):
@@ -275,8 +289,10 @@ def vol_details():
 def visualization_resources():
     if 'resource_uri' in request.form:
         uri_raw=request.form.get('resource_uri').strip().replace("<","").replace(">","")
-        uri="<"+uri_raw+">"
-        print("--%s--" %uri)
+        if uri_raw == "":
+            uri="<https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0>"
+        else:
+            uri="<"+uri_raw+">"
         g_results=describe_resource(uri)
         return render_template('visualization_resources.html', g_results=g_results)
     return render_template('visualization_resources.html')
