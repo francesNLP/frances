@@ -31,7 +31,6 @@ def term_search():
     per_page = 2
     offset = (page-1) * per_page
     limit = offset+per_page
-    print("---> TERM %s page %s, per_page %s, offset is %s, limit %s" %(term, page, per_page, offset, limit))
     results_for_render=dict(islice(results.items(),offset, limit))
     pagination = Pagination(page=page, total=len(results), per_page=page_size, search=False)
     print("next %s, prev %s " %(pagination.has_next, pagination.has_prev))

@@ -1,22 +1,15 @@
 {% extends "home.html" %}
     {% block head %}
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
      {% endblock %}
 
 {% block content %}
 {{ super() }}
-
 <br></br>
-<br></br>
-
 <p>Returned <strong>{{ results|length }}</strong> results for <strong>{{term}}</strong> </p>
 
-  <div class="container">
-  <form method='post' class="form-horizontal">
   {{ pagination.info }}
   {{ pagination.links }}
-   <div class="table-responsive">
-   <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover">
         <thead class="thead-inverse">
             <tr><th>URI</th>{% for v in headers %}<th>{{ v }}</th>{% endfor %}</tr>
         </thead>
@@ -31,10 +24,7 @@
             {% endfor %}
         </tbody>
     </table>
-   </div>
   {{ pagination.links }}
-  </form>
-</div>
 
 
 
