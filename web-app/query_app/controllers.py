@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session
 from .flask_app import app
 import requests
 import traceback
@@ -8,39 +8,39 @@ from flask_paginate import Pagination, get_page_parameter
 import itertools
 from itertools import islice
 
-def sampling(selection, offset=0, limit=None):
-    return selection[offset:(limit + offset if limit is not None else None)]
-
 @app.route("/", methods=["GET"])
 def home_page():
     return render_template('home.html')
 
-@app.route("/", methods=["POST"])
-def rs():
-        results={}
-        headers=["Year", "Edition", "Volume", "Definition", "Related Terms"]
+@app.route("/term_search",  methods=['GET', 'POST'])
+def term_search():
+    
+    headers=["Year", "Edition", "Volume", "Definition", "Related Terms"]
+    
+    if request.method == "POST":
         term = request.form["search"]
         if not term:
-           term = "ABACISCUS"
+            term = "ABACISCUS"
         term=term.upper()
-        results=get_definition(term)
-        page = int(request.args.get('page',1))
-        page_size=2
-        per_page = 2
-        offset = (page-1) * per_page
-        limit = offset+per_page
-        print("page %s, per_page %s, offset is %s, limit %s" %(page, per_page, offset, limit))
-        results_for_render=dict(islice(results.items(),offset, limit))
+        session['term'] = term
+    
+    term=session.get('term')
+    results=get_definition(term)
+    page = int(request.args.get("page", 1))
+    page_size=2
+    per_page = 2
+    offset = (page-1) * per_page
+    limit = offset+per_page
+    print("---> TERM %s page %s, per_page %s, offset is %s, limit %s" %(term, page, per_page, offset, limit))
+    results_for_render=dict(islice(results.items(),offset, limit))
+    pagination = Pagination(page=page, total=len(results), per_page=page_size, search=False)
+    print("next %s, prev %s " %(pagination.has_next, pagination.has_prev))
+    return render_template("results.html", results=results_for_render,
+                                           pagination = pagination, 
+                                           headers=headers,
+                                           term=term)
+       
 
-        pagination = Pagination(page=page, total=len(results), per_page=page_size, search=False)
-
-        return render_template("results.html",
-                                                        form=SPARQLform(),
-                                                        results=results_for_render,
-                                                        pagination = pagination, 
-                                                        headers=headers,
-                                                        term=term
-                                                        )
 @app.route("/eb_details",  methods=['GET', 'POST'])
 def eb_details():
     edList=get_editions()
@@ -59,6 +59,7 @@ def eb_details():
     return render_template('eb_details.html', edList=edList)
 
     
+
 @app.route("/vol_details", methods=['GET', 'POST'])
 def vol_details():
     if request.method == "POST":
