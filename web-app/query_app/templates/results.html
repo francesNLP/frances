@@ -12,6 +12,8 @@
 <p>Returned <strong>{{ results|length }}</strong> results for <strong>{{term}}</strong> </p>
 
   <div class="container">
+  <form method='post' class="form-horizontal">
+  {{ pagination.info }}
   {{ pagination.links }}
    <div class="table-responsive">
    <table class="table table-striped table-bordered table-hover">
@@ -31,6 +33,7 @@
     </table>
    </div>
   {{ pagination.links }}
+  </form>
 </div>
 
 
