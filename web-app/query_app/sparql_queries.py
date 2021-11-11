@@ -1,7 +1,6 @@
 from SPARQLWrapper import SPARQLWrapper, RDF, JSON
 import requests
 import traceback
-from .forms import SPARQLform
 
 sparqlW = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
 def get_editor():
@@ -66,6 +65,30 @@ def describe_resource(uri=None):
    if startsAtPage == endsAtPage:
        clear_r.pop(endsAtPageIndex)
    return clear_r
+
+
+
+def get_vol_by_vol_uri(uri):
+    sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
+    query="""
+    PREFIX eb: <https://w3id.org/eb#>
+    SELECT ?vnum ?letters ?part WHERE {
+       %s eb:number ?vnum ;
+          eb:letters ?letters .
+           OPTIONAL {%s eb:part ?part; }
+       
+    
+    } """ % (uri, uri)
+
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    r=results["results"]["bindings"][0]
+    if "part" in r:
+       data= r["vnum"]["value"]+ " "+ r["letters"]["value"]+ "Part "+ r["part"]["value"]
+    else:
+       data= r["vnum"]["value"]+ " "+ r["letters"]["value"]
+    return data
 
 def get_volumes(uri):
     sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
@@ -196,7 +219,7 @@ def get_volume_details(uri=None):
         clean_r["Volume Letters"]=r["letters"]["value"]
         if "part" in r:
             clean_r["Volume Part"]=r["part"]["value"]
-        clean_r["Volume Permanent URL"]=r["permanentURL"]["value"]
+        clean_r["Volume Permanent URL"]= r["permanentURL"]["value"]
         clean_r["Volume Number of Pages"]=r["numberOfPages"]["value"]
     return clean_r
 

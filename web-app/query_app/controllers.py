@@ -51,12 +51,16 @@ def eb_details():
             vol_uri="<"+vol_raw+">"
             ed_v=get_volume_details(vol_uri)
             ed_st=get_vol_statistics(vol_uri)
-            return render_template('eb_details.html', edList=edList,  ed_r=ed_r, ed_v=ed_v, ed_st=ed_st)
+            ed_name=edList[ed_raw]
+            vol_name=get_vol_by_vol_uri(vol_uri)
+            return render_template('eb_details.html', edList=edList,  ed_r=ed_r, ed_v=ed_v, ed_st=ed_st, ed_name=ed_name, vol_name=vol_name)
         else:
             return render_template('eb_details.html', edList=edList)
     return render_template('eb_details.html', edList=edList)
 
-    
+   
+
+ 
 
 @app.route("/vol_details", methods=['GET', 'POST'])
 def vol_details():
@@ -81,7 +85,7 @@ def visualization_resources():
         else:
             uri="<"+uri_raw+">"
         g_results=describe_resource(uri)
-        return render_template('visualization_resources.html', g_results=g_results)
+        return render_template('visualization_resources.html', g_results=g_results, uri=uri)
     return render_template('visualization_resources.html')
 
 @app.route("/similar_terms", methods=["GET"])
