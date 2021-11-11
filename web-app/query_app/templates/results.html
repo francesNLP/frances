@@ -1,4 +1,7 @@
 {% extends "home.html" %}
+    {% block head %}
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+     {% endblock %}
 
 {% block content %}
 {{ super() }}
@@ -7,5 +10,29 @@
 <br></br>
 
 <p>Returned <strong>{{ results|length }}</strong> results for <strong>{{term}}</strong> </p>
-{% include "includes/results.html" %}
+
+  <div class="container">
+  {{ pagination.links }}
+   <div class="table-responsive">
+   <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-inverse">
+            <tr><th>URI</th>{% for v in headers %}<th>{{ v }}</th>{% endfor %}</tr>
+        </thead>
+        <tbody>
+            {% for key, value in results.items() %}
+               <tr>
+                    <th> {{ key }} </th>
+                       {% for elemen in value %}
+                          <td> {{ elemen }} </td>
+                       {% endfor %}
+               </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+   </div>
+  {{ pagination.links }}
+</div>
+
+
+
 {% endblock %}
