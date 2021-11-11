@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify, session
 from .flask_app import app
 import requests
 import traceback
-from .forms import SPARQLform
 from .sparql_queries import *
 from flask_paginate import Pagination, get_page_parameter
 import itertools
@@ -84,3 +83,19 @@ def visualization_resources():
         g_results=describe_resource(uri)
         return render_template('visualization_resources.html', g_results=g_results)
     return render_template('visualization_resources.html')
+
+@app.route("/similar_terms", methods=["GET"])
+def similar_terms():
+    return render_template('similar.html')
+
+@app.route("/topic_summarization", methods=["GET"])
+def topic_summarization():
+    return render_template('summary.html')
+        
+@app.route("/evolution_of_terms", methods=["GET"])
+def evolution_of_terms():
+    return render_template('evolution.html')
+
+@app.route("/defoe_queries", methods=["GET"])
+def defoe_queries():
+    return render_template('defoe.html')
