@@ -20,10 +20,15 @@
                     <th> {{ key }} </th>
                        {% for elemen in value %}
                           <td>
-			   <script>
-
-                          var minimize_character_count = 100;    
+                          <script>
                           var t = "{{elemen}}";        
+                          var loop_ind = "{{loop.index}}"
+                          if ((loop_ind == "4")||(loop_ind == "5")){
+                             pageurl="https://google.com"
+                             document.write('<a href="' + pageurl + '">'+t+'</a>');
+                          }
+                          else {
+                          var minimize_character_count = 100;    
                           if(t.length > minimize_character_count ){
                           document.write(
                            t.slice(0,minimize_character_count )+'<span>... </span><a href="#" class="more">More</a>'+
@@ -44,8 +49,8 @@
                            $(this).parent().hide().prev().show().prev().show();    
                            });
 
-                         </script>
-                        </td>
+                              }
+	                 </script></td>
                        {% endfor %}
                </tr>
             {% endfor %}
