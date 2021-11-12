@@ -229,7 +229,7 @@ def get_definition(term=None):
     term=term.upper()
     query1="""
     PREFIX eb: <https://w3id.org/eb#>
-    SELECT ?definition ?article  ?year ?vnum ?enum ?rn WHERE {
+    SELECT ?definition ?article  ?spnum ?epnum ?year ?vnum ?enum ?rn ?permanentURL WHERE {
        ?article a eb:Article ;
                 eb:name "%s" ;
                 eb:definition ?definition ;
@@ -238,9 +238,15 @@ def get_definition(term=None):
 
        ?e eb:hasPart ?v.
        ?v eb:number ?vnum.
+       ?v eb:permanentURL ?permanentURL.
        ?v eb:hasPart ?article.
        ?e eb:publicationYear ?year.
        ?e eb:number ?enum.
+       ?article eb:startsAtPage ?sp.
+       ?sp   eb:number ?spnum .
+       ?article eb:endsAtPage ?ep.
+       ?ep eb:number ?epnum .
+               
        }
     """ % (term)
     query = query1
@@ -248,13 +254,18 @@ def get_definition(term=None):
     sparqlW.setReturnFormat(JSON)
     results = sparqlW.query().convert()
     clean_r={}
+    pURL={}
     for r in results["results"]["bindings"]:
+        permanentURL= r["permanentURL"]["value"]
+        startPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["spnum"]["value"]
+        endPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["epnum"]["value"]
         if "rn" in r:
-            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"],  r["definition"]["value"], r["rn"]["value"]]
+            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], r["spnum"]["value"], r["epnum"]["value"], r["definition"]["value"], r["rn"]["value"]]
         else:
-            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"],  r["definition"]["value"]]
+            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], r["spnum"]["value"], r["epnum"]["value"], r["definition"]["value"]]
+        pURL[r["article"]["value"]]=[{r["spnum"]["value"]:startPermanentURL}, {r["epnum"]["value"]:endPermanentURL}]
 
-    return clean_r
+    return clean_r,pURL
 
 def get_vol_statistics(uri):
     data={}

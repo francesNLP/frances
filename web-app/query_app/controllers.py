@@ -14,7 +14,7 @@ def home_page():
 @app.route("/term_search",  methods=['GET', 'POST'])
 def term_search():
     
-    headers=["Year", "Edition", "Volume", "Definition", "Related Terms"]
+    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Definition", "Related Terms"]
     
     if request.method == "POST":
         term = request.form["search"]
@@ -24,7 +24,7 @@ def term_search():
         session['term'] = term
     
     term=session.get('term')
-    results=get_definition(term)
+    results, pURL =get_definition(term)
     page = int(request.args.get("page", 1))
     page_size=2
     per_page = 2
@@ -34,6 +34,7 @@ def term_search():
     pagination = Pagination(page=page, total=len(results), per_page=page_size, search=False)
     print("next %s, prev %s " %(pagination.has_next, pagination.has_prev))
     return render_template("results.html", results=results_for_render,
+                                           pURL = pURL,
                                            pagination = pagination, 
                                            headers=headers,
                                            term=term)
