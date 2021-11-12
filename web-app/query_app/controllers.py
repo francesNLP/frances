@@ -14,7 +14,7 @@ def home_page():
 @app.route("/term_search",  methods=['GET', 'POST'])
 def term_search():
     
-    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Definition", "Related Terms"]
+    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition", "Related Terms"]
     
     if request.method == "POST":
         term = request.form["search"]

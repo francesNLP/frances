@@ -229,41 +229,65 @@ def get_definition(term=None):
     term=term.upper()
     query1="""
     PREFIX eb: <https://w3id.org/eb#>
-    SELECT ?definition ?article  ?spnum ?epnum ?year ?vnum ?enum ?rn ?permanentURL WHERE {
-       ?article a eb:Article ;
-                eb:name "%s" ;
-                eb:definition ?definition ;
-                OPTIONAL {?article eb:relatedTerms ?rt.
-                          ?rt eb:name ?rn.}
-
+    SELECT ?definition ?b  ?spnum ?epnum ?year ?vnum ?enum ?rn ?permanentURL WHERE {{
+    	?b a eb:Article .
+    	?b eb:name ?a .
+        ?b eb:name "%s" .
+        ?b eb:definition ?definition . 
+        OPTIONAL {?b eb:relatedTerms ?rt. 
+                  ?rt eb:name ?rn. }
        ?e eb:hasPart ?v.
        ?v eb:number ?vnum.
        ?v eb:permanentURL ?permanentURL.
-       ?v eb:hasPart ?article.
+       ?v eb:hasPart ?b.
        ?e eb:publicationYear ?year.
        ?e eb:number ?enum.
-       ?article eb:startsAtPage ?sp.
-       ?sp   eb:number ?spnum .
-       ?article eb:endsAtPage ?ep.
-       ?ep eb:number ?epnum .
-               
-       }
-    """ % (term)
+       ?b eb:startsAtPage ?sp.
+       ?sp eb:number ?spnum .
+       ?b eb:endsAtPage ?ep.
+       ?ep eb:number ?epnum . }
+
+       UNION {
+    	?b a eb:Topic .
+    	?b eb:name ?a .
+        ?b eb:name "%s" .
+        ?b eb:definition ?definition 
+        
+        OPTIONAL {?b eb:relatedTerms ?rt. 
+                  ?rt eb:name ?rn. }
+        
+        ?e eb:hasPart ?v.
+        ?v eb:number ?vnum.
+        ?v eb:permanentURL ?permanentURL.
+        ?v eb:hasPart ?b.
+        ?e eb:publicationYear ?year.
+        ?e eb:number ?enum.
+        ?b eb:startsAtPage ?sp.
+        ?sp   eb:number ?spnum .
+        ?b eb:endsAtPage ?ep.
+        ?ep eb:number ?epnum .
+        
+        }
+   }
+   """ %(term, term)
     query = query1
     sparqlW.setQuery(query)
     sparqlW.setReturnFormat(JSON)
     results = sparqlW.query().convert()
     clean_r={}
-    pURL={}
     for r in results["results"]["bindings"]:
         permanentURL= r["permanentURL"]["value"]
         startPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["spnum"]["value"]
         endPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["epnum"]["value"]
+        if "Article" in r["b"]["value"]:
+            term_type="Article"
+        else:
+            term_type="Topic"
 
         if "rn" in r:
-            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], r["definition"]["value"], r["rn"]["value"]]
+            clean_r[r["b"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], term_type, r["definition"]["value"], r["rn"]["value"]]
         else:
-            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], r["definition"]["value"]]
+            clean_r[r["b"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], term_type, r["definition"]["value"]]
     return clean_r
 
 def get_vol_statistics(uri):

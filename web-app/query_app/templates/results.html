@@ -18,16 +18,19 @@
             {% for key, value in results.items() %}
                <tr>
                     <th> {{ key }} </th>
+                       {{purl_data }}
                        {% for elemen in value %}
                           <td>
                           <script>
-                          var t = "{{elemen}}";        
                           var loop_ind = "{{loop.index}}"
                           if ((loop_ind == "4")||(loop_ind == "5")){
-                             pageurl="https://google.com"
+                          var info = [{% for item in elemen %} "{{item}}", {%endfor %}];
+                          var pageurl=info[0] ; 
+                          var t = info[1] ;
                              document.write('<a href="' + pageurl + '">'+t+'</a>');
                           }
                           else {
+                          var t = "{{elemen}}";        
                           var minimize_character_count = 100;    
                           if(t.length > minimize_character_count ){
                           document.write(
@@ -36,6 +39,7 @@
                           );
                            }
                           else {
+                          var t = "{{elemen}}";        
                                   document.write(t);
                                 }
                           $('a.more').click(function(event){
