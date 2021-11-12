@@ -24,7 +24,7 @@ def term_search():
         session['term'] = term
     
     term=session.get('term')
-    results, pURL =get_definition(term)
+    results =get_definition(term)
     page = int(request.args.get("page", 1))
     page_size=2
     per_page = 2
@@ -32,9 +32,7 @@ def term_search():
     limit = offset+per_page
     results_for_render=dict(islice(results.items(),offset, limit))
     pagination = Pagination(page=page, total=len(results), per_page=page_size, search=False)
-    print("next %s, prev %s " %(pagination.has_next, pagination.has_prev))
     return render_template("results.html", results=results_for_render,
-                                           pURL = pURL,
                                            pagination = pagination, 
                                            headers=headers,
                                            term=term)

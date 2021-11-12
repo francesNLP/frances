@@ -259,13 +259,12 @@ def get_definition(term=None):
         permanentURL= r["permanentURL"]["value"]
         startPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["spnum"]["value"]
         endPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["epnum"]["value"]
-        if "rn" in r:
-            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], r["spnum"]["value"], r["epnum"]["value"], r["definition"]["value"], r["rn"]["value"]]
-        else:
-            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], r["spnum"]["value"], r["epnum"]["value"], r["definition"]["value"]]
-        pURL[r["article"]["value"]]=[{r["spnum"]["value"]:startPermanentURL}, {r["epnum"]["value"]:endPermanentURL}]
 
-    return clean_r,pURL
+        if "rn" in r:
+            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], r["definition"]["value"], r["rn"]["value"]]
+        else:
+            clean_r[r["article"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], r["definition"]["value"]]
+    return clean_r
 
 def get_vol_statistics(uri):
     data={}
