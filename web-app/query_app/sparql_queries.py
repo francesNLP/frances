@@ -275,19 +275,30 @@ def get_definition(term=None):
     sparqlW.setReturnFormat(JSON)
     results = sparqlW.query().convert()
     clean_r={}
+    list_terms={}
+    cont=0
     for r in results["results"]["bindings"]:
         permanentURL= r["permanentURL"]["value"]
         startPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["spnum"]["value"]
         endPermanentURL = permanentURL+"#?c=0&m=0&s=0&cv="+r["epnum"]["value"]
         if "Article" in r["b"]["value"]:
             term_type="Article"
+            definition=r["definition"]["value"]
         else:
             term_type="Topic"
+            def_size=len(r["definition"]["value"])
+            if def_size > 10000:
+                definition=r["definition"]["value"][0:1000]+"...CONTINUE"
+                cont=cont+1
 
         if "rn" in r:
-            clean_r[r["b"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], term_type, r["definition"]["value"], r["rn"]["value"]]
+            if r["b"]["value"] not in list_terms:
+                list_terms[r["b"]["value"]]=[]
+            if r["rn"]["value"] not in list_terms[r["b"]["value"]]:
+                list_terms[r["b"]["value"]].append(r["rn"]["value"])
+            clean_r[r["b"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], term_type, definition, list_terms[r["b"]["value"]]]
         else:
-            clean_r[r["b"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], term_type, r["definition"]["value"]]
+            clean_r[r["b"]["value"]]=[r["year"]["value"], r["enum"]["value"], r["vnum"]["value"], [startPermanentURL, r["spnum"]["value"]], [endPermanentURL,r["epnum"]["value"]], term_type, definition, []]
     return clean_r
 
 def get_vol_statistics(uri):
