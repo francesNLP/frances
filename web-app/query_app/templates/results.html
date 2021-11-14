@@ -18,16 +18,18 @@
             {% for key, value in results.items() %}
                <tr>
                     <th> {{ key }} </th>
-                       {{purl_data }}
                        {% for elemen in value %}
                           <td>
                           <script>
                           var loop_ind = "{{loop.index}}"
                           if ((loop_ind == "4")||(loop_ind == "5")){
-                          var info = [{% for item in elemen %} "{{item}}", {%endfor %}];
-                          var pageurl=info[0] ; 
-                          var t = info[1] ;
+                             var info = [{% for item in elemen %} "{{item}}", {%endfor %}];
+                             var pageurl=info[0] ; 
+                             var t = info[1] ;
                              document.write('<a href="' + pageurl + '">'+t+'</a>');
+                          }
+                          else if (loop_ind == "8") {
+                          	{% for r_term in elemen %} document.write("{{r_term}}, "); {%endfor %}
                           }
                           else {
                           var t = "{{elemen}}";        
