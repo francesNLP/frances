@@ -29,7 +29,7 @@
                              document.write('<a href="' + pageurl + '">'+t+'</a>');
                           }
                           else if (loop_ind == "8") {
-                          	{% for r_term in elemen %} document.write("{{r_term}}, "); {%endfor %}
+                          	{% for r_term in elemen %} document.write('<a href=/term_search/'+"{{r_term}}"+ '>'+"{{r_term}}"+'</a>'+" "); {%endfor %}
                           }
                           else {
                           var t = "{{elemen}}";        

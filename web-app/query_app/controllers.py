@@ -11,19 +11,26 @@ from itertools import islice
 def home_page():
     return render_template('home.html')
 
+@app.route("/term_search/<string:termlink>",  methods=['GET', 'POST'])
 @app.route("/term_search",  methods=['GET', 'POST'])
-def term_search():
+def term_search(termlink=None):
     
     headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition", "Related Terms"]
-    
     if request.method == "POST":
-        term = request.form["search"]
+        if "search" in request.form:
+            term = request.form["search"]
         if not term:
             term = "ABACISCUS"
         term=term.upper()
         session['term'] = term
     
-    term=session.get('term')
+    if termlink!=None:
+        term = termlink
+        session['term'] = term
+    else:
+        term=session.get('term')
+    if not term:
+        term = "ABACISCUS"
     results =get_definition(term)
     page = int(request.args.get("page", 1))
     page_size=2
