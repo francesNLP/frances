@@ -86,7 +86,18 @@
             {% for key, value in ed_r.items() %}
                <tr>
                     <th> {{ key }} </th>
-                    <td> {{ value }} </td>
+                    <td> <script>
+                     var key = "{{key}}" ;
+                     var value="{{value}}";
+                     var termlink="{{value}}".split("/").pop()
+                     if (key.includes("URI")){
+                       document.write('<a href=/visualization_resources?termlink='+termlink + '&termtype=Edition>'+ value +'</a>');
+                     }
+                      else {
+                          document.write(value);
+                         }
+	            </script></td>
+            
                </tr>
             {% endfor %}
         </tbody>
@@ -101,7 +112,7 @@
                     <th> {{ key }} </th>
                     <td> <script>
                      var key = "{{key}}" ;
- 	             var value = "{{value}}" ;
+                     var value="{{value}}";
                      if (key.includes("Permanent")){
                        document.write('<a href="' + value + '">'+value+'</a>');
                      }

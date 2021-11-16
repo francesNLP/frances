@@ -97,6 +97,8 @@ def visualization_resources(termlink=None, termtype=None):
         termlink  = request.args.get('termlink', None)
         termtype  = request.args.get('termtype', None)
         if termlink!=None:
+            if ">" in termlink:
+                termlink=termlink.split(">")[0]
             uri="<https://w3id.org/eb/i/"+termtype+"/"+termlink+">"
             g_results=describe_resource(uri)
             return render_template('visualization_resources.html', g_results=g_results, uri=uri)
