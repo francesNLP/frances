@@ -369,4 +369,28 @@ def get_vol_statistics(uri):
     data["Number of Distinct Topics"] = num_dist_topics
     return data
             
-
+def get_document(uri):
+    uri="<"+uri+">"
+    sparql = SPARQLWrapper("http://localhost:3030/edition1st/sparql")
+    query="""
+    PREFIX eb: <https://w3id.org/eb#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    SELECT ?definition ?term
+        WHERE {{
+            %s a eb:Article ;
+               eb:name ?term ;
+               eb:definition ?definition . 
+            }
+            UNION {
+            %s a eb:Topic ;
+              eb:name ?term ; 
+              eb:definition ?definition . 
+            }
+       } 
+    """ %(uri, uri)
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    term = results["results"]["bindings"][0]["term"]["value"]
+    definition=results["results"]["bindings"][0]["definition"]["value"]
+    return term, definition
