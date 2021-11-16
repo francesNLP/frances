@@ -17,7 +17,16 @@
         <tbody>
             {% for key, value in results.items() %}
                <tr>
-                    <th> {{ key }} </th>
+                    <th> <script>
+                         var t_key="{{key}}".split("/").pop();
+                         if ("{{key}}".includes("Article")){
+                             document.write('<a href=/visualization_resources?termlink='+t_key + '&termtype=Article>'+ "{{key}}"+'</a>');
+                             }
+                         else{
+                             document.write('<a href=/visualization_resources?termlink='+t_key + '&termtype=Topic>'+ "{{key}}"+'</a>');
+                             }
+                         </script>
+                     </th>
                        {% for elemen in value %}
                           <td>
                           <script>

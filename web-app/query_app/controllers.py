@@ -83,16 +83,25 @@ def vol_details():
 
 
 @app.route("/visualization_resources", methods=['GET', 'POST'])
-def visualization_resources():
-    if 'resource_uri' in request.form:
-        uri_raw=request.form.get('resource_uri').strip().replace("<","").replace(">","")
-        if uri_raw == "":
-            uri="<https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0>"
+def visualization_resources(termlink=None, termtype=None):
+    if request.method == "POST":
+        if 'resource_uri' in request.form:
+            uri_raw=request.form.get('resource_uri').strip().replace("<","").replace(">","")
+            if uri_raw == "":
+                uri="<https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0>"
+            else:
+                uri="<"+uri_raw+">"
+            g_results=describe_resource(uri)
+            return render_template('visualization_resources.html', g_results=g_results, uri=uri)
+    else:
+        termlink  = request.args.get('termlink', None)
+        termtype  = request.args.get('termtype', None)
+        if termlink!=None:
+            uri="<https://w3id.org/eb/i/"+termtype+"/"+termlink+">"
+            g_results=describe_resource(uri)
+            return render_template('visualization_resources.html', g_results=g_results, uri=uri)
         else:
-            uri="<"+uri_raw+">"
-        g_results=describe_resource(uri)
-        return render_template('visualization_resources.html', g_results=g_results, uri=uri)
-    return render_template('visualization_resources.html')
+            return render_template('visualization_resources.html')
 
 @app.route("/similar_terms", methods=["GET"])
 def similar_terms():
