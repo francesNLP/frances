@@ -109,7 +109,7 @@ def visualization_resources(termlink=None, termtype=None):
             return render_template('visualization_resources.html')
 
 @app.route("/similar_terms", methods=["GET", "POST"])
-def similar_terms():
+def similar_terms(termlink=None):
     if request.method == "POST":
         if 'resource_uri' in request.form:
             data_similar=request.form.get('resource_uri')
@@ -128,7 +128,7 @@ def similar_terms():
             results={}
             cont = 0
             for r_uri_raw, rank in simdocs:
-                if r_uri_raw!=uri_raw and rank:
+                if r_uri_raw!=uri_raw :
                     r_uri="<"+r_uri_raw+">"
                     r_term, r_definition,r_enum, r_year, r_vnum = get_document(r_uri)
                     results[r_uri_raw]=[r_enum, r_year, r_vnum, r_term, r_definition, rank]
@@ -139,6 +139,27 @@ def similar_terms():
                 return render_template('similar.html', results=results)
             else:
                 return render_template('similar.html', results=results, term=term, definition=definition, uri=uri_raw, enum=enum, year=year, vnum=vnum)
+    
+    termlink  = request.args.get('termlink', None)
+    termtype  = request.args.get('termtype', None)
+    if termlink!=None:
+        if ">" in termlink:
+            termlink=termlink.split(">")[0]
+        uri="<https://w3id.org/eb/i/"+termtype+"/"+termlink+">"
+        term, definition, enum, year, vnum  =get_document(uri)
+        text=term+definition
+        simdocs=most_similar(model, text, topn=11)
+        results={}
+        cont = 0
+        for r_uri_raw, rank in simdocs:
+             if r_uri_raw!=termlink:
+                 r_uri="<"+r_uri_raw+">"
+                 r_term, r_definition,r_enum, r_year, r_vnum = get_document(r_uri)
+                 results[r_uri_raw]=[r_enum, r_year, r_vnum, r_term, r_definition, rank]
+                 cont+=1
+             if cont == 10:
+                 break 
+        return render_template('similar.html', results=results, term=term, definition=definition, uri=uri, enum=enum, year=year, vnum=vnum)
     return render_template('similar.html')
 
 @app.route("/topic_summarization", methods=["GET"])
