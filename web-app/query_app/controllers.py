@@ -6,6 +6,9 @@ from .sparql_queries import *
 from flask_paginate import Pagination, get_page_parameter
 import itertools
 from itertools import islice
+from .utils import load_model, most_similar
+
+model=load_model('/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/doc2vec_sparql_ed1.model')
 
 @app.route("/", methods=["GET"])
 def home_page():
@@ -105,8 +108,24 @@ def visualization_resources(termlink=None, termtype=None):
         else:
             return render_template('visualization_resources.html')
 
-@app.route("/similar_terms", methods=["GET"])
+@app.route("/similar_terms", methods=["GET", "POST"])
 def similar_terms():
+    if request.method == "POST":
+        if 'resource_uri' in request.form:
+            uri_raw=request.form.get('resource_uri').strip().replace("<","").replace(">","")
+            if uri_raw == "":
+                uri_raw="https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0"
+            uri="<"+uri_raw+">"
+            term, definition =get_document(uri)
+            text=term+definition
+            simdocs=most_similar(model, text, topn=11)
+            results={}
+            for r_uri_raw, rank in simdocs:
+                if r_uri_raw!=uri_raw and rank:
+                    r_uri="<"+r_uri_raw+">"
+                    r_term, r_definition = get_document(r_uri)
+                    results[r_uri_raw]=[r_term, r_definition, rank]
+            return render_template('similar.html', results=results, term=term, definition=definition, uri=uri_raw)
     return render_template('similar.html')
 
 @app.route("/topic_summarization", methods=["GET"])
