@@ -116,16 +116,16 @@ def similar_terms():
             if uri_raw == "":
                 uri_raw="https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0"
             uri="<"+uri_raw+">"
-            term, definition =get_document(uri)
+            term, definition, enum, year, vnum  =get_document(uri)
             text=term+definition
             simdocs=most_similar(model, text, topn=11)
             results={}
             for r_uri_raw, rank in simdocs:
                 if r_uri_raw!=uri_raw and rank:
                     r_uri="<"+r_uri_raw+">"
-                    r_term, r_definition = get_document(r_uri)
-                    results[r_uri_raw]=[r_term, r_definition, rank]
-            return render_template('similar.html', results=results, term=term, definition=definition, uri=uri_raw)
+                    r_term, r_definition,r_enum, r_year, r_vnum = get_document(r_uri)
+                    results[r_uri_raw]=[r_enum, r_year, r_vnum, r_term, r_definition, rank]
+            return render_template('similar.html', results=results, term=term, definition=definition, uri=uri_raw, enum=enum, year=year, vnum=vnum)
     return render_template('similar.html')
 
 @app.route("/topic_summarization", methods=["GET"])
