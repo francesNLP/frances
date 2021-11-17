@@ -112,20 +112,33 @@ def visualization_resources(termlink=None, termtype=None):
 def similar_terms():
     if request.method == "POST":
         if 'resource_uri' in request.form:
-            uri_raw=request.form.get('resource_uri').strip().replace("<","").replace(">","")
-            if uri_raw == "":
+            data_similar=request.form.get('resource_uri')
+            if "https://" in data_similar or "w3id" in data_similar:
+                uri_raw=data_similar.strip().replace("<","").replace(">","")
+            elif data_similar == "":
                 uri_raw="https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0"
-            uri="<"+uri_raw+">"
-            term, definition, enum, year, vnum  =get_document(uri)
-            text=term+definition
+            else:
+                text=data_similar
+                uri_raw=""                
+            if uri_raw!="":
+                uri="<"+uri_raw+">"
+                term, definition, enum, year, vnum  =get_document(uri)
+                text=term+definition
             simdocs=most_similar(model, text, topn=11)
             results={}
+            cont = 0
             for r_uri_raw, rank in simdocs:
                 if r_uri_raw!=uri_raw and rank:
                     r_uri="<"+r_uri_raw+">"
                     r_term, r_definition,r_enum, r_year, r_vnum = get_document(r_uri)
                     results[r_uri_raw]=[r_enum, r_year, r_vnum, r_term, r_definition, rank]
-            return render_template('similar.html', results=results, term=term, definition=definition, uri=uri_raw, enum=enum, year=year, vnum=vnum)
+                    cont+=1
+                if cont == 10:
+                    break 
+            if uri_raw == "":
+                return render_template('similar.html', results=results)
+            else:
+                return render_template('similar.html', results=results, term=term, definition=definition, uri=uri_raw, enum=enum, year=year, vnum=vnum)
     return render_template('similar.html')
 
 @app.route("/topic_summarization", methods=["GET"])
