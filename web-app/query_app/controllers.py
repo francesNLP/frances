@@ -6,9 +6,34 @@ from .sparql_queries import *
 from flask_paginate import Pagination, get_page_parameter
 import itertools
 from itertools import islice
-from .utils import load_model, most_similar
+from sklearn.metrics.pairwise import cosine_similarity
+from .utils import calculating_similarity_text
+import numpy as np
+import os
+import pickle
+from sentence_transformers import SentenceTransformer
+from tqdm import tqdm
+########
+input_path="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models"
+text_embeddings = np.load('/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/embeddings_1ed.npy')
 
-model=load_model('/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/doc2vec_sparql_ed1.model')
+with open (os.path.join(input_path, 'similarities_1ed.txt'), 'rb') as fp:
+    similarities = pickle.load(fp)
+
+with open (os.path.join(input_path, 'similarities_sorted_1ed.txt'), 'rb') as fp1:
+    similarities_sorted = pickle.load(fp1)
+
+with open (os.path.join(input_path, 'documents_1ed.txt'), 'rb') as fp2:
+    documents = pickle.load(fp2)
+
+with open (os.path.join(input_path, 'terms_info_1ed.txt'), 'rb') as fp3:
+    terms_info = pickle.load(fp3)
+
+with open (os.path.join(input_path, 'uris_1ed.txt'), 'rb') as fp4:
+    uris = pickle.load(fp4)
+
+model = SentenceTransformer('bert-base-nli-mean-tokens')
+######
 
 @app.route("/", methods=["GET"])
 def home_page():
@@ -118,23 +143,18 @@ def similar_terms(termlink=None):
             elif data_similar == "":
                 uri_raw="https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0"
             else:
-                text=data_similar
-                uri_raw=""                
+                uri_raw=""
+                results=calculating_similarity_text(data_similar,text_embeddings, model, terms_info, documents,uris)              
             if uri_raw!="":
                 uri="<"+uri_raw+">"
                 term, definition, enum, year, vnum  =get_document(uri)
-                text=term+definition
-            simdocs=most_similar(model, text, topn=11)
-            results={}
-            cont = 0
-            for r_uri_raw, rank in simdocs:
-                if r_uri_raw!=uri_raw :
-                    r_uri="<"+r_uri_raw+">"
-                    r_term, r_definition,r_enum, r_year, r_vnum = get_document(r_uri)
-                    results[r_uri_raw]=[r_enum, r_year, r_vnum, r_term, r_definition, rank]
-                    cont+=1
-                if cont == 10:
-                    break 
+                index_uri=uris.index(uri_raw)
+                results={}
+                for i in range(-2, -12, -1):
+                    similar_index=similarities_sorted[index_uri][i]
+                    rank=similarities[index_uri][similar_index]
+                    results[uris[similar_index]]=[terms_info[similar_index][1],terms_info[similar_index][2], terms_info[similar_index][4], terms_info[similar_index][0], documents[similar_index], rank]
+    
             if uri_raw == "":
                 return render_template('similar.html', results=results)
             else:
@@ -147,18 +167,13 @@ def similar_terms(termlink=None):
             termlink=termlink.split(">")[0]
         uri="<https://w3id.org/eb/i/"+termtype+"/"+termlink+">"
         term, definition, enum, year, vnum  =get_document(uri)
-        text=term+definition
-        simdocs=most_similar(model, text, topn=11)
+        uri_raw=uri.replace("<","").replace(">","")
+        index_uri=uris.index(uri_raw)
         results={}
-        cont = 0
-        for r_uri_raw, rank in simdocs:
-             if r_uri_raw!=termlink:
-                 r_uri="<"+r_uri_raw+">"
-                 r_term, r_definition,r_enum, r_year, r_vnum = get_document(r_uri)
-                 results[r_uri_raw]=[r_enum, r_year, r_vnum, r_term, r_definition, rank]
-                 cont+=1
-             if cont == 10:
-                 break 
+        for i in range(-2, -12, -1):
+            similar_index=similarities_sorted[index_uri][i]
+            rank=similarities[index_uri][similar_index]
+            results[uris[similar_index]]=[terms_info[similar_index][1],terms_info[similar_index][2], terms_info[similar_index][4], terms_info[similar_index][0], documents[similar_index], rank]
         return render_template('similar.html', results=results, term=term, definition=definition, uri=uri, enum=enum, year=year, vnum=vnum)
     return render_template('similar.html')
 
