@@ -57,7 +57,7 @@ form.search_form button:hover {
 
     <table class="table table-striped table-bordered table-hover">
         <thead class="thead-inverse">
-            <tr> <th> URI </th> <th> Edtion </th> <th> Year </th> <th> Volume </th> <th> Term </th> <th> Definition</th> </tr>
+            <tr> <th> URI </th> <th> Edtion </th> <th> Year </th> <th> Volume </th> <th> Term </th> <th> Definition</th> <th> Sentiment_Score </th> </tr>
         </thead>
         <tbody>
             {% for key, value in results.items() %}
@@ -65,10 +65,10 @@ form.search_form button:hover {
                     <th> <script>
                          var t_key="{{key}}".split("/").pop();
                          if ("{{key}}".includes("Article")){
-                             document.write('<a href=/similar_terms?termlink='+t_key + '&termtype=Article>'+ "{{key}}"+'</a>');
+                             document.write('<a href=/visualization_resources?termlink='+t_key + '&termtype=Article>'+ "{{key}}"+'</a>');
                              }
                          else{
-                             document.write('<a href=/similar_terms?termlink='+t_key + '&termtype=Topic>'+ "{{key}}"+'</a>');
+                             document.write('<a href=/visualization_resources?termlink='+t_key + '&termtype=Topic>'+ "{{key}}"+'</a>');
                              }
                          </script>
                      </th>

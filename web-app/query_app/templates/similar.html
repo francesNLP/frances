@@ -52,7 +52,7 @@ form.search_form button:hover {
   <sript src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <table class="table table-striped table-bordered table-hover">
         <thead class="thead-inverse">
-            <tr> <th> URI </th> <th> Edtion </th> <th> Year </th> <th> Volume </th> <th> Term </th> <th> Original Definition</th> <th> Topic Modelling </th></tr>
+            <tr> <th> URI </th> <th> Edtion </th> <th> Year </th> <th> Volume </th> <th> Term </th> <th> Original Definition</th> <th> Topic Modelling </th> <th> Sentiment_Score </th></tr>
         </thead>
         <tbody>
                <tr>
@@ -101,6 +101,7 @@ form.search_form button:hover {
 			document.write('<a href=/topic_modelling?topic_name='+t + '>'+ t+'</a>'); 
                        </script>
                    </td>
+                   <td> {{t_sentiment}} </td>
                </tr>
         </tbody>
        {% endif %}
@@ -111,7 +112,7 @@ form.search_form button:hover {
 
     <table class="table table-striped table-bordered table-hover">
         <thead class="thead-inverse">
-            <tr> <th> URI </th> <th> Edtion </th> <th> Year </th> <th> Volume </th> <th> Term </th> <th> Definition</th> <th> Topic Modelling </th> <th> Similitud Rank </th></tr>
+            <tr> <th> URI </th> <th> Edtion </th> <th> Year </th> <th> Volume </th> <th> Term </th> <th> Definition</th> <th> Topic Modelling </th> <th> Similitud Rank </th> <th> Sentiment_Score </th></tr>
         </thead>
         <tbody>
             {% for key, value in results.items() %}
@@ -144,6 +145,7 @@ form.search_form button:hover {
                              else {
                                   document.write(t);
                                 }
+                             }
                               $('a.more').click(function(event){
         		      event.preventDefault();
         		      $(this).hide().prev().hide();
@@ -154,7 +156,6 @@ form.search_form button:hover {
                              event.preventDefault();
                               $(this).parent().hide().prev().show().prev().show();    
                              });
-                             }
 	                 </script></td>
                       {% endfor %}
                </tr>
