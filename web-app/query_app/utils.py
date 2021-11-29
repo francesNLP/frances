@@ -28,7 +28,7 @@ def calculating_similarity_text(definition, text_embeddings, model, terms_info, 
     similarities_sorted = similarities.argsort()
     results={}
     topics_vis=[]
-    for i in range(-1, -12, -1):
+    for i in range(-1, -21, -1):
         similar_index=similarities_sorted[0][i]
         rank=similarities[0][similar_index]
         score='%.2f'%sentiment_terms[similar_index][0]['score']
