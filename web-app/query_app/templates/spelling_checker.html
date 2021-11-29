@@ -23,8 +23,12 @@ form.search_form button {
   cursor: pointer;
 }
 
-.formfield * {
-  vertical-align: text-top;
+
+.missing{
+color:Red;
+}
+.missmatch{
+color:blue;
 }
 
 form.search_form button:hover {
@@ -54,8 +58,8 @@ form.search_form button:hover {
 
   {% if results %}
   <br></br>
-
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch.js"></script>
   <sript src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
@@ -86,86 +90,31 @@ form.search_form button:hover {
         </tbody>
     </table>
   
+
+
 <script>
-    function compare() {
-     var elm1 = "{{definition}}", 
-        elm2=   "{{clean_definition}}",
-        txt1 = elm1.trim().replace(/\s+/g, ' '),
-        txt2 = elm2.trim().replace(/\s+/g, ' '),
-        arr1 = txt1.split(" "),
-        arr2 = [];
+var dmp = new diff_match_patch();
 
-    for (var i in arr1) {
-        var match = txt2.match(new RegExp("\\b" + arr1[i] + "\\b"));
-        if (match) {
-            txt2 = txt2.replace(new RegExp("\\s?" + arr1[i]), "");
-            txt1 = txt1.replace(new RegExp("\\s?" + arr1[i]), "");
-        } else if (!match) {
-            arr2.push(arr1[i]);
-        }
-    }
-    var arr3 = txt2.split(" "),
-        right = elm1,
-        wrong = elm2;
-    for (var a in arr2) {
-        for (var b in arr3) {
-            var match2 = arr3[b].match(new RegExp("[" + arr2[a] + "]", "g")),
-                t = Math.max(arr2[a].length, arr3[b].length);
-            if (match2 && match2.length >= t * 0.5) {
-                txt2 = txt2.replace(new RegExp("\\s?" + arr3[b]), "");
-                txt1 = txt1.replace(new RegExp("\\s?" + arr2[a]), "");
-                var str1 = "",
-                    str2 = "",
-                    n = 0;
-                for (var c = 0; c < t; c++) {
-                    if (arr2[a].charAt(c) === arr3[b].charAt(c + n)) {
-                        str1 += arr3[b].charAt(c + n);
-                        str2 += arr2[a].charAt(c);
-                    } else if (arr2[a].charAt(c) !== arr3[b].charAt(c + n)) {
-                        if(arr2[a].charAt(c + 1) == arr3[b].charAt(c + n)){
-                            str2 += arr2[a].charAt(c).fontcolor("blue");
-                            str1 += "_".fontcolor("red");
-                            n--;
-                        }else if(arr2[a].charAt(c) == arr3[b].charAt(c + n + 1)){
-                            str1 += arr3[b].charAt(c + n).fontcolor("orange");
-                            n++;
-                            c--;
-                        }else{
-                            str1 += arr3[b].charAt(c + n).fontcolor("red");
-                            str2 += arr2[a].charAt(c).fontcolor("green");
-                        }
-                    }
-                }
-                wrong = wrong.replace(arr3[b], str1);
-                right = right.replace(arr2[a], str2);
-            }
-        }
-    }
-    extra = txt2.split(" ");
-    for(var d in extra){
-        wrong = wrong.replace(extra[d], extra[d].fontcolor("grey"));
-    }
-    missing = txt1.split(" ");
-    for(var f in missing){
-        right = right.replace(missing[f], missing[f].fontcolor("blue"));
-    }
-    divColLeft.innerHTML = right;
-    divColRight.innerHTML = wrong;
-
-        }
-
+function launch() {
+  divColRight.innerHTML = "";
+  var text1 = "{{definition}}";
+  var text2 = "{{clean_definition}}";
+  dmp.Diff_Timeout = parseFloat(1);
+  var d = dmp.diff_main(text1, text2);
+  dmp.diff_cleanupSemantic(d);
+  var ds = dmp.diff_prettyHtml(d);
+  document.getElementById('divColRight').innerHTML = ds;
+}
 </script>
 
 <script>
     function reset() {
-    divColRight.innerHTML = "{{clean_definition}}";
     divColLeft.innerHTML = "{{definition}}";
+    divColRight.innerHTML = "{{clean_definition}}";
     }
 </script>
 
-
-
-<p><strong> Original </strong><input type="button" onClick="compare();" value="Compare" id=""/> <input type="button" onClick="reset();" value="Reset" id=""/></p>
+<p><strong> Original </strong><input type="button" onClick="launch();" value="Compute Diff" id=""/> <input type="button" onClick="reset();" value="Reset" id=""/></p>
 <div id="divColLeft">{{definition}}</div>
 
 <hr style="width:50%;text-align:left;margin-left:0">
