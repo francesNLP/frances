@@ -37,13 +37,16 @@ form.search_form button:hover {
 <h4> Topic Modelling Search </h4>
 <hr style="width:50%;text-align:left;margin-left:0">
  
-    <p> Enter a <strong> topic modelling </strong> to see all the terms within the same topic:</p>
+    <p> Enter a <strong> topic modelling name </strong> or just the <strong> number </strong> of a topic to see all the terms within the same topic. All topics modelling names start with a number. </p>
+   <p> We have <strong> {{num_topics}} </strong> topics modelling items.</p>
+    
+    
 
      <!-- Load icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- The form -->
         <form method="POST" action="/topic_modelling" class="search_form">
-  	<input type="text" placeholder="Topic Name" name="topic_name">
+  	<input type="text" placeholder="Topic Name or Number (e.g. 1)" name="topic_name">
   	<button type="submit"><i class="fa fa-search"></i></button>
 
 	</form> 

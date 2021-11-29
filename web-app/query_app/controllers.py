@@ -17,22 +17,23 @@ from tqdm import tqdm
 from bertopic import BERTopic
 
 ########
-input_path_embed="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2"
-input_path="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/"
+input_path_embed="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2-summary"
 
-text_embeddings = np.load('/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2/embeddings_1ed.npy')
-topic_model = BERTopic.load("/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2/BerTopic_Model_1ed") 
+text_embeddings = np.load('/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2-summary/embeddings_1ed.npy')
+topic_model = BERTopic.load("/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2-summary/BerTopic_Model_1ed") 
 
 similarities=load_data(input_path_embed, 'similarities_1ed.txt')
 similarities_sorted=load_data(input_path_embed, 'similarities_sorted_1ed.txt')
-documents=load_data(input_path, 'documents_1ed.txt')
-terms_info=load_data(input_path, 'terms_info_1ed.txt')
-uris=load_data(input_path, 'uris_1ed.txt')
+documents=load_data(input_path_embed, 'documents_1ed.txt')
+terms_info=load_data(input_path_embed, 'terms_info_1ed.txt')
+uris=load_data(input_path_embed, 'uris_1ed.txt')
 topics=load_data(input_path_embed, 'topics_1ed.txt')
-topics_name=load_data(input_path_embed, 'topics_names_1ed.txt')
+
+t_names=load_data(input_path_embed, 't_names_1ed.txt')
 topics_names=load_data(input_path_embed, 'topics_names_1ed.txt')
-summary_1771=load_data(input_path,'topics_summary_1771.txt') 
-sentiment_terms=load_data(input_path,'sentiment_documents_1ed.txt') 
+
+sentiment_terms=load_data(input_path_embed,'sentiment_documents_1ed.txt') 
+clean_documents=load_data(input_path_embed, 'clean_documents_1ed.txt')
 
 #model = SentenceTransformer('bert-base-nli-mean-tokens')
 #model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -49,12 +50,12 @@ def home_page():
 @app.route("/term_search",  methods=['GET', 'POST'])
 def term_search(termlink=None):
     
-    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition", "Related Terms", "Topic Modelling", "Sentiment_Score"]
+    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition/Summary", "Related Terms", "Topic Modelling", "Sentiment_Score"]
     if request.method == "POST":
         if "search" in request.form:
             term = request.form["search"]
         if not term:
-            term = "ABACISCUS"
+            term = "AABAM"
         term=term.upper()
         session['term'] = term
     
@@ -64,7 +65,7 @@ def term_search(termlink=None):
     else:
         term=session.get('term')
     if not term:
-        term = "ABACISCUS"
+        term = "AABAM"
     results =get_definition(term)
     topics_vis=[]
     for key, value in results.items():
@@ -144,7 +145,7 @@ def visualization_resources(termlink=None, termtype=None):
         if 'resource_uri' in request.form:
             uri_raw=request.form.get('resource_uri').strip().replace("<","").replace(">","")
             if uri_raw == "":
-                uri="<https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0>"
+                uri="<https://w3id.org/eb/i/Article/992277653804341_144133901_AABAM_0>"
             else:
                 uri="<"+uri_raw+">"
             g_results=describe_resource(uri)
@@ -189,7 +190,7 @@ def similar_terms(termlink=None):
         if "https://" in data_similar or "w3id" in data_similar:
             uri_raw=data_similar.strip().replace("<","").replace(">","")
         elif data_similar == "":
-            uri_raw="https://w3id.org/eb/i/Article/992277653804341_144133901_ABACISCUS_0"
+            uri_raw="https://w3id.org/eb/i/Article/992277653804341_144133901_AABAM_0"
         else:
             uri_raw=""
             session['uri_raw'] = "free_search"
@@ -257,17 +258,29 @@ def similar_terms(termlink=None):
 @app.route("/topic_modelling", methods=["GET", "POST"])
 def topic_modelling(topic_name=None):
     topic_name  = request.args.get('topic_name', None)
+    num_topics=len(t_names)
     if topic_name == None:
         if 'topic_name' in request.form:
             topic_name=request.form.get('topic_name')
             if topic_name=="":
-                topic_name="5_see_dialling_villain_article"
+                topic_name="0_markettown_miles_sends_members"
+            else:
+                if topic_name not in t_names:
+                    full_topic_name=""
+                    number=topic_name+"_"
+                    for x in t_names:
+                        if x.startswith(number):
+                            full_topic_name=x
+                    if full_topic_name:
+                        topic_name=full_topic_name
+                    else:
+                        topic_name="0_markettown_miles_sends_members"
             session['topic_name'] = topic_name
 
     if not topic_name:
          topic_name=session.get('topic_name')
     if not topic_name:
-        return render_template('topic_modelling.html')
+        return render_template('topic_modelling.html', num_topics=num_topics)
     indices = [i for i, x in enumerate(topics_names) if x == topic_name]
     results={}
     for t_i in indices:
@@ -288,16 +301,43 @@ def topic_modelling(topic_name=None):
     results_for_render=dict(islice(results.items(),offset, limit))
     pagination = Pagination(page=page, total=len(results), per_page=page_size, search=False)
     ##############  
-
     return render_template('topic_modelling.html', topic_name=topic_name, 
                                     results=results_for_render, pagination=pagination, 
-                                    bar_plot=bar_plot, num_results=num_results) 
+                                    bar_plot=bar_plot, num_results=num_results, num_topics=num_topics) 
             
 
-@app.route("/topic_summarization", methods=["GET"])
-def topic_summarization():
-    return render_template('summary.html')
-        
+@app.route("/spelling_checker", methods=["GET", "POST"])
+def spelling_checker(termlink=None):
+    uri_raw=""
+    uri=""
+    termlink  = request.args.get('termlink', None)
+    termtype  = request.args.get('termtype', None)
+    if termlink!=None:
+        if ">" in termlink:
+            termlink=termlink.split(">")[0]
+        uri="<https://w3id.org/eb/i/"+termtype+"/"+termlink+">"
+        uri_raw=uri.replace("<","").replace(">","")
+
+    elif 'resource_uri' in request.form:
+        uri_checker=request.form.get('resource_uri')
+        print("uri_checker")
+        if "https://" in uri_checker or "w3id" in uri_checker:
+            uri_raw=uri_checker.strip().replace("<","").replace(">","")
+            uri="<"+uri_raw+">"
+        elif uri_checker == "":
+            uri_raw="https://w3id.org/eb/i/Article/992277653804341_144133901_AABAM_0"
+            uri="<"+uri_raw+">"
+
+    if not uri:
+        return render_template('spelling_checker.html')
+    else:
+        term, definition, enum, year, vnum=get_document(uri)
+        index_uri=uris.index(uri_raw)
+        clean_definition=clean_documents[index_uri]
+        results={}
+        results[uri_raw]=[enum,year, vnum, term]
+        return render_template('spelling_checker.html',results=results, clean_definition=clean_definition, definition=definition)
+
 @app.route("/evolution_of_terms", methods=["GET"])
 def evolution_of_terms():
     return render_template('evolution.html')
