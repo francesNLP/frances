@@ -66,7 +66,7 @@ def term_search(termlink=None):
         term=session.get('term')
     if not term:
         term = "AABAM"
-    results =get_definition(term)
+    results =get_definition(term, documents, uris)
     topics_vis=[]
     for key, value in results.items():
         index_uri=uris.index(key)
@@ -265,7 +265,7 @@ def topic_modelling(topic_name=None):
         if 'topic_name' in request.form:
             topic_name=request.form.get('topic_name')
             if topic_name=="":
-                topic_name="0_markettown_miles_sends_members"
+                topic_name="0_law_court_scots_person"
             else:
                 if topic_name not in t_names:
                     full_topic_name=""
@@ -276,7 +276,7 @@ def topic_modelling(topic_name=None):
                     if full_topic_name:
                         topic_name=full_topic_name
                     else:
-                        topic_name="0_markettown_miles_sends_members"
+                        topic_name="0_law_court_scots_person"
             session['topic_name'] = topic_name
 
     if not topic_name:
@@ -335,6 +335,7 @@ def spelling_checker(termlink=None):
     else:
         term, definition, enum, year, vnum=get_document(uri)
         index_uri=uris.index(uri_raw)
+        definition=documents[index_uri]
         clean_definition=clean_documents[index_uri]
         results={}
         results[uri_raw]=[enum,year, vnum, term]
