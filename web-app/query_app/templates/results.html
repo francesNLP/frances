@@ -43,6 +43,14 @@
                           	{% for r_term in elemen %} document.write('<a href=/term_search/'+"{{r_term}}"+ '>'+"{{r_term}}"+'</a>'+" "); {%endfor %}
                           }
                           else if (loop_ind == "9") {
+                             var t_key="{{key}}".split("/").pop();
+                             if ("{{key}}".includes("Article")){
+                             document.write('<a href=/spelling_checker?termlink='+t_key + '&termtype=Article>'+ 'Spell Checker </a>');  }
+                         else{
+                             document.write('<a href=/spelling_checker?termlink='+t_key + '&termtype=Topic>'+ 'Spell Checker </a>');   
+                             }
+                          }
+                          else if (loop_ind == "10") {
                                var topic_name = "{{elemen}}";        
                                document.write('<a href=/topic_modelling?topic_name='+topic_name + '>'+ topic_name+'</a>');
                           }

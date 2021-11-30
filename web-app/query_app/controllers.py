@@ -50,7 +50,7 @@ def home_page():
 @app.route("/term_search",  methods=['GET', 'POST'])
 def term_search(termlink=None):
     
-    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition/Summary", "Related Terms", "Topic Modelling", "Sentiment_Score"]
+    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition/Summary", "Related Terms", "Spell Checker", "Topic Modelling", "Sentiment_Score"]
     if request.method == "POST":
         if "search" in request.form:
             term = request.form["search"]
@@ -70,12 +70,14 @@ def term_search(termlink=None):
     topics_vis=[]
     for key, value in results.items():
         index_uri=uris.index(key)
+        spellchecker=key
         topic_name = topics_names[index_uri]
         score='%.2f'%sentiment_terms[index_uri][0]['score']
         sentiment = sentiment_terms[index_uri][0]['label']+"_"+score
         if topics[index_uri] not in topics_vis:
             topics_vis.append(topics[index_uri])
         #topic_name = get_topic_name(index_uri, topics, topic_model)
+        value.append(spellchecker)
         value.append(topic_name)
         value.append(sentiment)
     if len(topics_vis) >= 1:

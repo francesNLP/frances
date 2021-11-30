@@ -42,7 +42,7 @@ form.search_form button:hover {
 }-->
 </style>
 
-<h4> Spelling Checker </h4>
+<h4> Spell Checker </h4>
 <hr style="width:50%;text-align:left;margin-left:0">
     
     <p> Enter an <strong> URI of a term </strong> that you would like to check its spelling</p>
@@ -114,11 +114,11 @@ function launch() {
     }
 </script>
 
-<p><strong> Original </strong><input type="button" onClick="launch();" value="Compute Diff" id=""/> <input type="button" onClick="reset();" value="Reset" id=""/></p>
+<p><strong> Original Definition </strong></p>
 <div id="divColLeft">{{definition}}</div>
 
 <hr style="width:50%;text-align:left;margin-left:0">
-<p><strong> Cleaned </strong></p>
+<p><strong> Cleaned Definition </strong><input type="button" onClick="launch();" value="Compute Diff" id=""/> <input type="button" onClick="reset();" value="Reset" id=""/></p>
 <div id="divColRight">{{clean_definition}}</div>
 
 
