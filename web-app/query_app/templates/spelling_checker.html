@@ -97,8 +97,10 @@ var dmp = new diff_match_patch();
 
 function launch() {
   divColRight.innerHTML = "";
-  var text1 = "{{definition}}";
-  var text2 = "{{clean_definition}}";
+  var src1 = "{{definition}}";
+  var src2 = "{{clean_definition}}";
+  var text1 = escapeUnicode(src1);
+  var text2 = escapeUnicode(src2);
   dmp.Diff_Timeout = parseFloat(1);
   var d = dmp.diff_main(text1, text2);
   dmp.diff_cleanupSemantic(d);
@@ -106,20 +108,44 @@ function launch() {
   document.getElementById('divColRight').innerHTML = ds;
 }
 </script>
+<script>
+function escapeUnicode(str) {
+  return str.replace(/[\u00A0-\uffff]/gu, function (c) {
+    return "\\u" + ("000" + c.charCodeAt().toString(16)).slice(-4)
+  });
+}
+</script>
 
 <script>
     function reset() {
-    divColLeft.innerHTML = "{{definition}}";
-    divColRight.innerHTML = "{{clean_definition}}";
+    var src1 = "{{definition}}";
+    var src2 = "{{clean_definition}}";
+    var text1 = escapeUnicode(src1);
+    var text2 = escapeUnicode(src2);
+    divColLeft.innerHTML = text1;
+    divColRight.innerHTML = text2;
     }
 </script>
 
+
 <p><strong> Original Definition </strong></p>
-<div id="divColLeft">{{definition}}</div>
+<div id="divColLeft">
+    <script> 
+    var src1 = "{{definition}}";
+    var text1 = escapeUnicode(src1);
+    divColLeft.innerHTML = text1;
+    </script>
+</div>
 
 <hr style="width:50%;text-align:left;margin-left:0">
 <p><strong> Cleaned Definition </strong><input type="button" onClick="launch();" value="Compute Diff" id=""/> <input type="button" onClick="reset();" value="Reset" id=""/></p>
-<div id="divColRight">{{clean_definition}}</div>
+<div id="divColRight">
+    <script> 
+    var src2 = "{{clean_definition}}";
+    var text2 = escapeUnicode(src2);
+    divColRight.innerHTML = text2;
+    </script>
+</div>
 
 
 {% endif %}

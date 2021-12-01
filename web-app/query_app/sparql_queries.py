@@ -225,7 +225,7 @@ def get_volume_details(uri=None):
 
 
 
-def get_definition(term=None):
+def get_definition(term=None, documents=None, uris=None):
     term=term.upper()
     query1="""
     PREFIX eb: <https://w3id.org/eb#>
@@ -268,7 +268,7 @@ def get_definition(term=None):
         ?ep eb:number ?epnum .
         
         }
-   }
+   } ORDER BY ASC(?year)
    """ %(term, term)
     query = query1
     sparqlW.setQuery(query)
@@ -286,10 +286,8 @@ def get_definition(term=None):
             definition=r["definition"]["value"]
         else:
             term_type="Topic"
-            def_size=len(r["definition"]["value"])
-            if def_size > 10000:
-                definition=r["definition"]["value"][0:1000]+"...CONTINUE"
-                cont=cont+1
+            indice=uris.index(r["b"]["value"])
+            definition="Summary: "+ documents[indice]
 
         if "rn" in r:
             if r["b"]["value"] not in list_terms:

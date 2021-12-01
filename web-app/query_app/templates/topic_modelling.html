@@ -81,7 +81,8 @@ form.search_form button:hover {
                      </th>
                        {% for elemen in value %}
                           <td> <script>
-                          var t = "{{elemen}}";        
+                          var src = "{{elemen}}"; 
+                          var t = escapeUnicode(src);       
                           var minimize_character_count = 100;    
                           if(t.length > minimize_character_count ){
                           document.write(
@@ -90,7 +91,6 @@ form.search_form button:hover {
                           );
                            }
                           else {
-                          var t = "{{elemen}}";        
                                   document.write(t);
                                 }
                           $('a.more').click(function(event){
@@ -103,6 +103,11 @@ form.search_form button:hover {
                            event.preventDefault();
                            $(this).parent().hide().prev().show().prev().show();    
                            });
+                           function escapeUnicode(str) {
+  return str.replace(/[\u00A0-\uffff]/gu, function (c) {
+    return "\\u" + ("000" + c.charCodeAt().toString(16)).slice(-4)
+  });
+}
 	                 </script></td>
                       {% endfor %}
                </tr>
