@@ -36,3 +36,20 @@ form.example::after {
   clear: both;
   display: table;
 }
+
+disclaimer {
+            position:fixed;
+            width:100%;
+            left:0;
+            bottom:0;
+            }
+disclaimer p {
+              text-align:center;
+              }
+
+footer{
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  clear: both;
+}

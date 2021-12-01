@@ -43,16 +43,20 @@
                           	{% for r_term in elemen %} document.write('<a href=/term_search/'+"{{r_term}}"+ '>'+"{{r_term}}"+'</a>'+" "); {%endfor %}
                           }
                           else if (loop_ind == "9") {
-                             var t_key="{{key}}".split("/").pop();
-                             if ("{{key}}".includes("Article")){
-                             document.write('<a href=/spelling_checker?termlink='+t_key + '&termtype=Article>'+ 'Spell Checker </a>');  }
-                         else{
-                             document.write('<a href=/spelling_checker?termlink='+t_key + '&termtype=Topic>'+ 'Spell Checker </a>');   
-                             }
-                          }
-                          else if (loop_ind == "10") {
                                var topic_name = "{{elemen}}";        
                                document.write('<a href=/topic_modelling?topic_name='+topic_name + '>'+ topic_name+'</a>');
+                          }
+                          else if (loop_ind == "11") {
+                             var t_key="{{key}}".split("/").pop();
+                             if ("{{key}}".includes("Article")){
+                             document.write('<dl><dt><a href=/spelling_checker?termlink='+t_key + '&termtype=Article>'+ 'Spell Checker </a></dt>');  
+                             document.write('<dt><a href=/similar_terms?termlink='+t_key + '&termtype=Article>'+ 'Term Similarity </a></dt>');  
+                             document.write('<dt><a href=/evolution_of_terms?termlink='+t_key + '&termtype=Article>'+ 'Term Evolution </a></dt></ul>');  }
+                         else{
+                             document.write('<ul><dt><a href=/spelling_checker?termlink='+t_key + '&termtype=Topic>'+ 'Spell Checker </a></dt>');   
+                             document.write('<dt><a href=/similar_terms?termlink='+t_key + '&termtype=Topic>'+ 'Term Similarity </a></dt>');  
+                             document.write('<a href=/evolution_of_terms?termlink='+t_key + '&termtype=Topic>'+ 'Term Evolution </a></dt></dl>');  }
+                             
                           }
                           else {
                           var src = "{{elemen}}";  
@@ -121,8 +125,11 @@
   </div>
  </div>
  {% endif %}
-
-
-
-
+ {% endblock %}
+ {% block footer %} 
+   <div class="container">
+      <div id="footer">
+           <p> I am the disclaimer</p>
+     </div>
+  </div>
 {% endblock %}

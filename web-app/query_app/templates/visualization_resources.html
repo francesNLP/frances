@@ -198,7 +198,7 @@ form.search_form::after {
   display: table;
 }
 </style>
-<h4> Visualization of Resources </h4>
+<h3> Visualization of Resources </h3>
 <hr style="width:50%;text-align:left;margin-left:0">
 
     <p> Enter the <strong> URI of a resource </strong> that you would like to visualize:</p>
@@ -212,6 +212,7 @@ form.search_form::after {
 	</form> 
 
   {% if g_results %}
+     <br></br>
      <p> Visualization RDF graph for the resource <strong>{{uri}} </strong></p>
      <div id="svg-body" class="panel-body"></div>
   	<script>
