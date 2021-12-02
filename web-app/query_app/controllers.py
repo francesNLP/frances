@@ -17,6 +17,8 @@ from tqdm import tqdm
 from bertopic import BERTopic
 
 ########
+defoe_path="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
+
 input_path_sum="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2-summary"
 
 input_path="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/models/all-mpnet-base-v2"
@@ -56,7 +58,7 @@ def home_page():
 @app.route("/term_search",  methods=['GET', 'POST'])
 def term_search(termlink=None):
     
-    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition/Summary", "Related Terms", "Spell Checker", "Topic Modelling", "Sentiment_Score"]
+    headers=["Year", "Edition", "Volume", "Start Page", "End Page", "Term Type", "Definition/Summary", "Related Terms", "Topic Modelling", "Sentiment_Score", "Advanced Options"]
     if request.method == "POST":
         if "search" in request.form:
             term = request.form["search"]
@@ -76,16 +78,15 @@ def term_search(termlink=None):
     topics_vis=[]
     for key, value in results.items():
         index_uri=uris.index(key)
-        spellchecker=key
         topic_name = topics_names[index_uri]
         score='%.2f'%sentiment_terms[index_uri][0]['score']
         sentiment = sentiment_terms[index_uri][0]['label']+"_"+score
         if topics[index_uri] not in topics_vis:
             topics_vis.append(topics[index_uri])
         #topic_name = get_topic_name(index_uri, topics, topic_model)
-        value.append(spellchecker)
         value.append(topic_name)
         value.append(sentiment)
+        value.append(key)
     if len(topics_vis) >= 1:
         fig1=topic_model.visualize_barchart(topics_vis, n_words=10)
         bar_plot = fig1.to_json() 
@@ -406,6 +407,23 @@ def evolution_of_terms(termlink=None):
                                 bar_plot=bar_plot, heatmap_plot=heatmap_plot, t_sentiment=t_sentiment)
     
 
-@app.route("/defoe_queries", methods=["GET"])
+@app.route("/defoe_queries", methods=["GET", "POST"])
 def defoe_queries():
-    return render_template('defoe.html')
+    defoe_q={}
+    defoe_q["target_keysearch_by_year_filter_date"]="target_keysearch_by_year_filter_date"
+    defoe_q["target_keysearch_by_year"]="target_keysearch_by_year"
+    defoe_q["keysearch_by_year"]="keysearch_by_year"
+    defoe_q["keysearch_by_year_details"]="keysearch_by_year"
+    if request.method == "POST":
+        defoe_selection=request.form.get('defoe_selection')
+        cwd = os.getcwd()
+        os.chdir(defoe_path)
+
+        cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" queries/target_date_slavery.yml -r target_trade_legacy_filter -n 34"
+   
+        print("CMD:%s" %cmd)
+        os.system(cmd)
+
+        print("----AFTER---")
+        os.chdir(cwd)
+    return render_template('defoe.html', defoe_q=defoe_q)
