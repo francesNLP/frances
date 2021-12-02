@@ -10,12 +10,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 from .utils import calculating_similarity_text, get_topic_name, load_data
 
 import numpy as np
-import os
+import os, yaml
 import pickle
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 from bertopic import BERTopic
 
+from werkzeug.utils import secure_filename
+from werkzeug.datastructures import  FileStorage
 ########
 defoe_path="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
 
@@ -414,16 +416,45 @@ def defoe_queries():
     defoe_q["target_keysearch_by_year"]="target_keysearch_by_year"
     defoe_q["keysearch_by_year"]="keysearch_by_year"
     defoe_q["keysearch_by_year_details"]="keysearch_by_year"
+
     if request.method == "POST":
+        
+        config={}
         defoe_selection=request.form.get('defoe_selection')
+        
+        config["preprocess"]=request.form.get('preprocess')
+        config["num_target"]=request.form.get('num_target')
+        config["lexicon_start"]=request.form.get('lexicon_start')
+        config["defoe_path"]= "/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
+        config["start_year"]= "1771"
+        config["end_year"]= "1773"
+        config["os_type"]="os"
+
+        file= request.files['file']
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        config["data"]=os.path.join(app.config['UPLOAD_FOLDER'], filename)       
+       
+        
+        config_file=os.path.join(app.config['CONFIG_FOLDER'], "config_frances_web.yml")
+        with open(config_file, 'w') as outfile:
+            yaml.dump(config, outfile, default_flow_style=False)
+        
+        result_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
+        
         cwd = os.getcwd()
         os.chdir(defoe_path)
-
-        cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" queries/target_date_slavery.yml -r target_trade_legacy_filter -n 34"
+     
+  
+        cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + result_file +" -n 34"
    
-        print("CMD:%s" %cmd)
         os.system(cmd)
-
         print("----AFTER---")
         os.chdir(cwd)
+        
+        with open(result_file, "r") as stream:
+            results=yaml.safe_load(stream)
+        
+        return render_template('defoe.html', defoe_q=defoe_q, results=results)
+        
     return render_template('defoe.html', defoe_q=defoe_q)

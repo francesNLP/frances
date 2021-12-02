@@ -34,5 +34,6 @@ PARSERS = {
 }
 
 UPLOAD_FOLDER="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/query_app/upload_folder"
-RESULTS_FOLDER="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/query_app/upload_folder/defoe_results"
+CONFIG_FOLDER="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/query_app/config_folder"
+RESULTS_FOLDER="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/query_app/defoe_results"
 ALLOWED_EXTENSIONS = {'txt', 'yaml', 'yml'}
