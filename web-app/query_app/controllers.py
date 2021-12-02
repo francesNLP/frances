@@ -427,7 +427,7 @@ def defoe_queries():
         config["lexicon_start"]=request.form.get('lexicon_start')
         config["defoe_path"]= "/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
         config["start_year"]= "1771"
-        config["end_year"]= "1773"
+        config["end_year"]= "1771"
         config["os_type"]="os"
 
         file= request.files['file']
