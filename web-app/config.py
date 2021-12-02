@@ -32,3 +32,7 @@ PARSERS = {
     ".ttl": "turtle",
     ".xml": "xml",
 }
+
+UPLOAD_FOLDER="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/query_app/upload_folder"
+RESULTS_FOLDER="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/frances/web-app/query_app/upload_folder/defoe_results"
+ALLOWED_EXTENSIONS = {'txt', 'yaml', 'yml'}

@@ -42,19 +42,20 @@ form.search_form button:hover {
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <!-- Load icon library -->
         <form method="POST" action="/defoe_queries"> 
-        <div class="row">
-                <div class="col-md-4">
-                    <label>Select Defoe Query</label>
-                    <select name="defoe_selection" data-live-search="true" id="defoe_selection" class="form-control" title="Select Defoe Query"> 
-                    {% for key, value in defoe_q.items() %}
-			 <option value="{{key}}">{{ value }}</option>
-		    {% endfor %}
-                    </select>
-                </div>
-  	        <button type="submit" class="button_style"><i class="fa fa-search"></i></button>
-
-         </div>
+           <label>Select Defoe Query</label>
+             <select name="defoe_selection" data-live-search="true" id="defoe_selection" class="form-control" title="Select Defoe Query"> 
+                {% for key, value in defoe_q.items() %}
+	             <option value="{{key}}">{{ value }}</option>
+		 {% endfor %}
+              </select>
+  	    <button type="submit"><i class="fa fa-search"></i></button>
          </form>
+
+         <form action ="/defoe_queries" method = "POST" enctype="multipart/form-data" in your form.>
+             <input type = "file" name = "file" >
+             <input type = "submit" value=Upload File>
+         </form> 
+
 
        
 
