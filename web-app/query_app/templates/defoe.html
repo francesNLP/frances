@@ -74,8 +74,16 @@ form.search_form button:hover {
     	       <input type="text" id="num_target" name="num_target" value=2>
   	     </li>
   	    <li>
-               <label for="lexicon_start">Indice of Lexicon starts at index</label>
+               <label for="lexicon_start">Lexicon starts at position (Optional)</label>
                <input type="text" id="lexicon_start" name="lexicon_start" value=0>
+            </li>
+  	    <li>
+               <label for="start_year">Start Year (Optional)</label>
+               <input type="text" id="start_year" name="start_year" value=1771>
+            </li>
+  	    <li>
+               <label for="end_year">End Year (Optional)</label>
+               <input type="text" id="end_year" name="end_year" value=1771>
             </li>
            </ul>
          <input type="submit" value="Submit">
@@ -93,7 +101,16 @@ form.search_form button:hover {
             {% for key, value in results.items() %}
                <tr>
                     <th> {{key}} </th>
-                    <td> {{value}} </td> 
+                    <td> 
+                          <ul>
+                          {% for elemen in value %}
+                                <li> 
+                                     {{elemen}}
+                                </li>
+
+                          {% endfor %}
+                          </ul>
+                     </td> 
                </tr>
             {% endfor %}
         </tbody>
