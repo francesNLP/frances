@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, session
+from flask import Flask, render_template, send_file, request, jsonify, session
 from .flask_app import app
 import requests
 import traceback
@@ -15,6 +15,7 @@ import pickle
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 from bertopic import BERTopic
+from zipfile import *
 
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
@@ -415,7 +416,7 @@ def defoe_queries():
     defoe_q["target_keysearch_by_year_filter_date"]="target_keysearch_by_year_filter_date"
     defoe_q["target_keysearch_by_year"]="target_keysearch_by_year"
     defoe_q["keysearch_by_year"]="keysearch_by_year"
-    defoe_q["keysearch_by_year_details"]="keysearch_by_year"
+    defoe_q["keysearch_by_year_details"]="keysearch_by_year_details.py"
 
     if request.method == "POST":
         
@@ -448,13 +449,19 @@ def defoe_queries():
   
         cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + result_file +" -n 34"
    
-        os.system(cmd)
+        #os.system(cmd)
         print("----AFTER---")
         os.chdir(cwd)
         
         with open(result_file, "r") as stream:
             results=yaml.safe_load(stream)
-        
-        return render_template('defoe.html', defoe_q=defoe_q, results=results)
+
+        if "details" in defoe_selection:
+            zip_file = os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".zip")
+            with ZipFile(zip_file, 'w') as zipf:
+                zipf.write(result_file)
+            return send_file(zip_file, as_attachment=True)
+        else:
+            return render_template('defoe.html', defoe_q=defoe_q, results=results, defoe_selection=defoe_selection)
         
     return render_template('defoe.html', defoe_q=defoe_q)
