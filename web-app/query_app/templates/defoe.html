@@ -128,11 +128,17 @@ form.search_form button:hover {
          <br></br>
           <script> document.write('<a href=/visualize_freq?defoe_selection='+"{{defoe_selection}}"+ '&lexicon_file='+"{{lexicon_file}}"+'&preprocess='+"{{preprocess}}"+ '> Visualize Results </a>') </script>
          <br></br>
-          {% if line_plot %}
-               <div class="chart" id="line_plot">
+          {% if line_f_plot %}
+               <div class="chart" id="line_f_plot">
                 <script>
-                    var graphs = {{line_plot | safe}};
-                    Plotly.plot('line_plot',graphs);
+                    var graphs = {{line_f_plot | safe}};
+                    Plotly.plot('line_f_plot',graphs);
+                </script>
+              </div>
+               <div class="chart" id="line_n_f_plot">
+                <script>
+                    var graphs = {{line_n_f_plot | safe}};
+                    Plotly.plot('line_n_f_plot',graphs);
                 </script>
               </div>
             <br></br>

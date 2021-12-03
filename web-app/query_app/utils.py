@@ -101,28 +101,6 @@ def freq_count(results):
                     freq_count[i[0]][year]+=i[1]
     return freq_count
 
-def normalize_freq(publication, freq_results, view_terms):
-    fig=plt.figure(figsize=(20,8))
-    years=set()
-    for term in view_terms:
-        if term in freq_results:
-            normed_results = {}
-            for year in freq_results[term]:
-                if year>0:
-                    normed_results[year] = (freq_results[term][year]* len(term.split()))/float(publication[year][2])
-                    years.add(year)
-            plt.plot(*zip(*sorted(normed_results.items())), label=term, lw = 2, alpha = 1, marker="X")
-    x_years=sorted(list(years))
-    plt.xticks(np.arange(min(x_years), max(x_years)+1, 2.0), rotation=45) 
-    plt.ticklabel_format(style = 'plain')
-    plt.tick_params(axis='both', which='major', labelsize=10)
-    plt.legend(loc='upper left')
-    plt.xlabel("Years")
-    plt.ylabel("Normalized Frequency")
-    return fig
-
-
-
 
 def plot_freq_count(freq_results, view_terms):
     img = BytesIO()
@@ -143,6 +121,28 @@ def plot_freq_count(freq_results, view_terms):
     plot_url = base64.b64encode(img.getvalue()).decode('utf8')
     return plot_url
 
+def normalize_freq(publication, freq_results, view_terms):
+    normed_results = {}
+    for term in view_terms:
+        if term in freq_results:
+            normed_results[term]={}
+            for year in freq_results[term]:
+                normed_results[term][year] = (freq_results[term][year]* len(term.split()))/float(publication[int(year)][2])
+    return normed_results
+
+
+def plotly_norm_freq_count(normalize_f_count):
+    df=pd.DataFrame.from_dict(normalize_f_count)
+    fig = px.line(df, labels={
+                     "index": "Year",
+                     "value": "Normalized Frequency",
+                     "variable": "Lexicon"
+                 }, title="Normalized Frequency of Lexicon Terms per Years")
+    fig.update_layout( yaxis = dict(
+        showexponent = 'all',
+        exponentformat = 'e'))
+    return fig
+
 def plotly_freq_count(f_count):
     df=pd.DataFrame.from_dict(f_count)
     fig = px.line(df, labels={
@@ -152,10 +152,16 @@ def plotly_freq_count(f_count):
                  }, title="Frequency of Lexicon Terms per Years")
     return fig
 
-def plot_taxonomy_freq(taxonomy, results):
+def plot_taxonomy_freq(taxonomy, results, norm_publication):
 
+    ### frequency plot
     f_count=freq_count(results)
-    plot_url=plotly_freq_count(f_count)
-    return plot_url
+    plot_f=plotly_freq_count(f_count)
+
+    ### normalize frequency plot
+    normalize_f_count=normalize_freq(norm_publication, f_count, taxonomy)
+    plot_n_f=plotly_norm_freq_count(normalize_f_count)
+
+    return plot_f, plot_n_f
 
 
