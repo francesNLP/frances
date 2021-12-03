@@ -90,9 +90,13 @@ form.search_form button:hover {
          </form> 
 
    {% if flag %}
+       <br></br>
        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-       <sript src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-       <p> <strong> Results of the defoe query </strong> </p>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+       <p> <strong >Results of {{defoe_selection}} query </strong> </p>
 
         {% if "details" in defoe_selection %}
               <script> document.write('<a href=/download?defoe_selection='+"{{defoe_selection}}"+ '> Download Results </a>') </script>
@@ -124,9 +128,14 @@ form.search_form button:hover {
          <br></br>
           <script> document.write('<a href=/visualize_freq?defoe_selection='+"{{defoe_selection}}"+ '&lexicon_file='+"{{lexicon_file}}"+'&preprocess='+"{{preprocess}}"+ '> Visualize Results </a>') </script>
          <br></br>
-          {% if plot_url %}
-               <img src="data:image/png;base64, {{plot_url}}">
-         <br></br>
+          {% if line_plot %}
+               <div class="chart" id="line_plot">
+                <script>
+                    var graphs = {{line_plot | safe}};
+                    Plotly.plot('line_plot',graphs);
+                </script>
+              </div>
+            <br></br>
           {% endif %}
        {% endif %}
    {% endif %}
