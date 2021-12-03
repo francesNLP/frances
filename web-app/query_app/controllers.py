@@ -449,19 +449,24 @@ def defoe_queries():
   
         cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + result_file +" -n 34"
    
-        #os.system(cmd)
-        print("----AFTER---")
+        os.system(cmd)
         os.chdir(cwd)
         
         with open(result_file, "r") as stream:
             results=yaml.safe_load(stream)
 
         if "details" in defoe_selection:
-            zip_file = os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".zip")
-            with ZipFile(zip_file, 'w') as zipf:
-                zipf.write(result_file)
-            return send_file(zip_file, as_attachment=True)
+            return render_template('defoe.html', defoe_q=defoe_q, flag=1, defoe_selection=defoe_selection)
         else:
-            return render_template('defoe.html', defoe_q=defoe_q, results=results, defoe_selection=defoe_selection)
+            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection)
         
     return render_template('defoe.html', defoe_q=defoe_q)
+
+@app.route("/download", methods=['GET'])
+def download(defoe_selection=None):
+    defoe_selection = request.args.get('defoe_selection', None)
+    result_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
+    zip_file = os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".zip")
+    with ZipFile(zip_file, 'w') as zipf:
+        zipf.write(result_file)
+    return send_file(zip_file, as_attachment=True)
