@@ -7,7 +7,8 @@ from flask_paginate import Pagination, get_page_parameter
 import itertools
 from itertools import islice
 from sklearn.metrics.pairwise import cosine_similarity
-from .utils import calculating_similarity_text, get_topic_name, load_data
+from .utils import calculating_similarity_text, get_topic_name 
+from .utils import plot_taxonomy_freq, load_data, preprocess_lexicon, dict_defoe_queries, read_results
 
 import numpy as np
 import os, yaml
@@ -16,9 +17,16 @@ from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 from bertopic import BERTopic
 from zipfile import *
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+
 
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
+
+from io import BytesIO
+import base64
+
 ########
 defoe_path="/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
 
@@ -412,11 +420,7 @@ def evolution_of_terms(termlink=None):
 
 @app.route("/defoe_queries", methods=["GET", "POST"])
 def defoe_queries():
-    defoe_q={}
-    defoe_q["target_keysearch_by_year_filter_date"]="target_keysearch_by_year_filter_date"
-    defoe_q["target_keysearch_by_year"]="target_keysearch_by_year"
-    defoe_q["keysearch_by_year"]="keysearch_by_year"
-    defoe_q["keysearch_by_year_details"]="keysearch_by_year_details.py"
+    defoe_q=dict_defoe_queries()
 
     if request.method == "POST":
         
@@ -441,32 +445,56 @@ def defoe_queries():
         with open(config_file, 'w') as outfile:
             yaml.dump(config, outfile, default_flow_style=False)
         
-        result_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
+        results_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
         
         cwd = os.getcwd()
         os.chdir(defoe_path)
      
   
-        cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + result_file +" -n 34"
+        cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + results_file +" -n 34"
    
-        os.system(cmd)
+        #os.system(cmd)
         os.chdir(cwd)
         
-        with open(result_file, "r") as stream:
-            results=yaml.safe_load(stream)
+
+        results=read_results(results_file)
 
         if "details" in defoe_selection:
             return render_template('defoe.html', defoe_q=defoe_q, flag=1, defoe_selection=defoe_selection)
         else:
-            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection)
+            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection, lexicon_file=config["data"], preprocess=config["preprocess"])
         
     return render_template('defoe.html', defoe_q=defoe_q)
 
 @app.route("/download", methods=['GET'])
 def download(defoe_selection=None):
     defoe_selection = request.args.get('defoe_selection', None)
-    result_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
-    zip_file = os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".zip")
+    cwd = os.getcwd()
+    os.chdir(app.config['RESULTS_FOLDER'])
+    results_file=defoe_selection+".yml"
+    zip_file = defoe_selection+".zip"
     with ZipFile(zip_file, 'w') as zipf:
-        zipf.write(result_file)
+        zipf.write(results_file)
+    os.chdir(cwd)
+    zip_file=os.path.join(app.config['RESULTS_FOLDER'], zip_file)
     return send_file(zip_file, as_attachment=True)
+
+@app.route("/visualize_freq", methods=['GET'])
+def visualize_freq(defoe_selection=None):
+    defoe_selection = request.args.get('defoe_selection', None)
+    lexicon_file = request.args.get('lexicon_file', None)
+    results_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
+    with open(results_file, "r") as stream:
+        results=yaml.safe_load(stream)
+    
+    preprocess= request.args.get('preprocess', None)
+    print("--Preprocess is %s---" %preprocess)
+    p_lexicon = preprocess_lexicon(lexicon_file, preprocess)
+    defoe_q=dict_defoe_queries()
+    print("PROCESS P_LEXICON:%s" %p_lexicon)
+    
+    results=read_results(results_file)
+    taxonomy=p_lexicon
+    plot_url=plot_taxonomy_freq(taxonomy, results)
+    print("--AFTER---")
+    return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection, lexicon_file=lexicon_file, plot_url=plot_url)

@@ -120,6 +120,14 @@ form.search_form button:hover {
             {% endfor %}
           </tbody>
          </table>
+            <script> document.write('<a href=/download?defoe_selection='+"{{defoe_selection}}"+ '> Download Results </a>') </script>
+         <br></br>
+          <script> document.write('<a href=/visualize_freq?defoe_selection='+"{{defoe_selection}}"+ '&lexicon_file='+"{{lexicon_file}}"+'&preprocess='+"{{preprocess}}"+ '> Visualize Results </a>') </script>
+         <br></br>
+          {% if plot_url %}
+               <img src="data:image/png;base64, {{plot_url}}">
+         <br></br>
+          {% endif %}
        {% endif %}
    {% endif %}
 
