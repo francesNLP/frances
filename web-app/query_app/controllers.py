@@ -462,7 +462,20 @@ def defoe_queries():
         if "details" in defoe_selection:
             return render_template('defoe.html', defoe_q=defoe_q, flag=1, defoe_selection=defoe_selection)
         else:
-            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection, lexicon_file=config["data"], preprocess=config["preprocess"])
+            preprocess= request.args.get('preprocess', None)
+            p_lexicon = preprocess_lexicon(config["data"], config["preprocess"])
+
+            #### Read Normalized data
+            norm_file=os.path.join(app.config['RESULTS_FOLDER'], "results_nls_normalized")
+            ####
+            norm_publication=read_results(norm_file)
+            taxonomy=p_lexicon
+            plot_f, plot_n_f=plot_taxonomy_freq(taxonomy, results, norm_publication)
+            #### only for ploty figures
+            line_f_plot = plot_f.to_json()
+            line_n_f_plot = plot_n_f.to_json()
+            ####
+            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection, line_f_plot=line_f_plot, line_n_f_plot=line_n_f_plot)
         
     return render_template('defoe.html', defoe_q=defoe_q)
 
