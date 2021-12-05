@@ -455,7 +455,7 @@ def defoe_queries():
             os.chdir(defoe_path)
             cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + results_file +" -n 34"
    
-            os.system(cmd)
+            #os.system(cmd)
             os.chdir(cwd)
         
 
@@ -464,7 +464,6 @@ def defoe_queries():
         if "terms" in defoe_selection:
             return render_template('defoe.html', defoe_q=defoe_q, flag=1, defoe_selection=defoe_selection)
         elif "uris" in defoe_selection or "normalized" in defoe_selection:
-            print("MANDO!!")
             return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection)
         else:
             preprocess= request.args.get('preprocess', None)
