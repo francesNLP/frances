@@ -98,10 +98,10 @@ form.search_form button:hover {
 
        <p> <strong >Results of {{defoe_selection}} query </strong> </p>
 
-        {% if "details" in defoe_selection %}
+        {% if "terms" in defoe_selection %}
               <script> document.write('<a href=/download?defoe_selection='+"{{defoe_selection}}"+ '> Download Results </a>') </script>
               <br></br>
-        {% else %} 
+        {% elif "frequency" in defoe_selection %}
         <table class="table table-striped table-bordered table-hover">
         <thead class="thead-inverse">
             <tr> <th> Year </th> <th> Keyword : Frequency <th> </tr>
@@ -141,6 +141,30 @@ form.search_form button:hover {
               </div>
             <br></br>
           {% endif %}
+        {% else %}
+        <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-inverse">
+            <tr> <th> Year </th> <th> Data <th> </tr>
+        </thead>
+        <tbody>
+            {% for key, value in results.items() %}
+               <tr>
+                    <th> {{key}} </th>
+                    <td> 
+                          {% for elemen in value %}
+                                <li> 
+                                     {{elemen}}
+                                </li>
+
+                          {% endfor %}
+                          </ul>
+                     </td> 
+               </tr>
+            {% endfor %}
+          </tbody>
+         </table>
+            <script> document.write('<a href=/download?defoe_selection='+"{{defoe_selection}}"+ '> Download Results </a>') </script>
+            <br></br>
        {% endif %}
    {% endif %}
 

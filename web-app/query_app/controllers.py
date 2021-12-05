@@ -428,17 +428,20 @@ def defoe_queries():
         defoe_selection=request.form.get('defoe_selection')
         
         config["preprocess"]=request.form.get('preprocess')
-        config["num_target"]=request.form.get('num_target')
-        config["lexicon_start"]=request.form.get('lexicon_start')
+        config["target"]=request.form.get('num_target')
+        config["target_sentences"] = ["Slave", "Slavery"]
+        config["target_filter"] = "or"
+        config["window"]= "10" 
         config["defoe_path"]= "/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
         config["start_year"]= request.form.get('start_year')
         config["end_year"]= request.form.get('end_year')
         config["os_type"]="os"
-
-        file= request.files['file']
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        config["data"]=os.path.join(app.config['UPLOAD_FOLDER'], filename)       
+       
+        if "normalized" not in defoe_selection: 
+            file= request.files['file']
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            config["data"]=os.path.join(app.config['UPLOAD_FOLDER'], filename)       
        
         
         config_file=os.path.join(app.config['CONFIG_FOLDER'], "config_frances_web.yml")
@@ -446,27 +449,29 @@ def defoe_queries():
             yaml.dump(config, outfile, default_flow_style=False)
         
         results_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
-        
-        cwd = os.getcwd()
-        os.chdir(defoe_path)
-     
-  
-        cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + results_file +" -n 34"
+       
+        if "normalized" not in defoe_selection: 
+            cwd = os.getcwd()
+            os.chdir(defoe_path)
+            cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + results_file +" -n 34"
    
-        #os.system(cmd)
-        os.chdir(cwd)
+            os.system(cmd)
+            os.chdir(cwd)
         
 
         results=read_results(results_file)
 
-        if "details" in defoe_selection:
+        if "terms" in defoe_selection:
             return render_template('defoe.html', defoe_q=defoe_q, flag=1, defoe_selection=defoe_selection)
+        elif "uris" in defoe_selection or "normalized" in defoe_selection:
+            print("MANDO!!")
+            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection)
         else:
             preprocess= request.args.get('preprocess', None)
             p_lexicon = preprocess_lexicon(config["data"], config["preprocess"])
 
             #### Read Normalized data
-            norm_file=os.path.join(app.config['RESULTS_FOLDER'], "results_nls_normalized")
+            norm_file=os.path.join(app.config['RESULTS_FOLDER'], "publication_normalized.yml")
             ####
             norm_publication=read_results(norm_file)
             taxonomy=p_lexicon
@@ -506,7 +511,7 @@ def visualize_freq(defoe_selection=None):
     results=read_results(results_file)
 
     #### Read Normalized data
-    norm_file=os.path.join(app.config['RESULTS_FOLDER'], "results_nls_normalized")
+    norm_file=os.path.join(app.config['RESULTS_FOLDER'], "publication_normalized.yml")
     ####
     norm_publication=read_results(norm_file)
     print("---%s---" %norm_publication)

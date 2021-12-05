@@ -56,7 +56,6 @@ def calculating_similarity_text(definition, text_embeddings, model, terms_info, 
 def preprocess_lexicon(data_file, preprocess="normalize"):
     keysentences=[]
     preprocess_type=parse_preprocess_word_type(preprocess)
-    print("---the preprocess type is %s" %preprocess_type)
     with open(data_file, 'r') as f:
         for keysentence in list(f):
             k_split = keysentence.split()
@@ -72,10 +71,11 @@ def preprocess_lexicon(data_file, preprocess="normalize"):
 
 def dict_defoe_queries():
     defoe_q={}
-    defoe_q["target_keysearch_by_year_filter_date"]="target_keysearch_by_year_filter_date"
-    defoe_q["target_keysearch_by_year"]="target_keysearch_by_year"
-    defoe_q["keysearch_by_year"]="keysearch_by_year"
-    defoe_q["keysearch_by_year_details"]="keysearch_by_year_details.py"
+    defoe_q["frequency_keyseach_by_year"]="frequency_keyseach_by_year"
+    defoe_q["publication_normalized"]="publication_normalized"
+    defoe_q["uris_keysearch"]="uris_keysearch"
+    defoe_q["terms_snippet_keysearch_by_year"]="terms_snippet_keysearch_by_year"
+    defoe_q["terms_fulltext_keysearch_by_year"]="terms_snippet_keysearch_by_year"
     return defoe_q
 
 
