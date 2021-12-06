@@ -209,24 +209,7 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 <img width="641" alt="eb-dataModel" src="https://user-images.githubusercontent.com/6940078/138864341-e18e5f0e-3038-4392-9bc9-3340875c5730.png">
 
 
-## 8. Architecture Proposed 
 
 
-<img width="1194" alt="FrancesArchitecture" src="https://user-images.githubusercontent.com/6940078/134651770-deafc0a8-0dab-4144-a933-151db978e0ad.png">
 
 
-## 9. ElasticSearch
-
-Terminal 1:
-
-1. Download elasticsearch-7.11.2.
-2. Decompress the elastic search-7.11.2 folder
-3. cd elasticsearch-7.11.2/
-4. ./bin/elasticsearch 
-           (Let it running - do not close this terminal)
-
-Terminal  2) 
-1. python create_load_indexes.py   —> It creates an ES index (nlsArticles) and loads the json files into Elastic Search. 
-2. curl 'localhost:9200/_cat/indices?v’  —> It checks that the index and data have been created correctly in Elastic Search
-3. python train_model_es.py.  —> Train a doc2vec model using the data previously loaded to Elastic Search 
-4. python test_load_search_model_es.py. —> Test the doc2vec model and retrieve the most similar documents (of a given text) from Elastic Search.  
