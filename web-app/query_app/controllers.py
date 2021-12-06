@@ -56,6 +56,8 @@ clean_documents=load_data(input_path_sum, 'clean_documents_1ed.txt')
 
 #model = SentenceTransformer('bert-base-nli-mean-tokens')
 #model = SentenceTransformer('all-MiniLM-L6-v2')
+
+### To use ###
 model = SentenceTransformer('all-mpnet-base-v2')
 
 
@@ -428,14 +430,14 @@ def defoe_queries():
         defoe_selection=request.form.get('defoe_selection')
         
         config["preprocess"]=request.form.get('preprocess')
-        config["target"]=request.form.get('num_target')
-        config["target_sentences"] = ["Slave", "Slavery"]
-        config["target_filter"] = "or"
-        config["window"]= "10" 
+        config["target_sentences"]= request.form.get('target_sentences').split(",")
+        config["target_filter"] = request.form.get('target_filter')
+        config["window"] = request.form.get('window') 
         config["defoe_path"]= "/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
         config["start_year"]= request.form.get('start_year')
         config["end_year"]= request.form.get('end_year')
         config["os_type"]="os"
+        config["hit_count"] = request.form.get('hit_count')
        
         if "normalized" not in defoe_selection: 
             file= request.files['file']
@@ -455,15 +457,17 @@ def defoe_queries():
             os.chdir(defoe_path)
             cmd="spark-submit --py-files defoe.zip defoe/run_query.py sparql_data.txt sparql defoe.sparql.queries."+ defoe_selection+" "+ config_file  +" -r " + results_file +" -n 34"
    
-            #os.system(cmd)
+            os.system(cmd)
             os.chdir(cwd)
         
 
         results=read_results(results_file)
 
         if "terms" in defoe_selection:
-            return render_template('defoe.html', defoe_q=defoe_q, flag=1, defoe_selection=defoe_selection)
+            results_uris=results["terms_uris"]
+            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, results_uris=results_uris,  defoe_selection=defoe_selection)
         elif "uris" in defoe_selection or "normalized" in defoe_selection:
+
             return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection)
         else:
             preprocess= request.args.get('preprocess', None)
@@ -508,6 +512,8 @@ def visualize_freq(defoe_selection=None):
     
     #### Read Results File
     results=read_results(results_file)
+
+
 
     #### Read Normalized data
     norm_file=os.path.join(app.config['RESULTS_FOLDER'], "publication_normalized.yml")
