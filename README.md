@@ -101,9 +101,10 @@ Furthermore, this notebook also re-arranges the updated information (and drops s
 - numberOfTerms:        Number of terms per page
 - numberOfPages:        Number of pages per volume
 - numberOfVolumes:      Number of volumes per edition or supplement
-
-TODO
-- [similar_terms]:      TODO- Doc2Vec similar terms
+- similar_terms:        Applying Transformers - "all-mpnet-base-v2" - extract which terms are more similar to others.
+- topic_summaritzation : Applying Transformers - "XLNeT"- summarize an topic definition
+- sentiment_analysis:   Applying Transformers - "siebert/sentiment-roberta-large-english" - classify the definitions between positve and negative. 
+- spelling_checker :    Applying Transformers + neuspell - check the terms definitions and fix errors. 
 	
 We have a row per TERM. Note, that a TERM can appear several times per edition. That is the case when we have several definitions per term.
 
