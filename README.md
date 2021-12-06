@@ -182,27 +182,14 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 - Given an edition, give me the years that each volume has been published.
 - Given an edition and a volume, give me all the terms
 - Given an edition, give me all the terms
-
 - Given a term, give me all editions and volumes that it appears. 
 - Given a term, give me all the definitions that we have per edition. 
 - Give the terms that only appear in one edition.
 - Give the terms that appears in all editions. 
 - Given an edition, tell me the terms for which we have more definitions
-
 - Search definitions for a given term and edition. 
-
 - Given a term and edition, tell me which terms (based on "related_terms") are related with it. 
--  Work in progress (using dataframes): [Knowledge_Graph](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_KnowledgeGraph.ipynb)
-  -  <img width="436" alt="Screen Shot 2021-10-11 at 17 32 23" src="https://user-images.githubusercontent.com/6940078/136824814-ad81c392-a429-405f-8be0-dc1bbabd68cf.png">
-
-
 - Given a term, see how the definition(s) have changed across editions. 
-
-(Additionally)
-
-- Generic data explorations with dataframes
-  - Work in progress: [DataFrame_Exploration](https://github.com/francesNLP/frances/blob/main/NLS_EB/EB_Dataframe_Explorations.ipynb)
-
 
 ## 7. Data Model Proposed
 
