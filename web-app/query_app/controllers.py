@@ -453,6 +453,7 @@ def config_query():
         config_options["target_filter"] = 1
         config_options["start_year"]= 1
         config_options["end_year"]= 1
+        config_options["lexicon"] = 1
         if "snippet" in defoe_selection:
             config_options["window"] = 1 
     return render_template('defoe.html', defoe_def=defoe_def[defoe_selection], defoe_selection=defoe_selection, config_options=config_options)
@@ -469,7 +470,10 @@ def run_queries():
         config["preprocess"]=request.form.get('preprocess')
         target_sentences= request.form.get('target_sentences')
         if target_sentences:
-            config["target_sentences"]=target_sentences.split(",")
+            t_sentences=target_sentences.split(",")
+            config["target_sentences"]=[]
+            for i in t_sentences:
+             config["target_sentences"].append(i.strip())
         config["target_filter"] = request.form.get('target_filter')
         config["window"] = request.form.get('window') 
         config["defoe_path"]= "/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"

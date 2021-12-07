@@ -60,7 +60,7 @@ form.search_form button:hover {
 
      {% if config_options %}
 
-         <form action ="/run_queries" method = "POST" enctype="multipart/form-data">
+         <form action ="/run_queries" method = "POST" enctype="multipart/form-data" id="run_queries">
                  <div>
     	         <label for="defoe_selection">Defoe query</label>
                   <select name="defoe_selection" id="defoe_selection"> 
@@ -89,7 +89,7 @@ form.search_form button:hover {
                {% if config_options["hit_count"] %}
                 	<hr style="width:50%;text-align:left;margin-left:0">
                 	<div>
-    	         	<label for="hit_count">Select the hit count (only for Freq. query)</label>
+    	         	<label for="hit_count">Select the hit count</label>
                  	<select name="hit_count" id="hit_count">
 	         	<option value=term>term</option>
 	         	<option value=word>word</option>
@@ -109,8 +109,9 @@ form.search_form button:hover {
                 	 <hr style="width:50%;text-align:left;margin-left:0">
   	         	<div>
                 
-    	          	<label for="target_sentences">Introduce Target words/sentences separated by "," (Optional)</label>
-    	          	<input type="text" id="target_sentences" name="target_sentences"> <br>
+    	          	<label for="target_sentences">Introduce Target words/sentences separated by "," (Optional)</label><br>
+                        <textarea form="run_queries" name="target_sentences" id="target_sentences" rows="10" cols="35"></textarea><br>
+
                  
     	          	<label for="target_filter"> Select the Target filter </label> <br> 
 			<input type="radio" id="or" name="target_filter" value="or" checked="checked">
@@ -133,7 +134,7 @@ form.search_form button:hover {
                {% if config_options["window"] %}
                		<hr style="width:50%;text-align:left;margin-left:0">
   	       		<div>
-               		<label for="window"> Snippet Window (Only for snippet query)</label>
+               		<label for="window"> Snippet Window </label>
                		<input type="text" id="window" name="window" value=10>
                		</div> <br>
                {% endif %}
