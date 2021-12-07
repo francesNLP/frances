@@ -115,9 +115,9 @@ form.search_form button:hover {
                  
     	          	<label for="target_filter"> Select the Target filter </label> <br> 
 			<input type="radio" id="or" name="target_filter" value="or" checked="checked">
-  			<label for="or">Select terms which contains <strong> any </strong> of the target words/sentences </label><br>
+  			<label for="or"> OR: Select terms which contains <strong> any </strong> of the target words/sentences </label><br>
   			<input type="radio" id="and" name="target_filter" value="and">
-  			<label for="and">Select terms which contains <strong> all </strong> the target words/sentences </label><br>
+  			<label for="and"> AND: Select terms which contains <strong> all </strong> the target words/sentences </label><br>
                  	</div><br>
                  {% endif %}
                  
@@ -168,8 +168,18 @@ form.search_form button:hover {
        	<p> Your configurations: </p>
        	<ul>
 		{% for key, value in config.items() %}
+                      
            		{% if "defoe_path" not in key and "os_type" not in key and value!=None %}
-           			<li> <strong> {{key}} </strong>: {{value}} </li>
+                                <script>
+                                   t_value="{{value}}".split("/").pop();
+                                   if ("{{key}}".includes("data")) {
+                                     
+                                         document.write( '<li> <strong> ' + "{{key}}" + ' </strong>: '+ t_value + ' </li>');
+                                   }
+                                   else {
+                                         document.write( '<li> <strong> ' + "{{key}}" + '</strong>: '+ "{{value}}" +'  </li>');
+                                        }
+                                </script>
            		{% endif %}
         	{% endfor %}         
        </ul>
