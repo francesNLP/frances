@@ -76,7 +76,24 @@ def dict_defoe_queries():
     defoe_q["uris_keysearch"]="uris_keysearch"
     defoe_q["terms_snippet_keysearch_by_year"]="terms_snippet_keysearch_by_year"
     defoe_q["terms_fulltext_keysearch_by_year"]="terms_snippet_keysearch_by_year"
+    defoe_q["terms_sentiment"]="terms_sentiment"
+    defoe_q["terms_topic_modelling"]="terms_topic_modelling"
+    defoe_q["terms_spelling_checker"]="terms_spelling_checker"
     return defoe_q
+
+
+def def_defoe_queries():
+    defoe_def={}
+    defoe_def["frequency_keyseach_by_year"]="counts number of terms or times in which appear keywords or keysentences and groups the results by years. Several configurations options are available for this query."
+    defoe_def["publication_normalized"]="extracts the number of documents, pages, and words per year. No configurations options are available for this query"
+    defoe_def["uris_keysearch"]="extracts uris of terms in which appear keywords or keysentences and groups the results by years. Several configurations options are available for this query."
+    defoe_def["terms_snippet_keysearch_by_year"]="extracts snippets of definitions in which appear keywords or keysentences and groups the results by years. Several filtering options, including the window size of the snippet."
+    defoe_def["terms_fulltext_keysearch_by_year"]="extracts terms definitions in which appear keywords or keysentences and groups the results by years. Several filtering options. Several configurations options are available for this query."
+    defoe_def["terms_geoparser"]="geoparsers the term definition in which appear keywords or keysentences and groups the results by years. Several configurations options are available for this query."
+    defoe_def["terms_sentiment"]="calculates the sentiment analyses of selected terms. Several configurations options are available for this query."
+    defoe_def["terms_topic_modelling"]="calculates the topic of selected terms. Several configurations options are available for this query."
+    defoe_def["terms_spelling_checker"]="checks the spelling of selected terms. Several configurations options are available for this query."
+    return defoe_def
 
 
 def read_results(results_file):

@@ -8,7 +8,7 @@ import itertools
 from itertools import islice
 from sklearn.metrics.pairwise import cosine_similarity
 from .utils import calculating_similarity_text, get_topic_name 
-from .utils import plot_taxonomy_freq, load_data, preprocess_lexicon, dict_defoe_queries, read_results
+from .utils import plot_taxonomy_freq, load_data, preprocess_lexicon, dict_defoe_queries, read_results, def_defoe_queries
 
 import numpy as np
 import os, yaml
@@ -420,17 +420,56 @@ def evolution_of_terms(termlink=None):
                                 bar_plot=bar_plot, heatmap_plot=heatmap_plot, t_sentiment=t_sentiment)
     
 
+
 @app.route("/defoe_queries", methods=["GET", "POST"])
 def defoe_queries():
     defoe_q=dict_defoe_queries()
+    return render_template('defoe.html', defoe_q=defoe_q)
 
+
+@app.route("/config_query", methods=["GET", "POST"])
+def config_query():
+    defoe_def=def_defoe_queries()
+    defoe_selection=request.form.get('defoe_selection')
+    config_options={}
+    config_options["preprocess"]=None
+    config_options["target_sentences"]= None
+    config_options["target_filter"] = None
+    config_options["window"] = None 
+    config_options["lexicon"] = None 
+    config_options["end_year"]= None
+    config_options["hit_count"] = None
+    if "frequency" in defoe_selection:
+        config_options["preprocess"]=1
+        config_options["target_sentences"]= 1
+        config_options["target_filter"] = 1
+        config_options["start_year"]= 1
+        config_options["end_year"]= 1
+        config_options["hit_count"] = 1
+        config_options["lexicon"] = 1
+    elif "terms" in defoe_selection or "uris" in defoe_selection: 
+        config_options["preprocess"]=1
+        config_options["target_sentences"]= 1
+        config_options["target_filter"] = 1
+        config_options["start_year"]= 1
+        config_options["end_year"]= 1
+        if "snippet" in defoe_selection:
+            config_options["window"] = 1 
+    return render_template('defoe.html', defoe_def=defoe_def[defoe_selection], defoe_selection=defoe_selection, config_options=config_options)
+    
+
+
+@app.route("/run_queries", methods=["GET", "POST"])
+def run_queries():
+    defoe_def=def_defoe_queries()
     if request.method == "POST":
         
         config={}
         defoe_selection=request.form.get('defoe_selection')
-        
         config["preprocess"]=request.form.get('preprocess')
-        config["target_sentences"]= request.form.get('target_sentences').split(",")
+        target_sentences= request.form.get('target_sentences')
+        if target_sentences:
+            config["target_sentences"]=target_sentences.split(",")
         config["target_filter"] = request.form.get('target_filter')
         config["window"] = request.form.get('window') 
         config["defoe_path"]= "/Users/rosafilgueira/HW-Work/NLS-Fellowship/work/defoe"
@@ -465,10 +504,10 @@ def defoe_queries():
 
         if "terms" in defoe_selection:
             results_uris=results["terms_uris"]
-            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, results_uris=results_uris,  defoe_selection=defoe_selection)
+            return render_template('defoe.html', defoe_def=defoe_def[defoe_selection], flag=1, results=results, results_uris=results_uris,  defoe_selection=defoe_selection, config=config)
         elif "uris" in defoe_selection or "normalized" in defoe_selection:
 
-            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection)
+            return render_template('defoe.html', defoe_def=defoe_def[defoe_selection], flag=1, results=results, defoe_selection=defoe_selection, config=config)
         else:
             preprocess= request.args.get('preprocess', None)
             p_lexicon = preprocess_lexicon(config["data"], config["preprocess"])
@@ -483,9 +522,9 @@ def defoe_queries():
             line_f_plot = plot_f.to_json()
             line_n_f_plot = plot_n_f.to_json()
             ####
-            return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection, line_f_plot=line_f_plot, line_n_f_plot=line_n_f_plot)
+            return render_template('defoe.html', defoe_def=defoe_def[defoe_selection], flag=1, results=results, defoe_selection=defoe_selection, line_f_plot=line_f_plot, line_n_f_plot=line_n_f_plot, config=config)
         
-    return render_template('defoe.html', defoe_q=defoe_q)
+    return render_template('defoe.html', defoe_def=defoe_def[defoe_selection])
 
 @app.route("/download", methods=['GET'])
 def download(defoe_selection=None):
@@ -500,30 +539,3 @@ def download(defoe_selection=None):
     zip_file=os.path.join(app.config['RESULTS_FOLDER'], zip_file)
     return send_file(zip_file, as_attachment=True)
 
-@app.route("/visualize_freq", methods=['GET'])
-def visualize_freq(defoe_selection=None):
-    defoe_selection = request.args.get('defoe_selection', None)
-    lexicon_file = request.args.get('lexicon_file', None)
-    results_file=os.path.join(app.config['RESULTS_FOLDER'], defoe_selection+".yml")
-    
-    preprocess= request.args.get('preprocess', None)
-    p_lexicon = preprocess_lexicon(lexicon_file, preprocess)
-    defoe_q=dict_defoe_queries()
-    
-    #### Read Results File
-    results=read_results(results_file)
-
-
-
-    #### Read Normalized data
-    norm_file=os.path.join(app.config['RESULTS_FOLDER'], "publication_normalized.yml")
-    ####
-    norm_publication=read_results(norm_file)
-    print("---%s---" %norm_publication)
-    taxonomy=p_lexicon
-    plot_f, plot_n_f=plot_taxonomy_freq(taxonomy, results, norm_publication)
-    #### only for ploty figures
-    line_f_plot = plot_f.to_json()
-    line_n_f_plot = plot_n_f.to_json()
-    ####
-    return render_template('defoe.html', defoe_q=defoe_q, flag=1, results=results, defoe_selection=defoe_selection, lexicon_file=lexicon_file, line_f_plot=line_f_plot, line_n_f_plot=line_n_f_plot)
