@@ -73,7 +73,6 @@ Therefore, we have created [Merging_EB_Terms.ipynb](https://github.com/francesNL
 
 Here we have an [example](https://github.com/francesNLP/frances/blob/main/NLS_EB/results_NLS/results_eb_1_edition_updated) of the results of the 1st edition cleaned. 
 
-## 4. Post-Processed EB Articles Metadata 
 
 Furthermore, this notebook also re-arranges the updated information (and drops some metada) to create a **NEW dataframe per file/edition**, with the following **METADATA/COLUMNS/PROPERTIES**:
 
@@ -127,7 +126,7 @@ These dataframes are stored as JSON files (using orient="index") in [NLS_EB/resu
 df.to_json(r'./results_NLS/results_eb_1_edition_postprocess_dataframe', orient="index") 
 ```
 
-## 5. Extracting all the information (until volume level) from the EB
+## 4. Extracting all the information (until volume level) from the EB
 
 
 We have also improved our query for extracting all the metadata from the all the editions, supplements and volumes from EB.
@@ -173,7 +172,7 @@ propierties extracted:
 <img width="634" alt="Screen Shot 2021-10-18 at 18 47 16" src="https://user-images.githubusercontent.com/6940078/137781600-f81433d7-d60e-425c-a40f-b8c9a4261b0c.png">
 
 
-## 6. Questions
+## 5. Questions
 
 Here a list of questions that we want to ask to these data (using the EB_Articles Clean Metadata):
 
@@ -192,7 +191,7 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 - Given a term and edition, tell me which terms (based on "related_terms") are related with it. 
 - Given a term, see how the definition(s) have changed across editions. 
 
-## 7. EB-Ontology
+## 6. EB-Ontology
 
 <img width="641" alt="eb-dataModel" src="https://user-images.githubusercontent.com/6940078/138864341-e18e5f0e-3038-4392-9bc9-3340875c5730.png">
 
@@ -206,6 +205,6 @@ Example 2:
 
 <img width="1166" alt="Screen Shot 2022-01-14 at 13 11 32" src="https://user-images.githubusercontent.com/6940078/149520648-e6c916c5-997a-44e8-bff0-b5be41caac0e.png">
 
-## 9. Frances Architecture
+## 7. Frances Architecture
 <img width="1195" alt="Screen Shot 2022-01-14 at 11 57 12" src="https://user-images.githubusercontent.com/6940078/149520225-752e2f4d-a5dc-4184-ad78-2eae09a5dd3f.png">
 
