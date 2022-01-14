@@ -192,13 +192,20 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 - Given a term and edition, tell me which terms (based on "related_terms") are related with it. 
 - Given a term, see how the definition(s) have changed across editions. 
 
-## 7. Data Model Proposed
+## 7. EB-Ontology
 
 <img width="641" alt="eb-dataModel" src="https://user-images.githubusercontent.com/6940078/138864341-e18e5f0e-3038-4392-9bc9-3340875c5730.png">
 
 
+## EB-Knowlege Graph
 
+Example 1: 
+<img width="1183" alt="Screen Shot 2022-01-14 at 13 10 21" src="https://user-images.githubusercontent.com/6940078/149520575-8718724b-c83f-4160-b1a3-a1890723cb54.png">
 
-## 8. Frances Architecture
+Example 2:
+
+<img width="1166" alt="Screen Shot 2022-01-14 at 13 11 32" src="https://user-images.githubusercontent.com/6940078/149520648-e6c916c5-997a-44e8-bff0-b5be41caac0e.png">
+
+## 9. Frances Architecture
 <img width="1195" alt="Screen Shot 2022-01-14 at 11 57 12" src="https://user-images.githubusercontent.com/6940078/149520225-752e2f4d-a5dc-4184-ad78-2eae09a5dd3f.png">
 
