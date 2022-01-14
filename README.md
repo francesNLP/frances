@@ -199,5 +199,6 @@ Here a list of questions that we want to ask to these data (using the EB_Article
 
 
 
-
+## 8. Frances Architecture
+<img width="1195" alt="Screen Shot 2022-01-14 at 11 57 12" src="https://user-images.githubusercontent.com/6940078/149520225-752e2f4d-a5dc-4184-ad78-2eae09a5dd3f.png">
 
