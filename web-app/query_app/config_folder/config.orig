@@ -1,0 +1,13 @@
+data: /Users/rf208/Research/work/frances/web-app/query_app/upload_folder/slavery_trade.txt
+defoe_path: /Users/rf208/Research/work/defoe
+end_year: '1771'
+hit_count: term
+os_type: os
+preprocess: lemmatize
+start_year: '1771'
+target: null
+target_filter: or
+target_sentences:
+- Slave
+- Slavery
+window: '10'

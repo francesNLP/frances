@@ -1,0 +1,11 @@
+data: /Users/rf208/Research/NLS-Fellowship/work/frances/web-app/query_app/upload_folder/animal.txt
+defoe_path: /Users/rf208/Research/NLS-Fellowship/work/defoe/
+end_year: '1801'
+hit_count: term
+os_type: os
+preprocess: lemmatize
+start_year: '1771'
+target_filter: or
+target_sentences:
+- '                                '
+window: '10'
