@@ -88,10 +88,6 @@ def dict_defoe_queries():
     defoe_q["uris_keysearch"]="uris_keysearch"
     defoe_q["terms_snippet_keysearch_by_year"]="terms_snippet_keysearch_by_year"
     defoe_q["terms_fulltext_keysearch_by_year"]="terms_fulltext_keysearch_by_year"
-    defoe_q["geoparser_terms"]="geoparser_terms"
-    defoe_q["sentiment_analysis"]="sentiment_analysis"
-    defoe_q["topic_modelling"]="topic_modelling"
-    defoe_q["spelling_checker"]="spelling_checker"
     return defoe_q
 
 
