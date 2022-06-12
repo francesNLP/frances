@@ -8,5 +8,5 @@ Late execute in this order:
 
 
 
-You can practice SPAQL queries using  QueringRDF.ipynb
+You can practice SPARQL queries using QueringRDF.ipynb
 
