@@ -8,4 +8,3 @@ In this folder, your Knowlege Graph will be created after running:
 2. Dataframe2RDF.ipynb -> it will create a knowlege graph (from the previous dataframe file) and store it here.
 
 
-You can practice SPAQL queries using  QueringRDF.ipynb
