@@ -1,6 +1,6 @@
 ## Important
 
-Place here chapbooks_metadata_pages.yml or any of the results files obtained from running [write_pages_df_yml](https://github.com/francesNLP/defoe/blob/master/defoe/nls/queries/write_pages_df_yml.py) query.
+Place here chapbooks_metadata_pages.yml or any of the results files obtained from running [write_metadata_pages_yml](https://github.com/francesNLP/defoe/blob/master/defoe/nls/queries/write_metadata_pages_yml) query.
 
 In this folder, your Knowlege Graph will be created after running:
 
